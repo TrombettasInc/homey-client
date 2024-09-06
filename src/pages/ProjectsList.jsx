@@ -1,0 +1,42 @@
+import { useState, useEffect } from "react";
+import axios from "axios" ;
+import AddProject from "../Components/AddProject";
+import ProjectCard from "../Components/ProjectCard";
+
+const API_URL = "http://localhost:5005";
+
+function ProjectList (){
+
+    const [ projects, setProjects] = useState([]);
+
+    const getAllProjects = () =>{
+
+        const storedToken = localStorage.getItem("authToken");
+
+        axios
+        .get(`${API_URL}/api/projects`,
+            { headers: { Authorization: `Bearer ${storedToken}` } }
+        )
+        .then((response)=> setProjects(response.data))
+        .catch((error)=>console.log(error));
+    };
+
+    useEffect(()=>{
+        getAllProjects();
+    },[]);
+
+
+  return (
+    <div className="ProjectList">
+        <AddProject getAllProjects={getAllProjects} />
+        
+        {projects.map((project)=>(
+          <ProjectCard key={project._id} {...project} />
+        ))}
+    </div>
+  )
+
+}
+
+
+export default ProjectList;
