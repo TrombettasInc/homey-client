@@ -26,12 +26,17 @@ function ProjectList (){
     },[]);
 
 
-  return (
+  return ( //displays the create project form and the project card with some info in the main page//
     <div className="ProjectList">
-        <AddProject getAllProjects={getAllProjects} />
+        <AddProject getAllProjects={getAllProjects} /> 
         
         {projects.map((project)=>(
-          <ProjectCard key={project._id} {...project} />
+          <ProjectCard key={project._id}
+          _id={project._id}
+          title={project.title}
+          isDone={project.isDone}
+          
+       />
         ))}
     </div>
   )

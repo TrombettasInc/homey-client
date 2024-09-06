@@ -66,10 +66,6 @@ function EditProjectPage(props) {
     return (
 
         <div className="edit-project-container">
-
-            <Link to="/projects">
-                <button className="create-project-back-button">Back</button>
-            </Link>
             
             <h3 className="edit-project-header">Edit Project</h3>
 

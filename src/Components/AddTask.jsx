@@ -40,7 +40,6 @@ function AddTask({projectId, getProject}) {
 
     return (
         <div className="create-task">
-            <button className="create-task-back-button">back</button>
 
             <h3 className="create-task-header">Add New Task</h3>
 
@@ -57,7 +56,7 @@ function AddTask({projectId, getProject}) {
 
                 <label className="create-task-form-deadline">deadline</label>
                 <input
-                    type="valueAsDate"
+                    type="date"
                     name="deadline"
                     value={deadline}
                     onChange={(e) => setDeadline(e.target.value)}

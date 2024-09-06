@@ -30,9 +30,6 @@ function ProjectCard({ title, description, StartDate, isDone, Tasks, _id, deadli
             <Link to={`/projects/${_id}`} >
                 <h3>{title}</h3>
             </Link>
-            <p>{description} </p>
-            <p>{StartDate} </p>
-            <p>{Tasks} </p>
             <label>
                 <input
                     type="checkbox"
