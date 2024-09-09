@@ -1,92 +1,134 @@
-import { useState} from "react";
+import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
+import styles from './AddProject.module.css';
 
 const API_URL = "http://localhost:5005";
 
+// AddProject Component
 function AddProject(props) {
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [deadline, setDeadline] = useState("");
+  const [isDone, setIsDone] = useState(false);
 
-    const [title, setTitle] = useState("");
-    const [description, setDescription] = useState("");
-    const [startDate, setStartDate] = useState("");
-    const [deadline, setDeadline] = useState(new Date());
-    const [isDone, setIsDone] = useState(false);
+  const navigate = useNavigate();
 
-   
-    const navigate = useNavigate();
-    
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        
-        // Create an object representing the body of the POST request
-        const requestBody = { title, description, startDate, deadline, isDone };
-    
-        const storedToken = localStorage.getItem('authToken');
-    
-    
-        axios
-            .post(`${API_URL}/api/projects`, requestBody,
-                { headers: { Authorization: `Bearer ${storedToken}` } }
-            )
-            .then((response) => {
-                // Reset the state to clear the inputs
-                setTitle("");
-                setDescription("");
-                setStartDate("");
-                setDeadline("");
-                setIsDone(false)
-                
-                // Get the created project's ID from the response
-                const createdProjectId = response.data._id; 
+    const requestBody = { title, description, deadline, isDone };
+    const storedToken = localStorage.getItem('authToken');
 
-                // Invoke the callback function coming through the props
-                // from the ProjectDetailsPage, to refresh the project details
-                props.getAllProjects();
-                navigate(`/projects/${createdProjectId}`)
-            })
-            .catch((error) => console.log(error));
-    };
+    axios
+      .post(`${API_URL}/api/projects`, requestBody, {
+        headers: { Authorization: `Bearer ${storedToken}` },
+      })
+      .then((response) => {
+        setTitle("");
+        setDescription("");
+        setDeadline("");
+        setIsDone(false);
 
+        const createdProjectId = response.data._id;
+        props.getAllProjects();
+        navigate(`/projects/${createdProjectId}`);
+      })
+      .catch((error) => console.log(error));
+  };
 
-    return (
-        <div className="create-project-container">
-            <button className="create-project-back-button">back</button>
-            <h3 className="create-project-header">Create Project</h3>
+  return (
+    <main className={styles.container}>
+      <Link to="/projects">
+        <img
+          loading="lazy"
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/478d9bba00cceb7b77b56a3e7d9c72ac3d5e7d78ebd85d224a6b3345bcdb6872?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0"
+          className={styles.logo}
+          alt="Project logo"
+        />
+      </Link>
 
-            <form onSubmit={handleSubmit}>
-                <label className="create-project-form-title">Project Title</label>
-                <input
-                    type="text"
-                    name="your project title"
-                    value={title}
-                    required
-                    onChange={(e) => setTitle(e.target.value)}
-                />
+      <form onSubmit={handleSubmit} className={styles.formContainer}>
+        <h1 className={styles.title}>Create Project</h1>
 
-                <label className="create-project-form-deadline" >Deadline</label>
-                <input
-                    type="date"
-                    name="deadline"
-                    value={deadline}
-                    onChange={(e) => setDeadline(e.target.value)}
-                />
-
-                <label className="create-project-form-description">Description</label>
-                <textarea
-                    type="text"
-                    name="description"
-                    value={description}
-                    required
-                    onChange={(e) => setDescription(e.target.value)}
-                />
-
-                <button type="submit" className="create-project-button">Create!</button>
-            </form>
+        {/* Project Title Field */}
+        <div className={styles.inputWrapper}>
+          <div className={styles.inputContent}>
+            <img
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/22a892083d9a2459f3d6034245b0adf402047a0091b4cdfbf717e8f1786b90fe?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0"
+              className={styles.inputIcon}
+              alt="Title Icon"
+            />
+            <input
+              type="text"
+              id="projectTitle"
+              className={styles.input}
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+              placeholder="Project Title"
+              required
+              style={{ fontSize: "16px", padding: "10px", border: "none" }}
+            />
+          </div>
         </div>
 
+        {/* Deadline Field */}
+        <div className={styles.dateWrapper}>
+          <label htmlFor="deadline" className={styles.dateLabel}>
+            Deadline
+          </label>
+          <input
+            type="date"
+            id="deadline"
+            value={deadline}
+            onChange={(e) => setDeadline(e.target.value)}
+            className={styles.input}
+            required
+            style={{ fontSize: "16px", padding: "10px", border: "none" }}
+          />
+          <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/ecbf590f99fffde6575863051d00cdb9fea318ce6dd7240a95a8d8b918d13e3e?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0"
+            className={styles.dateIcon}
+            alt="Deadline Icon"
+          />
+        </div>
 
-    );
+        {/* Project Description Field */}
+        <div className={styles.inputWrapper}>
+          <div className={styles.inputContent}>
+            <img
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/4d671a9a3741b06f3c0c0a6f804e3b6f42b21f67fb759696e08a3541c9f23184?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0"
+              className={styles.inputIcon}
+              alt="Description Icon"
+            />
+            <textarea
+              id="projectDescription"
+              className={styles.textarea}
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
+              placeholder="Project Description"
+              required
+              style={{
+                fontSize: "16px",
+                padding: "10px",
+                border: "none",
+                height: "100px",
+                resize: "none",
+              }}
+            ></textarea>
+          </div>
+        </div>
+
+        {/* Submit Button */}
+        <button type="submit" className={styles.submitButton}>
+          Create
+        </button>
+      </form>
+    </main>
+  );
 }
+
 export default AddProject;
