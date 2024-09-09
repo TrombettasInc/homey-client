@@ -5,7 +5,7 @@ import axios from "axios";
 
 const API_URL = "http://localhost:5005";
 
-function ProjectCard({ title, description, startDate, isDone, projectId, deadline, getProject, Tasks }) {
+function ProjectCard({ title, isDone, projectId, getProject }) {
 
     const [checked, setChecked] = useState(isDone);
     
@@ -28,7 +28,7 @@ function ProjectCard({ title, description, startDate, isDone, projectId, deadlin
     };
     return (
         <div className="ProjectCard card">
-            <Link to={`/projects/${projectId}`} state={{title, description, startDate, isDone, Tasks, projectId, deadline }} >
+            <Link to={`/projects/${projectId}`} >
                 <h3>{title}</h3>
             </Link>
             <label>

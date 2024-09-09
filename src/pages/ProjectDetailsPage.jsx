@@ -4,12 +4,15 @@ import axios from "axios";
 import AddTask from "../Components/AddTask";
 import TaskCard from "../Components/TaskCard";
 import EditProjectPage from "./EditProjectPage";
+import ProjectCard from "../Components/ProjectCard";
 
 const API_URL = "http://localhost:5005";
 
 function ProjectDetailsPage() {
     const [project, setProject] = useState(null);
     const { projectId } = useParams();
+    const [checked, setChecked] = useState(false);
+
     const storedToken = localStorage.getItem("authToken");
     
     // Fetch project data
@@ -20,6 +23,7 @@ function ProjectDetailsPage() {
             })
             .then((response) => {
                 setProject(response.data);
+                setChecked(response.data.isDone); 
                 console.log("API response:", response.data); // Log the project data
             })
             .catch((error) => console.log("Error fetching project:", error));
@@ -28,6 +32,22 @@ function ProjectDetailsPage() {
     useEffect(() => {
         getProject();
     }, [projectId]);
+
+    const handleCheckboxChange = (event) => {
+        const newChecked = event.target.checked;
+        setChecked(newChecked);
+
+        // Update the project status in the backend
+        axios
+            .put(`${API_URL}/api/projects/${projectId}`, { isDone: newChecked }, {
+                headers: { Authorization: `Bearer ${storedToken}` }
+            })
+            .then((response) => {
+                getProject(); // Refetch project data to ensure it's up to date
+                console.log("Project status updated:", response.data);
+            })
+            .catch((error) => console.log("Error updating project status:", error));
+    };
 
     return (
         <div className="ProjectDetails">
@@ -38,7 +58,14 @@ function ProjectDetailsPage() {
                     <p>Start Date: {new Date(project.startDate).toLocaleDateString()}</p>
                     <p>Deadline: {project.deadline ? new Date(project.deadline).toLocaleDateString() : 'No Deadline'}</p>
 
-                    <p>Status: {project.isDone ? 'Done' : 'Not Done'}</p>
+                    <label>
+                        <input
+                            type="checkbox"
+                            checked={checked}
+                            onChange={handleCheckboxChange}
+                        />
+                        {checked ? 'Done' : 'Not Done'}
+                    </label>
 
                     <EditProjectPage project={project} />
                     <AddTask getProject={getProject} projectId={projectId} />
