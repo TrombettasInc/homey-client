@@ -81,7 +81,7 @@ function EditProjectPage(props) {
 
                 <label className="edit-project-form-deadline" >Deadline</label>
                 <input
-                    type="valueAsDate"
+                    type="date"
                     name="deadline"
                     value={deadline}
                     onChange={(e) => setDeadline(e.target.value)}

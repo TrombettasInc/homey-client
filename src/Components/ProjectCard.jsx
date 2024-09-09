@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import axios from "axios";
 
+const API_URL = "http://localhost:5005";
 
-function ProjectCard({ title, description, StartDate, isDone, Tasks, _id, deadline }) {
+function ProjectCard({ title, description, startDate, isDone, projectId, deadline, getProject, Tasks }) {
 
     const [checked, setChecked] = useState(isDone);
-
-    const navigate = useNavigate();
     
     const storedToken = localStorage.getItem('authToken');
 
@@ -19,15 +19,16 @@ function ProjectCard({ title, description, StartDate, isDone, Tasks, _id, deadli
             { isDone: newChecked },
             { headers: { Authorization: `Bearer ${storedToken}` } }
         )
-            .then(() => {
+            .then((response) => {
                 getProject();
-                navigate(`/projects/${projectId}`)
+                console.log("project status updated", response.data)
+                
             })
             .catch((error) => console.log(error));
     };
     return (
         <div className="ProjectCard card">
-            <Link to={`/projects/${_id}`} >
+            <Link to={`/projects/${projectId}`} state={{title, description, startDate, isDone, Tasks, projectId, deadline }} >
                 <h3>{title}</h3>
             </Link>
             <label>

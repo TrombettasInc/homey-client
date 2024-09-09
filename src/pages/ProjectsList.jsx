@@ -32,10 +32,13 @@ function ProjectList (){
         
         {projects.map((project)=>(
           <ProjectCard key={project._id}
-          _id={project._id}
+          projectId={project._id}
           title={project.title}
+          description={project.description}
+          startDate={project.startDate}
+          deadline={project.deadline}
           isDone={project.isDone}
-          
+          getProject={getAllProjects}
        />
         ))}
     </div>
