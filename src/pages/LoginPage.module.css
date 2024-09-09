@@ -1,0 +1,117 @@
+.loginContainer {
+    background: var(--Colors-White, #fff);
+    max-width: 480px;
+    width: 100%;
+    color: var(--Colors-Black, #18191f);
+    margin: 0 auto;
+    padding: 68px 0;
+    font: 500 21px/1 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
+  }
+  
+  .logo {
+    aspect-ratio: 1.01;
+    object-fit: contain;
+    object-position: center;
+    width: 135px;
+    align-self: center;
+    max-width: 100%;
+  }
+  
+  .avatarIcon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 48px;
+    box-shadow: 0 4px 0 0 #18191f;
+    margin: 16px 0 0 20px;
+  }
+  .formContainer {
+    background: var(--Colors-White, #fff);
+    margin-top: 28px;
+    width: 100%;
+    padding: 24px;
+  }
+  
+  .title {
+    color: #000;
+    font-feature-settings: "liga" off, "clig" off;
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1;
+  }
+  
+  .subtitle {
+    color: var(--Colors-Black-800, #474a57);
+    font-feature-settings: "liga" off, "clig" off;
+    font-size: 17px;
+    line-height: 24px;
+    margin-top: 12px;
+  }
+  
+  .inputWrapper {
+    border-radius: 16px;
+    border: 2px solid var(--Colors-Black, #18191f);
+    background: var(--Colors-White, #fff);
+    display: flex;
+    margin-top: 32px;
+    width: 80%;
+    padding: 16px;
+    
+  
+  }
+  
+  .inputContent {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .inputIcon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 24px;
+  }
+  
+  .input {
+    font-feature-settings: "liga" off, "clig" off;
+    width: 100%;
+    border: none;
+    background: transparent;
+    font-size: inherit;
+  }
+  
+  .submitButton {
+    align-items: center;
+    border-radius: 16px;
+    border: 2px solid var(--Colors-Black, #18191f);
+    background: var(--Colors-Yellow, #ffbd12);
+    box-shadow: 0 4px 0 0 #18191f;
+    display: flex;
+    margin-top: 32px;
+    width: 90%;
+    font-weight: 800;
+    text-align: center;
+    justify-content: center;
+    padding: 16px;
+    cursor: pointer;
+  }
+  
+  .signupLink {
+    color: var(--Colors-Red, #f95a2c);
+    font-feature-settings: "liga" off, "clig" off;
+    font-size: 13px;
+    line-height: 1;
+    margin-top: 32px;
+  }
+  
+  .signupLink span {
+    font-weight: 700;
+  }
+  
+  .errorMessage {
+    color: var(--Colors-Red, #f95a2c);
+    font-size: 14px;
+    margin-top: 12px;
+  }
+  
