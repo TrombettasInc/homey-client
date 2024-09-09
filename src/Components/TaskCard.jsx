@@ -64,10 +64,8 @@ function TaskCard({ taskId, projectId, description, deadline, StartDate, isDone,
         <div className="TaskCard card">
 
             <h4> Description</h4>
-            <h3>{description} </h3>idl
-
-            <p>{StartDate} </p>
-            <p>{deadline} </p>
+            <h3>{description} </h3>
+            <p>Deadline: {deadline ? new Date(deadline).toLocaleDateString() : 'No Deadline'}</p>
             <div>
                 <label>
                     <input
