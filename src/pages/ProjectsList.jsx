@@ -34,9 +34,6 @@ function ProjectList (){
           <ProjectCard key={project._id}
           projectId={project._id}
           title={project.title}
-          description={project.description}
-          startDate={project.startDate}
-          deadline={project.deadline}
           isDone={project.isDone}
           getProject={getAllProjects}
        />

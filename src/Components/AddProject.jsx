@@ -70,7 +70,7 @@ function AddProject(props) {
                     type="date"
                     name="deadline"
                     value={deadline}
-                    onChange={(e) => setDeadline(new Date(e.target.value))}
+                    onChange={(e) => setDeadline(e.target.value)}
                 />
 
                 <label className="create-project-form-description">Description</label>

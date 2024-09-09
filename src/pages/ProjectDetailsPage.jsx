@@ -36,7 +36,8 @@ function ProjectDetailsPage() {
                     <h1>Title: {project.title}</h1>
                     <p>Description: {project.description}</p>
                     <p>Start Date: {new Date(project.startDate).toLocaleDateString()}</p>
-                    <p>Deadline: {new Date(project.deadline).toLocaleDateString()}</p>
+                    <p>Deadline: {project.deadline ? new Date(project.deadline).toLocaleDateString() : 'No Deadline'}</p>
+
                     <p>Status: {project.isDone ? 'Done' : 'Not Done'}</p>
 
                     <EditProjectPage project={project} />
