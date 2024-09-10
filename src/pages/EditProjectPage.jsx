@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import ProjectList from "./ProjectsList";
 import { Link } from "react-router-dom";
-const API_URL = "http://localhost:5005";
+
 
 function EditProjectPage(props) {
     const [title, setTitle] = useState("");
@@ -19,7 +19,7 @@ function EditProjectPage(props) {
 
     useEffect(() => {
         axios
-            .get(`${API_URL}/api/projects/${projectId}`,
+            .get(`${import.meta.env.VITE_API_URL}/api/projects/${projectId}`,
                 { headers: { Authorization: `Bearer ${storedToken}` } }
             )
             .then((response) => {
@@ -42,7 +42,7 @@ function EditProjectPage(props) {
     
 
         axios
-            .put(`${API_URL}/api/projects/${projectId}`, requestBody,
+            .put(`${import.meta.env.VITE_API_URL}/api/projects/${projectId}`, requestBody,
                 { headers: { Authorization: `Bearer ${storedToken}` } }
             )
             .then((response) => {
@@ -53,7 +53,7 @@ function EditProjectPage(props) {
     const deleteProject = () => {
 
         axios
-            .delete(`${API_URL}/api/projects/${projectId}`,
+            .delete(`${import.meta.env.VITE_API_URL}/api/projects/${projectId}`,
                 { headers: { Authorization: `Bearer ${storedToken}` } }
             )
             .then(() => {

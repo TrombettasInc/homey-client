@@ -1,7 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
 
-const API_URL = "http://localhost:5005";
 
 
 function AddTask({projectId, getProject}) {
@@ -20,7 +19,7 @@ function AddTask({projectId, getProject}) {
         const storedToken = localStorage.getItem('authToken');
 
         axios
-            .post(`${API_URL}/api/tasks`, requestBody,
+            .post(`${import.meta.env.VITE_API_URL}/api/tasks`, requestBody,
                 { headers: { Authorization: `Bearer ${storedToken}` } }
             )
             .then((response) => {

@@ -3,7 +3,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 import styles from './SignUpPage.module.css'
 
-const API_URL = "http://localhost:5005";
+
 
 // InputField Component
 const InputField = ({ icon, placeholder, type, value, onChange }) => {
@@ -41,7 +41,7 @@ const SignupPage = () => {
     e.preventDefault();
     const requestBody = { email, password, name };
 
-    axios.post(`${API_URL}/auth/signup`, requestBody)
+    axios.post(`${import.meta.env.VITE_API_URL}/auth/signup`, requestBody)
       .then((response) => {
         navigate('/login');
       })

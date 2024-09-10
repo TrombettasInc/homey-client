@@ -5,7 +5,7 @@ import { AuthContext } from "../context/auth.context";
 import styles from './LoginPage.module.css'; // Import your CSS
 import logo from "../assets/logo.png"
 
-const API_URL = "http://localhost:5005";
+
 
 // InputField Component
 function InputField({ icon, placeholder, type, value, onChange }) {
@@ -39,7 +39,7 @@ function LoginPage() {
     const requestBody = { email, password };
 
     axios
-      .post(`${API_URL}/auth/login`, requestBody)
+      .post(`${import.meta.env.VITE_API_URL}/auth/login`, requestBody)
       .then((response) => {
         storeToken(response.data.authToken);
         authenticateUser();

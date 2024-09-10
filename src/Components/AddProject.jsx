@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import styles from './AddProject.module.css';
 
-const API_URL = "http://localhost:5005";
+
 
 // AddProject Component
 function AddProject(props) {
@@ -21,7 +21,7 @@ function AddProject(props) {
     const storedToken = localStorage.getItem('authToken');
 
     axios
-      .post(`${API_URL}/api/projects`, requestBody, {
+      .post(`${import.meta.env.VITE_API_URL}/api/projects`, requestBody, {
         headers: { Authorization: `Bearer ${storedToken}` },
       })
       .then((response) => {

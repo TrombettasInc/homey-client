@@ -6,7 +6,7 @@ import TaskCard from "../Components/TaskCard";
 import EditProjectPage from "./EditProjectPage";
 import ProjectCard from "../Components/ProjectCard";
 
-const API_URL = "http://localhost:5005";
+
 
 function ProjectDetailsPage() {
     const [project, setProject] = useState(null);
@@ -18,7 +18,7 @@ function ProjectDetailsPage() {
     // Fetch project data
     const getProject = () => {
         axios
-            .get(`${API_URL}/api/projects/${projectId}`, {
+            .get(`${import.meta.env.VITE_API_URL}/api/projects/${projectId}`, {
                 headers: { Authorization: `Bearer ${storedToken}` }
             })
             .then((response) => {
@@ -39,7 +39,7 @@ function ProjectDetailsPage() {
 
         // Update the project status in the backend
         axios
-            .put(`${API_URL}/api/projects/${projectId}`, { isDone: newChecked }, {
+            .put(`${import.meta.env.VITE_API_URL}/api/projects/${projectId}`, { isDone: newChecked }, {
                 headers: { Authorization: `Bearer ${storedToken}` }
             })
             .then((response) => {

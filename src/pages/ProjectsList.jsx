@@ -1,20 +1,21 @@
 import { useState, useEffect } from "react";
 import axios from "axios" ;
-import AddProject from "../Components/AddProject";
 import ProjectCard from "../Components/ProjectCard";
+import { useNavigate } from "react-router-dom";
 
-const API_URL = "http://localhost:5005";
+
 
 function ProjectList (){
 
     const [ projects, setProjects] = useState([]);
+    const navigate = useNavigate();
 
     const getAllProjects = () =>{
 
         const storedToken = localStorage.getItem("authToken");
 
         axios
-        .get(`${API_URL}/api/projects`,
+        .get(`${import.meta.env.VITE_API_URL}/api/projects`,
             { headers: { Authorization: `Bearer ${storedToken}` } }
         )
         .then((response)=> setProjects(response.data))
@@ -25,10 +26,14 @@ function ProjectList (){
         getAllProjects();
     },[]);
 
+    const handleCreateProject = () => {
+      navigate('/create', { state: { getAllProjects } }); // Pass props using state
+    };
+
 
   return ( //displays the create project form and the project card with some info in the main page//
     <div className="ProjectList">
-        <AddProject getAllProjects={getAllProjects} /> 
+        <button onClick={handleCreateProject}>Create Project</button>
         
         {projects.map((project)=>(
           <ProjectCard key={project._id}

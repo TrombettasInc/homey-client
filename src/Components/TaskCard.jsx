@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const API_URL = "http://localhost:5005";
+
 
 function TaskCard({ taskId, projectId, description, deadline, StartDate, isDone, getProject }) {
 
@@ -15,7 +15,7 @@ function TaskCard({ taskId, projectId, description, deadline, StartDate, isDone,
 
     useEffect(() => {
         axios
-            .get(`${API_URL}/api/projects/${projectId}`, {
+            .get(`${import.meta.env.VITE_API_URL}/api/projects/${projectId}`, {
                 headers: { Authorization: `Bearer ${storedToken}` }
             })
             .then((response) => {
@@ -31,7 +31,7 @@ function TaskCard({ taskId, projectId, description, deadline, StartDate, isDone,
         const newChecked = event.target.checked;
         setChecked(newChecked);
 
-        axios.put(`${API_URL}/api/tasks/${taskId}`,
+        axios.put(`${import.meta.env.VITE_API_URL}/api/tasks/${taskId}`,
             { isDone: newChecked},
             { headers: { Authorization: `Bearer ${storedToken}` } }
         )
@@ -49,7 +49,7 @@ function TaskCard({ taskId, projectId, description, deadline, StartDate, isDone,
         const updatedTasks = taskData.filter(task => task._id !== taskId);
 
         axios
-            .delete(`${API_URL}/api/tasks/${taskId}`,
+            .delete(`${import.meta.env.VITE_API_URL}/api/tasks/${taskId}`,
                 { headers: { Authorization: `Bearer ${storedToken}` } },
             )
             .then(() => {
