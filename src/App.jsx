@@ -13,7 +13,8 @@ import LoginPage from './pages/LoginPage';
 import EditProjectPage from './pages/EditProjectPage';
 import ProjectDetailsPage from './pages/ProjectDetailsPage';
 import ProjectList from './pages/ProjectsList';
-import AddProject from './Components/AddProject'
+import AddProject from './Components/AddProject';
+import HomePage from './pages/HomePage';
 
  
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <Navbar />
  
       <Routes>     
+        <Route path='/' element={<HomePage/>} />
         <Route path="/projects" element={ <IsPrivate> <ProjectList /></IsPrivate> } />
         <Route path="/projects/:projectId" element={<IsPrivate><ProjectDetailsPage /></IsPrivate> } />
         <Route path="/create" element={<IsPrivate><AddProject /></IsPrivate> } />
