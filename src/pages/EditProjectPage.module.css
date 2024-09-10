@@ -1,0 +1,173 @@
+.container {
+  background-color: #fff;
+  display: flex;
+  max-width: 480px;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  color: #18191f;
+  margin: 0 auto;
+  padding: 50px 0;
+  font: 800 21px/1 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+.logo {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 48px;
+  box-shadow: 0 2px 0 0 #18191f;
+  align-self: flex-start;
+  margin-left: 24px;
+}
+
+.header {
+  align-items: center;
+  background: #fff;
+  align-self: stretch;
+  display: flex;
+  margin-top: 34px;
+  width: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  font-size: 36px;
+  text-align: center;
+  line-height: 1;
+  justify-content: center;
+  padding: 32px 24px;
+}
+
+.title {
+  font-feature-settings: "liga" off, "clig" off;
+  max-width: 100%;
+  width: 327px;
+  overflow: hidden;
+}
+
+.inputContainer {
+  border-radius: 16px;
+  border: 2px solid #18191f;
+  background: #fff;
+  display: flex;
+  margin-top: 35px;
+  width: 100%;
+  max-width: 327px;
+  flex-direction: column;
+  font-weight: 500;
+  justify-content: center;
+  padding: 14px 20px;
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  overflow: hidden;
+  justify-content: flex-start;
+}
+
+.inputIcon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 24px;
+  align-self: stretch;
+  margin: auto 0;
+}
+
+.input {
+  font-feature-settings: "liga" off, "clig" off;
+  align-self: stretch;
+  width: 251px;
+  margin: auto 0;
+  border: none;
+  background: transparent;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.dateContainer {
+  border-radius: 16px;
+  border: 2px solid #18191f;
+  background: #fff;
+  display: flex;
+  margin-top: 34px;
+  width: 327px;
+  max-width: 100%;
+  padding-left: 16px;
+  gap: 20px;
+  overflow: hidden;
+  font-weight: 500;
+  white-space: nowrap;
+  justify-content: space-between;
+}
+
+.dateLabel {
+  font-feature-settings: "liga" off, "clig" off;
+  margin: auto 0;
+}
+
+.dateIcon {
+  aspect-ratio: 0.79;
+  object-fit: contain;
+  object-position: center;
+  width: 44px;
+}
+
+.descriptionContainer {
+  border-radius: 16px;
+  border: 2px solid #18191f;
+  background: #fff;
+  display: flex;
+  margin-top: 31px;
+  width: 327px;
+  max-width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  font-weight: 500;
+  padding: 14px 16px 89px;
+}
+
+.descriptionLabel {
+  font-feature-settings: "liga" off, "clig" off;
+  align-self: stretch;
+  width: 251px;
+  gap: 12px;
+  overflow: hidden;
+}
+
+.button {
+  align-items: center;
+  border-radius: 16px;
+  border: 2px solid #18191f;
+  box-shadow: 0 4px 0 0 #18191f;
+  background-color: #ffbd12;
+  display: flex;
+  margin-top: 32px;
+  flex-direction: column;
+  overflow: hidden;
+  text-align: center;
+  justify-content: center;
+  padding: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.buttonText {
+  font-feature-settings: "liga" off, "clig" off;
+  align-self: stretch;
+  gap: 2px;
+  overflow: hidden;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

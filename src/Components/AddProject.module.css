@@ -11,7 +11,7 @@
     font: 500 21px/1 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
   }
   
-  .logo {
+  .backbutton {
     aspect-ratio: 1;
     object-fit: contain;
     object-position: center;
@@ -19,6 +19,7 @@
     box-shadow: 0 2px 0 0 #18191f;
     align-self: flex-start;
     margin-left: 24px;
+    justify-content: flex-start;
   }
   
   .header {

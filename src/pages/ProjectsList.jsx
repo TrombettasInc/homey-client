@@ -37,9 +37,11 @@ function ProjectList (){
         
         {projects.map((project)=>(
           <ProjectCard key={project._id}
+          projects={projects}
           projectId={project._id}
           title={project.title}
           isDone={project.isDone}
+          startDate={project.startDate}
           getProject={getAllProjects}
        />
         ))}

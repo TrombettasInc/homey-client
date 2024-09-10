@@ -7,24 +7,19 @@
     padding: 68px 0;
     font: 500 21px/1 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
   }
-  
-  .logo {
-    aspect-ratio: 1.01;
-    object-fit: contain;
-    object-position: center;
-    width: 135px;
-    align-self: center;
-    max-width: 100%;
-  }
-  
-  .avatarIcon {
+  .backbutton {
     aspect-ratio: 1;
     object-fit: contain;
     object-position: center;
     width: 48px;
     box-shadow: 0 4px 0 0 #18191f;
     margin: 16px 0 0 20px;
+    text-decoration: none;
   }
+  .backbutton  a {
+    text-decoration: none;
+  }
+
   .formContainer {
     background: var(--Colors-White, #fff);
     margin-top: 28px;

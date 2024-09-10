@@ -43,8 +43,8 @@ function AddProject(props) {
         <img
           loading="lazy"
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/478d9bba00cceb7b77b56a3e7d9c72ac3d5e7d78ebd85d224a6b3345bcdb6872?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0"
-          className={styles.logo}
-          alt="Project logo"
+          className={styles.backbutton}
+          alt="back button"
         />
       </Link>
 

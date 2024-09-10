@@ -5,15 +5,6 @@ import styles from './HomePage.module.css';
 function HomePage() {
   return (
     <main className={styles.homepage}>
-      {/* Header Section */}
-      <header className={styles.header}>
-        <img 
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/df815ec07b8c69a75a37f8b1d1fd22c58ef7d75971751f3b7bf6cc90c735e56f?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0" 
-          alt="Homey logo" 
-          className={styles.logo} 
-        />
-        <h2 className={styles.brandName}>homey</h2>
-      </header>
 
       {/* Project Creation Section */}
       <section className={styles.projectCreation}>
