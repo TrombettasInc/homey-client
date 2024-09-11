@@ -6,7 +6,6 @@
     flex-direction: column;
     margin: 0 auto;
     display: flex;
-
 }
 
 .content {
@@ -117,7 +116,7 @@
 }
 
 .icon {
-    width: 32px; /* Adjust size of the tick icon */
+    width: 32px; 
     height: 32px;
     object-fit: contain;
     object-position: center;

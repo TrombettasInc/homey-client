@@ -1,7 +1,7 @@
 
 import { Link } from "react-router-dom";
-import { useContext } from "react";                     // <== IMPORT 
-import { AuthContext } from "../context/auth.context";  // <== IMPORT
+import { useContext } from "react";                     
+import { AuthContext } from "../context/auth.context";  
 import styles from './Navbar.module.css'
 
 function Navbar() {
@@ -17,6 +17,7 @@ function Navbar() {
   //  Update the rendering logic to display different content 
   //  depending on whether the user is logged in or not
   return (
+    <>
     <nav>
       
       <header className={styles.header}>
@@ -47,6 +48,9 @@ function Navbar() {
         </>
       )}
     </nav>
+
+    <Link to = '/create'>Create Project</Link>
+    </>
   );
 }
 

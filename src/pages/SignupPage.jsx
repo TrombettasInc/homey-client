@@ -60,7 +60,7 @@ const SignupPage = () => {
   return (
     <main className={styles.signUp}>
      
-      <Link to={'/projects'}><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/57165382ff09f0d105cafacdf1ebdcf9537362d3e5530cac65e7c8e01f3aacca?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0" alt="Logo" className={styles.logo} /></Link>
+      
       <form className={styles.formContainer} onSubmit={handleSignupSubmit}>
         <h1 className={styles.title}>Sign up</h1>
         <p className={styles.subtitle}>

@@ -54,7 +54,7 @@ function EditProjectPage() {
 
     return (
         <main className={styles.container}>
-            <Link to="/projects">
+            <Link to={`/projects/${projectId}`}>
                 <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/478d9bba00cceb7b77b56a3e7d9c72ac3d5e7d78ebd85d224a6b3345bcdb6872?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0" className={styles.logo} alt="Project logo" />
             </Link>
             <header className={styles.header}>
@@ -62,7 +62,7 @@ function EditProjectPage() {
             </header>
             <form onSubmit={handleFormSubmit}>
                 <div className={styles.inputContainer}>
-                    <label htmlFor="projectTitle" className={styles.visuallyHidden}>Project Title</label>
+                    <label htmlFor="projectTitle" className={styles.visuallyHidden}></label>
                     <div className={styles.inputWrapper}>
                         <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/22a892083d9a2459f3d6034245b0adf402047a0091b4cdfbf717e8f1786b90fe?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0" className={styles.inputIcon} alt="" />
                         <input
@@ -89,7 +89,7 @@ function EditProjectPage() {
                     <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ecbf590f99fffde6575863051d00cdb9fea318ce6dd7240a95a8d8b918d13e3e?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0" className={styles.dateIcon} alt="Calendar icon" />
                 </div>
                 <div className={styles.descriptionContainer}>
-                    <label htmlFor="projectDescription" className={styles.descriptionLabel}>Project Description</label>
+                    <label htmlFor="projectDescription" className={styles.descriptionLabel}></label>
                     <textarea
                         id="projectDescription"
                         className={styles.textarea}

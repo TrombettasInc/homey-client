@@ -4,9 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import styles from './AddProject.module.css';
 
 
-
-// AddProject Component
-function AddProject(props) {
+function AddProject() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [deadline, setDeadline] = useState("");
@@ -31,11 +29,12 @@ function AddProject(props) {
         setIsDone(false);
 
         const createdProjectId = response.data._id;
-        props.getAllProjects();
+        console.log(response.data._id)
         navigate(`/projects/${createdProjectId}`);
       })
       .catch((error) => console.log(error));
   };
+
 
   return (
     <main className={styles.container}>

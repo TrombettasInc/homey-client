@@ -7,18 +7,6 @@
     padding: 68px 0;
     font: 500 21px/1 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
   }
-  .backbutton {
-    aspect-ratio: 1;
-    object-fit: contain;
-    object-position: center;
-    width: 48px;
-    box-shadow: 0 4px 0 0 #18191f;
-    margin: 16px 0 0 20px;
-    text-decoration: none;
-  }
-  .backbutton  a {
-    text-decoration: none;
-  }
 
   .formContainer {
     background: var(--Colors-White, #fff);
@@ -38,7 +26,6 @@
   .subtitle {
     color: var(--Colors-Black-800, #474a57);
     font-feature-settings: "liga" off, "clig" off;
-    font-size: 17px;
     line-height: 24px;
     margin-top: 12px;
   }
@@ -51,13 +38,12 @@
     margin-top: 32px;
     width: 80%;
     padding: 16px;
-    
   }
   
   .inputContent {
     display: flex;
     align-items: center;
-    gap: 12px;
+    width: 100%;
   }
   
   .inputIcon {
@@ -82,19 +68,19 @@
     background: var(--Colors-Yellow, #ffbd12);
     box-shadow: 0 4px 0 0 #18191f;
     display: flex;
-    margin-top: 32px;
-    width: 90%;
-    font-weight: 800;
+    margin-top: 32px; 
+    width: 88%;
+    font-weight: 1000;
     text-align: center;
     justify-content: center;
-    padding: 16px;
+    padding: 20px;
     cursor: pointer;
+    font-size: 23px ;
   }
   
   .signupLink {
     color: var(--Colors-Red, #f95a2c);
     font-feature-settings: "liga" off, "clig" off;
-    font-size: 13px;
     line-height: 1;
     margin-top: 32px;
   }

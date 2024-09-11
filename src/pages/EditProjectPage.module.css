@@ -8,7 +8,7 @@
   color: #18191f;
   margin: 0 auto;
   padding: 50px 0;
-  font: 800 21px/1 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
+  font: 800 21px/1;
 }
 
 .logo {
@@ -19,6 +19,7 @@
   box-shadow: 0 2px 0 0 #18191f;
   align-self: flex-start;
   margin-left: 24px;
+  text-decoration: none;
 }
 
 .header {
@@ -30,7 +31,7 @@
   width: 100%;
   flex-direction: column;
   overflow: hidden;
-  font-size: 36px;
+  font-size: 25px;
   text-align: center;
   line-height: 1;
   justify-content: center;

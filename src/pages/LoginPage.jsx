@@ -2,10 +2,7 @@ import { useState, useContext } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/auth.context";
-import styles from './LoginPage.module.css'; // Import your CSS
-import logo from "../assets/logo.png"
-
-
+import styles from './LoginPage.module.css'; 
 
 // InputField Component
 function InputField({ icon, placeholder, type, value, onChange }) {
@@ -71,8 +68,7 @@ function LoginPage() {
   return (
     <main className={styles.loginContainer}>
 
-      <Link to={'/projects'}><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/57165382ff09f0d105cafacdf1ebdcf9537362d3e5530cac65e7c8e01f3aacca?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0" alt="Logo" className={styles.avatarIcon} /></Link>
-
+      
 
       <form onSubmit={handleLoginSubmit} className={styles.formContainer}>
         <h1 className={styles.title}>Login</h1>

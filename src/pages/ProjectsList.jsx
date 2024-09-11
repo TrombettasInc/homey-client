@@ -2,8 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios" ;
 import ProjectCard from "../Components/ProjectCard";
 import { useNavigate } from "react-router-dom";
-
-
+import {Link } from "react-router-dom";
 
 function ProjectList (){
 
@@ -26,14 +25,8 @@ function ProjectList (){
         getAllProjects();
     },[]);
 
-    const handleCreateProject = () => {
-      navigate('/create', { state: { getAllProjects } }); // Pass props using state
-    };
-
-
   return ( //displays the create project form and the project card with some info in the main page//
     <div className="ProjectList">
-        <button onClick={handleCreateProject}>Create Project</button>
         
         {projects.map((project)=>(
           <ProjectCard key={project._id}
