@@ -22,8 +22,12 @@ function EditProjectPage() {
                 const projectToEdit = response.data;
                 setTitle(projectToEdit.title);
                 setDescription(projectToEdit.description);
-                setDeadline(projectToEdit.deadline);
+                
                 setIsDone(projectToEdit.isDone);
+                const formattedDeadline = projectToEdit.deadline
+                ? new Date(projectToEdit.deadline).toISOString().split('T')[0]
+                : "";
+                setDeadline(formattedDeadline);
             })
             .catch((error) => console.log(error));
     }, [projectId, storedToken]);
@@ -37,7 +41,7 @@ function EditProjectPage() {
                 { headers: { Authorization: `Bearer ${storedToken}` } }
             )
             .then((response) => {
-                console.log("Project updated:", response.data);
+                
                 navigate(`/projects/${projectId}`);
             })
             .catch((error) => console.log("Error updating project:", error)); // Log the error if any
@@ -99,10 +103,10 @@ function EditProjectPage() {
                     />
                 </div>
                 <button type="submit" className={styles.button}>
-                    <span className={styles.buttonText}>Update Project</span>
+                    <span className={styles.buttonText}>Update</span>
                 </button>
                 <button type="button" onClick={deleteProject} className={styles.button}>
-                    <span className={styles.buttonText}>Delete Project</span>
+                    <span className={styles.buttonText}>Delete</span>
                 </button>
             </form>
         </main>

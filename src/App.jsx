@@ -15,7 +15,7 @@ import ProjectDetailsPage from './pages/ProjectDetailsPage';
 import ProjectList from './pages/ProjectsList';
 import AddProject from './Components/AddProject';
 import HomePage from './pages/HomePage';
-
+import PageNotFound from './pages/PageNotFound';
  
 function App() {
   return (
@@ -30,6 +30,7 @@ function App() {
         <Route path="/projects/edit/:projectId" element={<IsPrivate> <EditProjectPage /> </IsPrivate>} />
         <Route path="/signup" element={<IsAnon><SignupPage /> </IsAnon>} />
         <Route path="/login" element={ <IsAnon><LoginPage /> </IsAnon> } />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </div>
   );

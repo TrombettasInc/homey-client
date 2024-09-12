@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import styles from './AddProject.module.css';
+import styles from './Addproject.module.css';  
 
 
 function AddProject() {
@@ -29,7 +29,6 @@ function AddProject() {
         setIsDone(false);
 
         const createdProjectId = response.data._id;
-        console.log(response.data._id)
         navigate(`/projects/${createdProjectId}`);
       })
       .catch((error) => console.log(error));
