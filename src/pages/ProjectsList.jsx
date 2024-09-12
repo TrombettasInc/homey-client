@@ -8,6 +8,9 @@ function ProjectList() {
   const [projects, setProjects] = useState([]);
   const navigate = useNavigate();  // Initialize useNavigate
 
+  const colors = ['#E9E7FC', '#FFF3F8', '#FFF4CC', '#D6FCF7', '#FFE8E8']; //mudar as cores
+
+
   const getAllProjects = () => {
     const storedToken = localStorage.getItem("authToken");
 
@@ -25,6 +28,10 @@ function ProjectList() {
 
   const handleGoBack = () => {
     navigate('/create');
+  };
+
+  const getRandomColor = () => {
+    return colors[Math.floor(Math.random() * colors.length)];
   };
 
   return (
@@ -69,6 +76,7 @@ function ProjectList() {
             isDone={project.isDone}
             startDate={project.startDate}
             getProject={getAllProjects}
+            color={getRandomColor()} 
           />
         ))
       )}

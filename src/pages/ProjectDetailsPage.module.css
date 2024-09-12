@@ -1,5 +1,3 @@
-
-
 .projectDetails {
   background-color: #fff;
   display: flex;
@@ -8,14 +6,13 @@
   flex-direction: column;
   overflow: hidden;
   margin: 0 auto;
-  padding: 120px 0 32px;
+  padding: 50px 0 32px;
 }
 
 .container {
   display: flex;
   width: 100%;
   flex-direction: column;
-
 }
 
 .projectTitle {
@@ -25,7 +22,7 @@
   flex-direction: column;
   overflow: hidden;
   padding: 0 30px 21px;
-  font: 800 30px/1 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
+  font: 800 25px/1 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
   position: relative;
 }
 
@@ -48,7 +45,7 @@
 .projectInfoTitle {
   color: #18191f;
   font-feature-settings: "liga" off, "clig" off;
-  font: 700 21px/30px Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
+  font: 800 23px/30px Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
 }
 
 .projectInfoDate {
@@ -56,14 +53,14 @@
   font-feature-settings: "liga" off, "clig" off;
   align-self: start;
   margin-top: 36px;
-  font: 700 15px/2 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
+  font:800 20px/2 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
 }
 
 .projectInfoDeadline {
   color: #474a57;
   align-self: start;
   margin-top: 9px;
-  font: 500 14px/1 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
+  font: 600 20px/1 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
 }
 
 .projectInfoActions {
@@ -73,8 +70,6 @@
   gap: 20px;
   justify-content: space-between;
 }
-
-/* Checkbox Styles (Updated) */
 
 .checkboxContainer {
   display: flex;
@@ -124,9 +119,10 @@
   white-space: nowrap;
   text-align: center;
   padding: 10px 17px;
-  font: 800 12px/1 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
+  font: 800 23px/1 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
   cursor: pointer;
   margin-top: auto;
+  text-decoration: none;
 }
 
 .addTaskForm {
@@ -134,22 +130,22 @@
   border: 2px solid #18191f;
   box-shadow: 0 2px 0 0 #18191f;
   background-color: #d6fcf7;
-  align-items: flex-end;
   margin-top: 17px;
   width: 100%;
   max-width: 440px;
-  gap: 20px;
-  color: #18191f;
-  justify-content: space-between;
   padding: 13px 17px 22px;
-  font: 13px/1 Montserrat, sans-serif;
+  font: 23px/1 Montserrat, sans-serif;
   position: relative;
-  flex-direction: column;
+  display: flex;
+  justify-content: flex-end; 
+  align-items: flex-start; 
+  flex-direction: column; 
+  
 }
 
 .addTaskTitle {
   font-feature-settings: "liga" off, "clig" off;
-  font-size: 15px;
+  font-size: 23px;
   font-weight: 700;
   line-height: 26px;
   align-self: flex-start;
@@ -158,17 +154,16 @@
 .inputWrapper {
   display: flex;
   flex-direction: column;
-  font-weight: 500;
+  font-weight: 800;
   width: 100%;
   gap: 10px;
 }
 
 .inputContainer {
   border-radius: 9.982px;
-  border: 1.248px solid #18191f;
+  border: 2px solid #18191f;
   background-color: #fff;
   display: flex;
-  margin-top: 7px;
   width: 90%;
   padding: 9px 10px;
   font-size: 23px;
@@ -178,24 +173,52 @@
   aspect-ratio: 1;
   object-fit: contain;
   object-position: center;
-  width: 15px;
+  width: 25px;
   margin-right: 7px;
 }
 
-.taskInput,
-.deadlineInput {
+.taskInput {
   font-feature-settings: "liga" off, "clig" off;
   border: none;
   background: transparent;
   width: 100%;
   font: inherit;
+  height: 23px;
+}
+
+.dateWrapper {
+  border-radius: 10px;
+  border: 2px solid #18191f;
+  background-color: #fff;
+  display: flex;
+  margin-top: 1px;
+  padding-left: 5px;
+  gap: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 94%;
+  height: 40px;
+}
+
+.deadlineInput {
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  padding: 5px;
+  width: 100%;
+}
+
+.dateLabel {
+  font-feature-settings: "liga" off, "clig" off;
+  margin: auto 0;
+  font-size: 23px;
 }
 
 .calendarIcon {
-  aspect-ratio: 0.77;
+  aspect-ratio: 0.79;
   object-fit: contain;
   object-position: center;
-  width: 27px;
+  width: 44px;
 }
 
 .addButton {
@@ -209,11 +232,14 @@
   min-height: 36px;
   overflow: hidden;
   font-weight: 800;
+  font-size: 23px;
   white-space: nowrap;
   text-align: center;
   padding: 10px 17px;
   cursor: pointer;
-  margin: 10px;
+  margin: 20px 0 0;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .taskCard {
@@ -242,15 +268,15 @@
 .taskDeadline {
   color: #474a57;
   font-feature-settings: "liga" off, "clig" off;
-  font-size: 12px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 800;
   line-height: 1;
 }
 
 .taskDescription {
   color: #18191f;
   font-feature-settings: "liga" off, "clig" off;
-  font-size: 20px;
+  font-size: 23px;
   font-weight: 800;
   line-height: 1.4;
   margin-top: 8px;
@@ -265,7 +291,7 @@
   align-self: end;
   z-index: 10;
   overflow: hidden;
-  font-size: 12px;
+  font-size: 23px;
   color: #18191f;
   font-weight: 800;
   white-space: nowrap;
@@ -273,7 +299,7 @@
   line-height: 1;
   padding: 10px 16px;
   position: absolute;
-  bottom: 80px;
+  bottom: 50px;
   right: 46px;
   cursor: pointer;
   margin: -25px;

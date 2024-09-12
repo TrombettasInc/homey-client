@@ -5,7 +5,7 @@ import styles from './ProjectCard.module.css';
 
 
 
-function ProjectCard({ title, isDone, startDate, projectId, getProject }) {
+function ProjectCard({ title, isDone, startDate, projectId, color, getProject }) {
     const [checked, setChecked] = useState(isDone); 
 
     const storedToken = localStorage.getItem('authToken');
@@ -30,7 +30,7 @@ function ProjectCard({ title, isDone, startDate, projectId, getProject }) {
         <article className={styles.card}>
 
             <div className={styles.content}>
-                <div className={styles.frame}>
+                <div className={styles.frame}style={{ backgroundColor: color }}>
                     <p className={styles.createdDate}>{new Date(startDate).toLocaleDateString()}</p>
                     <h2 className={styles.projectTitle}>{title}</h2>
 

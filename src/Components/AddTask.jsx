@@ -53,31 +53,28 @@ function AddTask({ projectId, getProject }) {
                             value={description}
                             required
                             onChange={(e) => setDescription(e.target.value)}
-                            
+
                         />
                     </div>
                 </div>
                 <br />
-                <div className={styles.inputWrapper}>
-                    
-                    <div className={styles.inputContainer}>
-                    <label htmlFor="deadline" >deadline</label>
-                        <input
-                            type="date"
-                            id="taskDeadline"
-                            className={styles.deadlineInput}
-                            placeholder="deadline"
-                            value={deadline}
-                            onChange={(e) => setDeadline(e.target.value)}
-                            style={{ fontSize: "13px", border: "none" }}
-                        />
-                        <img
-                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/7b71adf9c660d4bf197db4c60f874eef1364737d23e9e9e98fc61f2fff7493d2?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0"
-                            alt="add task deadline dropdown icon"
-                            className={styles.calendarIcon}
-                        />
-                    </div>
+                <div className={styles.dateWrapper}>
+                    <label htmlFor="taskDeadline" className={styles.dateLabel}>Deadline</label>
+                    <input
+                        type="date"
+                        id="taskDeadline"
+                        className={styles.deadlineInput}
+                        value={deadline}
+                        onChange={(e) => setDeadline(e.target.value)}
+                        required
+                    />
+                    <img
+                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/7b71adf9c660d4bf197db4c60f874eef1364737d23e9e9e98fc61f2fff7493d2?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0"
+                        alt="add task deadline dropdown icon"
+                        className={styles.dateIcon}
+                    />
                 </div>
+
                 <button type="submit" className={styles.addButton}>add!</button>
             </form>
         </div>

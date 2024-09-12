@@ -1,4 +1,4 @@
-/* General styles */
+
 body,
 html {
   margin: 0;
@@ -9,20 +9,20 @@ html {
   overflow-x: hidden;
 }
 
-/* Navbar styles */
+
 .navbar {
-  background-color: #fff; /* White background */
-  color: #18191f; /* Black text */
+  background-color: #fff;
+  color: #18191f; 
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
   height: 50px;
   position: relative;
-  z-index: 10; /* Ensure it's on top */
+  z-index: 10; 
 }
 
-/* Logo centered */
+
 .logo {
   position: absolute;
   left: 70%;

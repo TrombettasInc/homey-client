@@ -4,7 +4,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/auth.context";
 import styles from './LoginPage.module.css'; 
 
-// InputField Component
 function InputField({ icon, placeholder, type, value, onChange }) {
   return (
     <div className={styles.inputWrapper}>

@@ -81,7 +81,7 @@ function ProjectDetailsPage() {
                                     </div>
                                 </div>
 
-                                <Link to={`/projects/edit/${projectId}`} state={{ project }} className={styles.editButton}>Edit</Link>
+                                <Link to={`/projects/edit/${projectId}`} state={{ project }} className={styles.editButton}>edit</Link>
                             </div>
                         </section>
 
