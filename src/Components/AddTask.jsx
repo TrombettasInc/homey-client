@@ -53,13 +53,15 @@ function AddTask({ projectId, getProject }) {
                             value={description}
                             required
                             onChange={(e) => setDescription(e.target.value)}
+                            
                         />
                     </div>
                 </div>
                 <br />
                 <div className={styles.inputWrapper}>
-                    <label htmlFor="deadline" ></label>
+                    
                     <div className={styles.inputContainer}>
+                    <label htmlFor="deadline" >deadline</label>
                         <input
                             type="date"
                             id="taskDeadline"
@@ -67,7 +69,7 @@ function AddTask({ projectId, getProject }) {
                             placeholder="deadline"
                             value={deadline}
                             onChange={(e) => setDeadline(e.target.value)}
-                            style={{ fontSize: "20px", border: "none" }}
+                            style={{ fontSize: "13px", border: "none" }}
                         />
                         <img
                             src="https://cdn.builder.io/api/v1/image/assets/TEMP/7b71adf9c660d4bf197db4c60f874eef1364737d23e9e9e98fc61f2fff7493d2?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0"

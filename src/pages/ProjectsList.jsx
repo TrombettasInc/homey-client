@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import ProjectCard from "../Components/ProjectCard";
 import { useNavigate } from "react-router-dom";
-import styles from './ProjectsList.module.css'; 
+import styles from './ProjectsList.module.css';
 
 function ProjectList() {
   const [projects, setProjects] = useState([]);
@@ -24,7 +24,7 @@ function ProjectList() {
   }, []);
 
   const handleGoBack = () => {
-    navigate('/create');  
+    navigate('/create');
   };
 
   return (
@@ -33,15 +33,14 @@ function ProjectList() {
         // Display the empty projects page when there are no projects
         <main className={styles.container}>
           <div className={styles.imageBg} role="img" aria-label="Decorative background image">
-          <span className={styles.peoplecontainer}>
-                <img 
-                  src="/emptypage.png"
-                  alt="" 
-                  className={styles.people} 
-                />
-              </span>
-             </div>
-          
+            <span className={styles.peoplecontainer}>
+              <img
+                src="/emptypage.png"
+                alt=""
+                className={styles.people}
+              />
+            </span>
+          </div>
           <section className={styles.contentBox}>
             <h1 className={styles.title}>Let's go!</h1>
             <p className={styles.subtitle}>
@@ -49,10 +48,10 @@ function ProjectList() {
             </p>
             <button className={styles.button} onClick={handleGoBack}>
               <span className={styles.buttonContent}>
-                <img 
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/9ea4d14243520560bc7e62b21d3eeffb65ecfd04a01105b59e25604071f1481c?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0" 
-                  alt="" 
-                  className={styles.buttonIcon} 
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/9ea4d14243520560bc7e62b21d3eeffb65ecfd04a01105b59e25604071f1481c?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0"
+                  alt=""
+                  className={styles.buttonIcon}
                 />
                 <span className={styles.buttonText}>create!</span>
               </span>

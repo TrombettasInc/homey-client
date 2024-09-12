@@ -1,0 +1,142 @@
+/* General styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  height: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #fff; /* White background */
+  color: #18191f; /* Black text */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  height: 50px;
+  position: relative;
+  z-index: 10; /* Ensure it's on top */
+}
+
+/* Logo centered */
+.logo {
+  position: absolute;
+  left: 70%;
+  transform: translateX(-50%);
+  font-size: 45px; /* Larger font size */
+  font-weight: bold;
+}
+
+/* Hamburger icon on the left */
+.hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.menuicon {
+  width: 50px; /* Larger size based on your custom styles */
+  height: 50px;
+  object-fit: contain;
+  border: none;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+/* Full-screen mobile menu */
+.mobile-menu {
+  position: fixed;
+  top: 70px;
+  width: 25%;
+  height: 70%;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #18191f; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 20;
+
+}
+
+/* Close button */
+.close-button {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.close-button img {
+  width: 30px; /* Custom size for the close button icon */
+  height: 30px;
+  object-fit: contain;
+}
+
+/* Mobile menu links */
+.nav-links-mobile {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex-grow: 1;
+}
+
+.nav-links-mobile li a,
+.nav-links-mobile li button {
+  color: #18191f; /* Black text */
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 800;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.active-user {
+  font-size: 30px;
+  color: #f95a2c; /* Orange color for active user */
+  font-weight: 800;
+}
+
+/* Footer section */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+.footer-text {
+  color: #474a57;
+  font-size: 18px;
+  font-weight: 800;
+  display: flex;
+  gap: 5px;
+}
+.footer-text a{
+  text-decoration: none;
+}
+
+.social-links img {
+  width: 120px;
+  height: 50px;
+  object-fit: contain;
+}
+
+/* Hover effects for links */
+.nav-links-mobile li a:hover,
+.nav-links-mobile li button:hover {
+  color: #ffbd12; /* Custom hover color */
+}

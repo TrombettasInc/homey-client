@@ -20,7 +20,7 @@ function TaskCard({ taskId, projectId, description, deadline, isDone, getProject
             })
             .then((response) => {
                 const project = response.data
-                setTaskData(project.tasks); 
+                setTaskData(project.tasks);
             })
             .catch((error) => console.log(error));
 
@@ -63,25 +63,31 @@ function TaskCard({ taskId, projectId, description, deadline, isDone, getProject
             <div className={styles.taskContent}>
                 <h4 className={styles.taskLabel}> Description</h4>
                 <h3 className={styles.taskDescription}>{description} </h3>
+
                 <p className={styles.taskDeadline}>Deadline: {deadline ? new Date(deadline).toLocaleDateString() : 'No Deadline'}</p>
-                <div className={styles.checkboxContainer}>
-                    <div
-                        className={`${styles.checkbox} ${checked ? styles.checked : ''}`}
-                        role="checkbox"
-                        tabIndex="0"
-                        aria-checked={checked}
-                        onClick={() => handleCheckboxChange(!checked)}
-                    >
-                        {checked && (
-                            <img
-                                loading="lazy"
-                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/51a1a671c4ae4c97ff9a3464d05eb5ce4d4db0939a6cef9e3149a9fd69a2757f?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0"
-                                className={styles.checkboxIcon}
-                                alt="task card tick mark icon"
-                            />
-                        )}
+                <div className="checkBoxDeleteContainer">
+                    <div className={styles.checkboxContainer}>
+                        <div
+                            className={`${styles.checkbox} ${checked ? styles.checked : ''}`}
+                            role="checkbox"
+                            tabIndex="0"
+                            aria-checked={checked}
+                            onClick={() => handleCheckboxChange(!checked)}
+                        >
+                            {checked && (
+                                <img
+                                    loading="lazy"
+                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/51a1a671c4ae4c97ff9a3464d05eb5ce4d4db0939a6cef9e3149a9fd69a2757f?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0"
+                                    className={styles.checkboxIcon}
+                                    alt="task card tick mark icon"
+                                />
+                            )}
+
+                        </div>
+
+
+                        <button onClick={deleteTask} className={styles.deleteButton}>Delete</button>
                     </div>
-                    <button onClick={deleteTask} className={styles.deleteButton}>Delete</button>
                 </div>
 
 
