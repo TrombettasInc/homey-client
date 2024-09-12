@@ -1,21 +1,18 @@
 import { useState } from "react";
 import axios from "axios";
+import styles from '../pages/ProjectDetailsPage.module.css';
 
 
-
-function AddTask({projectId, getProject}) {
+function AddTask({ projectId, getProject }) {
     const [description, setDescription] = useState("");
-    const [startDate, setStartDate] = useState("");
     const [deadline, setDeadline] = useState("");
     const [isDone, setIsDone] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-       
-        // Create an object representing the body of the POST request
-        const requestBody = { description, startDate, deadline, isDone, projectId };
-        
+        const requestBody = { description, deadline, isDone, projectId };
+
         const storedToken = localStorage.getItem('authToken');
 
         axios
@@ -23,11 +20,9 @@ function AddTask({projectId, getProject}) {
                 { headers: { Authorization: `Bearer ${storedToken}` } }
             )
             .then((response) => {
-                // Reset the state to clear the inputs
+                console.log('Task added:', response.data);
                 setDescription("");
-                setStartDate("");
                 setDeadline("");
-
 
                 // Invoke the callback function coming through the props
                 // from the ProjectDetailsPage, to refresh the project details
@@ -40,28 +35,48 @@ function AddTask({projectId, getProject}) {
     return (
         <div className="create-task">
 
-            <h3 className="create-task-header">Add New Task</h3>
-
-            <form onSubmit={handleSubmit}>
-
-                <label className="create-task-form-description">Description</label>
-                <textarea
-                    type="text"
-                    name="description"
-                    value={description}
-                    required
-                    onChange={(e) => setDescription(e.target.value)}
-                />
-
-                <label className="create-task-form-deadline">deadline</label>
-                <input
-                    type="date"
-                    name="deadline"
-                    value={deadline}
-                    onChange={(e) => setDeadline(e.target.value)}
-                />
-
-                <button type="submit" className="create-task-button">Add!</button>
+            <form className={styles.addTaskForm} onSubmit={handleSubmit}>
+                <h3 className={styles.addTaskTitle}>Add task</h3>
+                <div className={styles.inputWrapper}>
+                    <label htmlFor="taskDescription" ></label>
+                    <div className={styles.inputContainer}>
+                        <img
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/a8fd8ced8adb21bec7b233af6670e3c4d3fba469c11155ff58bf5174dd5f6179?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0"
+                            alt=""
+                            className={styles.inputIcon}
+                        />
+                        <input
+                            type="text"
+                            id="taskDescription"
+                            className={styles.taskInput}
+                            placeholder="task description"
+                            value={description}
+                            required
+                            onChange={(e) => setDescription(e.target.value)}
+                        />
+                    </div>
+                </div>
+                <br />
+                <div className={styles.inputWrapper}>
+                    <label htmlFor="deadline" ></label>
+                    <div className={styles.inputContainer}>
+                        <input
+                            type="date"
+                            id="taskDeadline"
+                            className={styles.deadlineInput}
+                            placeholder="deadline"
+                            value={deadline}
+                            onChange={(e) => setDeadline(e.target.value)}
+                            style={{ fontSize: "20px", border: "none" }}
+                        />
+                        <img
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/7b71adf9c660d4bf197db4c60f874eef1364737d23e9e9e98fc61f2fff7493d2?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0"
+                            alt="add task deadline dropdown icon"
+                            className={styles.calendarIcon}
+                        />
+                    </div>
+                </div>
+                <button type="submit" className={styles.addButton}>add!</button>
             </form>
         </div>
     );

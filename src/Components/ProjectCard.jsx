@@ -47,18 +47,13 @@ function ProjectCard({ title, isDone, startDate, projectId, getProject }) {
                                 tabIndex="0"
                                 aria-checked={checked}
                                 onClick={handleCheckboxChange}
-                                onKeyDown={(e) => {
-                                    if (e.key === 'Enter' || e.key === ' ') {
-                                        handleCheckboxChange();
-                                    }
-                                }}
                             >
                                 {checked && (
                                     <img
                                         loading="lazy"
                                         src="https://cdn.builder.io/api/v1/image/assets/TEMP/51a1a671c4ae4c97ff9a3464d05eb5ce4d4db0939a6cef9e3149a9fd69a2757f?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0"
-                                        className={styles.icon}
-                                        alt="Tick mark icon"
+                                        className={styles.checkboxIcon}
+                                        alt="project card tick mark icon"
                                     />
                                 )}
                             </div>

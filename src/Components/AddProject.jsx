@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import styles from './AddProject.module.css';
 
 
@@ -66,9 +66,7 @@ function AddProject() {
 
         {/* Deadline Field */}
         <div className={styles.dateWrapper}>
-          <label htmlFor="deadline" className={styles.dateLabel}>
-            Deadline
-          </label>
+          <label htmlFor="deadline" className={styles.dateLabel}>deadline</label>
           <input
             type="date"
             id="deadline"
@@ -82,7 +80,7 @@ function AddProject() {
             loading="lazy"
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/ecbf590f99fffde6575863051d00cdb9fea318ce6dd7240a95a8d8b918d13e3e?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0"
             className={styles.dateIcon}
-            alt="Deadline Icon"
+            alt="add project deadline dropdown icon"
           />
         </div>
 

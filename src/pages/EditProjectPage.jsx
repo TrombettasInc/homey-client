@@ -7,7 +7,7 @@ function EditProjectPage() {
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const [deadline, setDeadline] = useState("");
-    const [isDone, setIsDone] = useState("");
+    const [isDone, setIsDone] = useState(false);
 
     const { projectId } = useParams();
     const navigate = useNavigate();
@@ -26,7 +26,7 @@ function EditProjectPage() {
                 setIsDone(projectToEdit.isDone);
             })
             .catch((error) => console.log(error));
-    }, [projectId]);
+    }, [projectId, storedToken]);
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
@@ -37,8 +37,10 @@ function EditProjectPage() {
                 { headers: { Authorization: `Bearer ${storedToken}` } }
             )
             .then((response) => {
+                console.log("Project updated:", response.data);
                 navigate(`/projects/${projectId}`);
-            });
+            })
+            .catch((error) => console.log("Error updating project:", error)); // Log the error if any
     };
 
     const deleteProject = () => {
