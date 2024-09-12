@@ -91,6 +91,7 @@
     height: 32px;
     cursor: pointer;
     position: relative;
+    margin: 65px 0 0 17px;
     
   }
   
@@ -133,6 +134,7 @@
     padding: 10px 17px;
     font: 800 12px/1 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
     cursor: pointer;
+    margin-top: auto;
   }
   
   .addTaskForm {
@@ -140,7 +142,7 @@
     border: 2px solid #18191f;
     box-shadow: 0 2px 0 0 #18191f;
     background-color: #d6fcf7;
-    display: flex;
+    
     margin-top: 17px;
     width: 100%;
     max-width: 440px;
@@ -219,6 +221,7 @@
     text-align: center;
     padding: 10px 17px;
     cursor: pointer;
+    margin: 10px;
   }
   
   .taskCard {
@@ -281,6 +284,7 @@
     bottom: 80px;
     right: 46px;
     cursor: pointer;
+    margin: 10px;
   }
   
   .visually-hidden {
