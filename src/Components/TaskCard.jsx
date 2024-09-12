@@ -84,8 +84,6 @@ function TaskCard({ taskId, projectId, description, deadline, isDone, getProject
                             )}
 
                         </div>
-
-
                         <button onClick={deleteTask} className={styles.deleteButton}>Delete</button>
                     </div>
                 </div>
