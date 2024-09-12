@@ -1,0 +1,119 @@
+.container {
+    background-color: #fff;
+    display: flex;
+    max-width: 480px;
+    width: 100%;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: Montserrat, sans-serif;
+    color: var(--Colors-Black, #18191f);
+    font-weight: 800;
+    text-align: center;
+    margin: 0 auto;
+    padding: 150px 24px 28px;
+  }
+
+  .peoplecontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Full width of its container */
+    height: 100%; /* Full height of its container */
+  }
+  
+  .people {
+    width: 1200px; /* Set your desired width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the image scales properly */
+  }
+  
+  .imageBg {
+    background-color: #ffc7de;
+    border-radius: 50%;
+    align-self: center;
+    display: flex;
+    width: 309px;
+    height: 309px;
+    aspect-ratio: 1;
+  }
+  
+  .contentBox {
+    border-radius: 16px;
+    border: 2px solid var(--Colors-Black, #18191f);
+    box-shadow: 0 6px 0 0 #18191f;
+    background-color: #e9e7fc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 33px;
+  }
+  
+  .title {
+    font-feature-settings: "liga" off, "clig" off;
+    font-size: 36px;
+    line-height: 1;
+  }
+  
+  .subtitle {
+    color: var(--Colors-Black-800, #474a57);
+    font-feature-settings: "liga" off, "clig" off;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    align-self: stretch;
+    margin-top: 33px;
+  }
+  
+  .button {
+    align-items: center;
+    border-radius: 14.857px;
+    border: 1.857px solid var(--Colors-Black, #18191f);
+    box-shadow: 0 3.714px 0 0 #18191f;
+    background-color: #ffbd12;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-size: 20px;
+    white-space: nowrap;
+    line-height: 1;
+    justify-content: center;
+    padding: 15px;
+    cursor: pointer;
+  }
+  
+  .buttonContent {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    overflow: hidden;
+    justify-content: start;
+  }
+  
+  .buttonIcon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 22px;
+    align-self: stretch;
+    margin: auto 0;
+  }
+  
+  .buttonText {
+    font-feature-settings: "liga" off, "clig" off;
+    align-self: stretch;
+    margin: auto 0;
+  }
+  
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+ 
