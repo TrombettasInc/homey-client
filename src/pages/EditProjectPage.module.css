@@ -93,7 +93,7 @@
   background: #fff;
   display: flex;
   margin-top: 34px;
-  width: 327px;
+  width: 350px;
   max-width: 100%;
   padding-left: 16px;
   gap: 20px;
@@ -121,7 +121,7 @@
   background: #fff;
   display: flex;
   margin-top: 31px;
-  width: 327px;
+ 
   max-width: 100%;
   flex-direction: column;
   align-items: flex-start;
@@ -152,6 +152,8 @@
   padding: 16px;
   font-weight: 500;
   cursor: pointer;
+  width: 100%;
+  font-size: 23px;
 }
 
 .buttonText {
