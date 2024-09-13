@@ -112,7 +112,7 @@ function AddProject() {
 
         {/* Submit Button */}
         <button type="submit" className={styles.submitButton}>
-          Create
+          create
         </button>
       </form>
     </main>

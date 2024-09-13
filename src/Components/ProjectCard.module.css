@@ -24,7 +24,7 @@
     flex-direction: column;
     overflow: hidden;
     justify-content: center;
-    padding: 25px 32px 32px;
+    padding: 10px 10px 10px;
     box-sizing: border-box;
 }
 
@@ -85,6 +85,7 @@
     gap: 2px;
     overflow: hidden;
     text-decoration: none;
+    color: #18191f;
 }
 
 .checkboxContainer {
@@ -116,8 +117,8 @@
 }
 
 .checkboxIcon {
-    width: 40px; 
-    height: 40px;
+    width: 41px; 
+    height: 41px;
     object-fit: contain;
     object-position: center;
     position: absolute;
