@@ -62,7 +62,7 @@ function EditProjectPage() {
         <main className={styles.container}>
             
             <header className={styles.header}>
-                <h1 className={styles.title}>edit Project</h1>
+                <h1 className={styles.title}>edit project</h1>
             </header>
             <form onSubmit={handleFormSubmit}>
                 <div className={styles.inputContainer}>
@@ -98,7 +98,7 @@ function EditProjectPage() {
                         className={styles.textarea}
                         value={description}
                         onChange={(e) => setDescription(e.target.value)}
-                        style={{ fontSize: "23px", padding: "5px", border: "none", fontFamily: "'Montserrat', sans-serif", height: "300px" }}
+                        style={{ fontSize: "23px", padding: "5px", border: "none", fontFamily: "'Montserrat', sans-serif", height: "150px" }}
                     />
                 </div>
                 <button type="submit" className={styles.button}>
