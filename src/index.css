@@ -1,13 +1,14 @@
 
-/* Set Montserrat as the default font for the entire app */
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    max-width: 480px !important;
+    margin: 0 auto !important;
+
   }
-  
-  /* Optionally, you can customize font styles for headings and paragraphs */
+
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700; /* Bold */

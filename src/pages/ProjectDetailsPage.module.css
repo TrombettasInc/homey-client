@@ -6,13 +6,14 @@
   flex-direction: column;
   overflow: hidden;
   margin: 0 auto;
-  padding: 50px 0 32px;
+  padding: 10px 0 32px;
 }
 
 .container {
   display: flex;
   width: 100%;
   flex-direction: column;
+  margin-top: 0;
 }
 
 .projectTitle {
@@ -21,7 +22,7 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  padding: 0 30px 21px;
+  padding: 0 0 21px;
   font: 800 25px/1 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
   position: relative;
 }
@@ -45,7 +46,7 @@
 .projectInfoTitle {
   color: #18191f;
   font-feature-settings: "liga" off, "clig" off;
-  font: 800 23px/30px Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
+  font: 800 25px/2 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
 }
 
 .projectInfoDate {
@@ -53,14 +54,16 @@
   font-feature-settings: "liga" off, "clig" off;
   align-self: start;
   margin-top: 36px;
-  font:800 20px/2 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
+  font:800 15px/2 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
+  padding: 0;
 }
 
 .projectInfoDeadline {
   color: #474a57;
   align-self: start;
-  margin-top: 9px;
-  font: 600 20px/1 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
+  font: 600 15px/2 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0
 }
 
 .projectInfoActions {

@@ -11,7 +11,7 @@ function Navbar() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const handleHamburgerClick = () => {
-    setMobileMenuOpen(!isMobileMenuOpen);
+    setMobileMenuOpen(true);
   };
 
   const handleCloseClick = () => {
@@ -20,16 +20,17 @@ function Navbar() {
 
   return (
     <>
-      <nav className="navbar">
-
-        <button className="hamburger" onClick={handleHamburgerClick}>
-          <img
-            loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/df815ec07b8c69a75a37f8b1d1fd22c58ef7d75971751f3b7bf6cc90c735e56f?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0"
-            className="menuicon"
-            alt="menu Icon"
-          />
-        </button>
+       <nav className="navbar">
+        {!isMobileMenuOpen && ( // Hide the hamburger when the menu is open
+          <button className="hamburger" onClick={handleHamburgerClick}>
+            <img
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/df815ec07b8c69a75a37f8b1d1fd22c58ef7d75971751f3b7bf6cc90c735e56f?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0"
+              className="menuicon"
+              alt="menu Icon"
+            />
+          </button>
+        )}
         <div className="logo">homey</div>
       </nav>
 

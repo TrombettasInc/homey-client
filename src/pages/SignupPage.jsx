@@ -62,9 +62,9 @@ const SignupPage = () => {
      
       
       <form className={styles.formContainer} onSubmit={handleSignupSubmit}>
-        <h1 className={styles.title}>Sign up</h1>
+        <h1 className={styles.title}>sign up</h1>
         <p className={styles.subtitle}>
-          Sign up to create projects and tasks for your homey!
+          sign up to create projects and tasks for your homey!
         </p>
         {inputFields.map((field, index) => (
           <InputField key={index} {...field} />
@@ -74,7 +74,7 @@ const SignupPage = () => {
         </button>
         {errorMessage && <p className={styles.error}>{errorMessage}</p>}
         <p className={styles.loginLink}>
-          Already have an account? <Link to={'/login'}><span>Go here</span></Link>
+          Already have an account? <Link to={'/login'}><span>go here</span></Link>
         </p>
       </form>
     </main>

@@ -9,9 +9,9 @@ function HomePage() {
       {/* Project Creation Section */}
       <section className={styles.projectCreation}>
         <div className={styles.contentWrapper}>
-          <h1 className={styles.title}>Create projects!</h1>
+          <h1 className={styles.title}>create projects!</h1>
           <p className={styles.subtitle}>
-            Create awesome projects for your home in a fast and cool way
+            create awesome projects for your home in a fast and cool way
           </p>
         </div>
       </section>
@@ -19,7 +19,7 @@ function HomePage() {
       {/* Action Button with Link */}
       <Link to="/projects">
         <button className={styles.actionButton}>
-          <span className={styles.buttonText}>To my projects!</span>
+          <span className={styles.buttonText}>to my projects!</span>
         </button>
       </Link>
 

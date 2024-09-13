@@ -36,7 +36,7 @@ function AddTask({ projectId, getProject }) {
         <div className="create-task">
 
             <form className={styles.addTaskForm} onSubmit={handleSubmit}>
-                <h3 className={styles.addTaskTitle}>Add task</h3>
+                <h3 className={styles.addTaskTitle}>add task</h3>
                 <div className={styles.inputWrapper}>
                     <label htmlFor="taskDescription" ></label>
                     <div className={styles.inputContainer}>
@@ -59,12 +59,13 @@ function AddTask({ projectId, getProject }) {
                 </div>
                 <br />
                 <div className={styles.dateWrapper}>
-                    <label htmlFor="taskDeadline" className={styles.dateLabel}>Deadline</label>
+                    <label htmlFor="taskDeadline" className={styles.dateLabel}>deadline</label>
                     <input
                         type="date"
                         id="taskDeadline"
                         className={styles.deadlineInput}
                         value={deadline}
+                        placeholder="deadline"
                         onChange={(e) => setDeadline(e.target.value)}
                         required
                     />

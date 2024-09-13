@@ -72,7 +72,7 @@ function LoginPage() {
       <form onSubmit={handleLoginSubmit} className={styles.formContainer}>
         <h1 className={styles.title}>Login</h1>
         <p className={styles.subtitle}>
-          Login to create and edit your amazing projects.
+          login to create and edit your amazing projects.
         </p>
 
         {inputFields.map((field, index) => (
@@ -86,7 +86,7 @@ function LoginPage() {
         {errorMessage && <p className={styles.errorMessage}>{errorMessage}</p>}
 
         <p className={styles.signupLink}>
-          Don't have an account? <Link to="/signup"><span>Sign Up</span></Link>
+          don't have an account? <Link to="/signup"><span>sign Up</span></Link>
         </p>
       </form>
     </main>

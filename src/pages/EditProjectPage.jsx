@@ -62,7 +62,7 @@ function EditProjectPage() {
         <main className={styles.container}>
             
             <header className={styles.header}>
-                <h1 className={styles.title}>Edit Project</h1>
+                <h1 className={styles.title}>edit Project</h1>
             </header>
             <form onSubmit={handleFormSubmit}>
                 <div className={styles.inputContainer}>
@@ -81,7 +81,7 @@ function EditProjectPage() {
                     </div>
                 </div>
                 <div className={styles.dateContainer}>
-                    <label htmlFor="deadline" className={styles.dateLabel}>Deadline</label>
+                    <label htmlFor="deadline" className={styles.dateLabel}>deadline</label>
                     <input
                         id="deadline"
                         type="date"
@@ -103,10 +103,10 @@ function EditProjectPage() {
                     />
                 </div>
                 <button type="submit" className={styles.button}>
-                    <span className={styles.buttonText}>Update</span>
+                    <span className={styles.buttonText}>update</span>
                 </button>
                 <button type="button" onClick={deleteProject} className={styles.button}>
-                    <span className={styles.buttonText}>Delete</span>
+                    <span className={styles.buttonText}>delete</span>
                 </button>
             </form>
         </main>

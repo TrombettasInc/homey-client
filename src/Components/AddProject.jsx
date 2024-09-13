@@ -39,7 +39,7 @@ function AddProject() {
     <main className={styles.container}>
 
       <form onSubmit={handleSubmit} className={styles.formContainer}>
-        <h1 className={styles.title}>Create Project</h1>
+        <h1 className={styles.title}>create project</h1>
 
         {/* Project Title Field */}
         <div className={styles.inputWrapper}>
@@ -56,7 +56,7 @@ function AddProject() {
               className={styles.input}
               value={title}
               onChange={(e) => setTitle(e.target.value)}
-              placeholder="Project Title"
+              placeholder="project title"
               required
               style={{ fontSize: "16px", padding: "10px", border: "none" }}
             />
@@ -97,7 +97,7 @@ function AddProject() {
               className={styles.input}
               value={description}
               onChange={(e) => setDescription(e.target.value)}
-              placeholder="Project Description"
+              placeholder="project description"
               required
               style={{
                 fontSize: "16px",

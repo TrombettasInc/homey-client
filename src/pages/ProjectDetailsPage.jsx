@@ -59,8 +59,8 @@ function ProjectDetailsPage() {
                         {/* Merged ProjectInfo */}
                         <section className={styles.projectInfo}>
                             <h2 className={styles.projectInfoTitle}>{project.description}</h2>
-                            <p className={styles.projectInfoDate}>Start Date: {new Date(project.startDate).toLocaleDateString()}</p>
-                            <p className={styles.projectInfoDeadline}>Deadline: {project.deadline ? new Date(project.deadline).toLocaleDateString() : 'No Deadline'}</p>
+                            <p className={styles.projectInfoDate}>start date: {new Date(project.startDate).toLocaleDateString()}</p>
+                            <p className={styles.projectInfoDeadline}>deadline: {project.deadline ? new Date(project.deadline).toLocaleDateString() : 'No Deadline'}</p>
                             <div className={styles.projectInfoActions}>
                                 <div className={styles.checkboxContainer}>
                                     <div
@@ -104,7 +104,7 @@ function ProjectDetailsPage() {
                         </section>
                     </>
                 ) : (
-                    <p>Loading project data...</p>
+                    <p>loading project data...</p>
                 )}
             </div>
         </main>

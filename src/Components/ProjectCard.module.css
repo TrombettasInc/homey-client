@@ -10,7 +10,7 @@
 
 .content {
     display: flex;
-    margin-top: 16px;
+    margin-top: 10px;
     width: 100%;
     flex-direction: column;
 }
@@ -68,7 +68,7 @@
     max-width: 100%;
     flex-direction: column;
     overflow: hidden;
-    font-size: 19px;
+    font-size: 18px;
     color: #18191f;
     font-weight: 800;
     text-align: center;

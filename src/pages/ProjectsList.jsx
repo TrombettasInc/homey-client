@@ -49,9 +49,9 @@ function ProjectList() {
             </span>
           </div>
           <section className={styles.contentBox}>
-            <h1 className={styles.title}>Let's go!</h1>
+            <h1 className={styles.title}>let's go!</h1>
             <p className={styles.subtitle}>
-              Looks like you don't currently have any projects, but no problem, click the button to
+              looks like you don't currently have any projects, but no problem, click the button to
             </p>
             <button className={styles.button} onClick={handleGoBack}>
               <span className={styles.buttonContent}>

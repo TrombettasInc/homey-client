@@ -18,7 +18,7 @@
     align-items: center;
     gap: 20px;
     overflow: hidden;
-    font-size: 27px;
+    font-size: 36px;
     color: #18191f;
     font-weight: 800;
     white-space: nowrap;
@@ -72,10 +72,10 @@
   .subtitle {
     color: #474a57;
     font-feature-settings: "liga" off, "clig" off;
-    font-size: 21px;
+    font-size: 23px;
     font-weight: 500;
     line-height: 28px;
-    margin-top: 24px;
+    margin-top: 1px;
   }
   
   .actionButton {
@@ -84,11 +84,10 @@
     background: #f95a2c;
     box-shadow: 0 6px 0 0 #18191f;
     align-self: center;
-   
-    margin-top: 24px;
+    margin-top: 10px;
     flex-direction: column;
     overflow: hidden;
-    font-size: 21px;
+    font-size: 23px;
     color: #fff;
     font-weight: 800;
     line-height: 1;
@@ -117,5 +116,5 @@
     object-position: center;
     width: 100%;
     align-self: center;
-    margin-top: 47px;
+    margin-top: 30px;
   }

@@ -9,7 +9,6 @@ html {
   overflow-x: hidden;
 }
 
-
 .navbar {
   background-color: #fff;
   color: #18191f; 
@@ -22,16 +21,14 @@ html {
   z-index: 10; 
 }
 
-
 .logo {
   position: absolute;
   left: 70%;
   transform: translateX(-50%);
-  font-size: 45px; /* Larger font size */
+  font-size: 45px;
   font-weight: bold;
 }
 
-/* Hamburger icon on the left */
 .hamburger {
   background: none;
   border: none;
@@ -40,7 +37,7 @@ html {
 }
 
 .menuicon {
-  width: 50px; /* Larger size based on your custom styles */
+  width: 50px; 
   height: 50px;
   object-fit: contain;
   border: none;
@@ -51,12 +48,11 @@ html {
   display: block;
 }
 
-/* Full-screen mobile menu */
 .mobile-menu {
   position: fixed;
-  top: 70px;
-  width: 25%;
-  height: 70%;
+  top: 1px;
+  width: 40%;
+  height: 100%;
   background-color: rgba(255, 255, 255, 0.9);
   color: #18191f; 
   display: flex;
@@ -64,24 +60,29 @@ html {
   justify-content: space-between;
   align-items: center;
   z-index: 20;
-
 }
 
-/* Close button */
+.hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
 .close-button {
   align-self: flex-end;
   background: none;
   border: none;
   cursor: pointer;
+  margin-bottom: 50px;
 }
 
 .close-button img {
-  width: 30px; /* Custom size for the close button icon */
-  height: 30px;
+  width: 50px; 
+  height: 50px;
   object-fit: contain;
 }
 
-/* Mobile menu links */
 .nav-links-mobile {
   list-style: none;
   padding: 0;
@@ -95,22 +96,22 @@ html {
 
 .nav-links-mobile li a,
 .nav-links-mobile li button {
-  color: #18191f; /* Black text */
+  color: #18191f;
   text-decoration: none;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 800;
   background: none;
   border: none;
   cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .active-user {
-  font-size: 30px;
-  color: #f95a2c; /* Orange color for active user */
+  font-size: 40px;
+  color: #f95a2c;
   font-weight: 800;
 }
 
-/* Footer section */
 .footer {
   display: flex;
   flex-direction: column;
@@ -120,7 +121,7 @@ html {
 
 .footer-text {
   color: #474a57;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 800;
   display: flex;
   gap: 5px;
@@ -135,8 +136,7 @@ html {
   object-fit: contain;
 }
 
-/* Hover effects for links */
 .nav-links-mobile li a:hover,
 .nav-links-mobile li button:hover {
-  color: #ffbd12; /* Custom hover color */
+  color: #ffbd12; 
 }

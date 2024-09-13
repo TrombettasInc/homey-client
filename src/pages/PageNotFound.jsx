@@ -24,7 +24,7 @@ function PageNotFound() {
         <div className={styles.textBox}>
           <h1 className={styles.title}>Oops!</h1>
           <p className={styles.subtitle}>
-            Seems like the page you're looking for doesn't exist...
+            seems like the page you're looking for doesn't exist...
           </p>
         </div>
       </section>

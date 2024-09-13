@@ -61,10 +61,10 @@ function TaskCard({ taskId, projectId, description, deadline, isDone, getProject
     return (
         <div className={styles.taskCard}>
             <div className={styles.taskContent}>
-                <h4 className={styles.taskLabel}> Description</h4>
+                <h4 className={styles.taskLabel}> description</h4>
                 <h3 className={styles.taskDescription}>{description} </h3>
 
-                <p className={styles.taskDeadline}>Deadline: {deadline ? new Date(deadline).toLocaleDateString() : 'No Deadline'}</p>
+                <p className={styles.taskDeadline}>deadline: {deadline ? new Date(deadline).toLocaleDateString() : 'no deadline'}</p>
                 <div className="checkBoxDeleteContainer">
                     <div className={styles.checkboxContainer}>
                         <div

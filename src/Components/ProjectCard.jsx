@@ -37,7 +37,7 @@ function ProjectCard({ title, isDone, startDate, projectId, color, getProject })
 
                     <div className={styles.actionContainer}>
                         <button className={styles.detailsButton}>
-                            <Link to={`/projects/${projectId}`} className={styles.detailsButtonText} state={isDone}>See details</Link>
+                            <Link to={`/projects/${projectId}`} className={styles.detailsButtonText} state={isDone}>see details</Link>
                         </button>
 
                         <div className={styles.checkboxContainer}>
