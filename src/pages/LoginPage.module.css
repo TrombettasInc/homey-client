@@ -4,8 +4,8 @@
     width: 100%;
     color: var(--Colors-Black, #18191f);
     margin: 0 auto;
-    padding: 68px 0;
     font: 500 21px/1 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
+    display: flex;
   }
 
   .formContainer {
@@ -69,13 +69,14 @@
     box-shadow: 0 4px 0 0 #18191f;
     display: flex;
     margin-top: 32px; 
-    width: 88%;
+    width: 91%;
     font-weight: 1000;
     text-align: center;
     justify-content: center;
     padding: 20px;
     cursor: pointer;
     font-size: 23px ;
+    font-family: Montserrat, -apple-system, Roboto, Helvetica, sans-serif;;
   }
   
   .signupLink {

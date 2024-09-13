@@ -52,9 +52,9 @@ const SignupPage = () => {
   };
 
   const inputFields = [
-    { icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/3ba6409d26ad4fc977dc4efd1b7897da19e238cdd9c7bfc0807165d1d8c85bc3?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0", placeholder: "Name", type: "text", value: name, onChange: handleName },
-    { icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/d122d5e555f59c374b30085089c8ed6142aeb76b3f65257ea0211e199c1e2aab?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0", placeholder: "Email address", type: "email", value: email, onChange: handleEmail },
-    { icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/86345a51fd527fffc4e19c4b548594d1e5b56236570569d2947d3e2bfc540b43?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0", placeholder: "Password", type: "password", value: password, onChange: handlePassword },
+    { icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/3ba6409d26ad4fc977dc4efd1b7897da19e238cdd9c7bfc0807165d1d8c85bc3?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0", placeholder: "name", type: "text", value: name, onChange: handleName },
+    { icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/d122d5e555f59c374b30085089c8ed6142aeb76b3f65257ea0211e199c1e2aab?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0", placeholder: "email address", type: "email", value: email, onChange: handleEmail },
+    { icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/86345a51fd527fffc4e19c4b548594d1e5b56236570569d2947d3e2bfc540b43?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0", placeholder: "password", type: "password", value: password, onChange: handlePassword },
   ];
 
   return (
@@ -70,11 +70,11 @@ const SignupPage = () => {
           <InputField key={index} {...field} />
         ))}
         <button type="submit" className={styles.signupButton}>
-          Sign up
+          sign up
         </button>
         {errorMessage && <p className={styles.error}>{errorMessage}</p>}
         <p className={styles.loginLink}>
-          Already have an account? <Link to={'/login'}><span>go here</span></Link>
+          already have an account? <Link to={'/login'}><span>go here</span></Link>
         </p>
       </form>
     </main>

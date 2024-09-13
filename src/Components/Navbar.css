@@ -1,4 +1,3 @@
-
 body,
 html {
   margin: 0;
@@ -7,6 +6,7 @@ html {
   height: 100%;
   box-sizing: border-box;
   overflow-x: hidden;
+  max-width: 412px;
 }
 
 .navbar {
@@ -51,7 +51,7 @@ html {
 .mobile-menu {
   position: fixed;
   top: 1px;
-  width: 60%;
+  width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.9);
   color: #18191f; 
@@ -75,6 +75,7 @@ html {
   border: none;
   cursor: pointer;
   margin-bottom: 50px;
+  padding: 10px;
 }
 
 .close-button img {

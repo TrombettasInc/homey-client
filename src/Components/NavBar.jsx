@@ -43,7 +43,7 @@ function Navbar() {
             {!isLoggedIn ? (
               <>
                 <li><Link to="/login" onClick={handleCloseClick}>log in</Link></li>
-                <li><Link to="/signup" onClick={handleCloseClick}>sign Up</Link></li>
+                <li><Link to="/signup" onClick={handleCloseClick}>sign up</Link></li>
               </>
             ) : (
               <>
