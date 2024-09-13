@@ -2,12 +2,9 @@
   background-color: #fff;
   display: flex;
   max-width: 480px;
-  width: 100%;
   flex-direction: column;
   align-items: center;
   color: #18191f;
-  margin: 0 auto;
-  padding: 54px 0 152px;
   font: 500 23px/1 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
 }
 
@@ -130,6 +127,7 @@ input::placeholder {
   cursor: pointer;
   width: 100%;
   font-size: 23px;
+  font-family: Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
 }
 
 .buttonText {
