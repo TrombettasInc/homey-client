@@ -1,7 +1,7 @@
 .projectDetails {
   background-color: #fff;
   display: flex;
-  max-width: 480px;
+  max-width: 412px;
   width: 100%;
   flex-direction: column;
   overflow: hidden;
@@ -37,7 +37,6 @@
   border: 2.108px solid #18191f;
   background-color: #fff3f8;
   box-shadow: 0 6.324px 0 0 #18191f;
-  width: 100%;
   max-width: 428px;
   flex-direction: column;
   padding: 20px 23px;
@@ -134,7 +133,6 @@
   box-shadow: 0 2px 0 0 #18191f;
   background-color: #d6fcf7;
   margin-top: 17px;
-  width: 100%;
   max-width: 440px;
   padding: 13px 17px 22px;
   font: 23px/1 Montserrat, sans-serif;
@@ -143,7 +141,7 @@
   justify-content: flex-end; 
   align-items: flex-start; 
   flex-direction: column; 
-  
+  font-family: Montserrat, -apple-system, Roboto, Helvetica, sans-serif;;
 }
 
 .addTaskTitle {
@@ -243,6 +241,7 @@
   margin: 20px 0 0;
   display: flex;
   justify-content: flex-end;
+  font-family: Montserrat, -apple-system, Roboto, Helvetica, sans-serif;;
 }
 
 .taskCard {

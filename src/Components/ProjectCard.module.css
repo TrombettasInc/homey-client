@@ -1,12 +1,10 @@
 .card {
     background-color: #fff;
-    max-width: 412px;
     width: 100%;
     padding-bottom: 20px;
     flex-direction: column;
     margin: 0 auto;
     display: flex;
-    
 }
 
 .content {
