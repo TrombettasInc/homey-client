@@ -76,7 +76,6 @@ function EditProjectPage() {
                             placeholder="Project Title"
                             value={title}
                             onChange={(e) => setTitle(e.target.value)}
-                            style={{ fontSize: "16px", padding: "10px", border: "none" }}
                         />
                     </div>
                 </div>
@@ -88,7 +87,7 @@ function EditProjectPage() {
                         className={styles.dateInput}
                         value={deadline}
                         onChange={(e) => setDeadline(e.target.value)}
-                        style={{ fontSize: "16px", padding: "10px", border: "none" }}
+                        style={{ fontSize: "23px", padding: "5px", border: "none", fontFamily: "'Montserrat', sans-serif"  }}
                     />
                     <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ecbf590f99fffde6575863051d00cdb9fea318ce6dd7240a95a8d8b918d13e3e?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0" className={styles.dateIcon} alt="Calendar icon" />
                 </div>
@@ -99,7 +98,7 @@ function EditProjectPage() {
                         className={styles.textarea}
                         value={description}
                         onChange={(e) => setDescription(e.target.value)}
-                        style={{ fontSize: "16px", padding: "10px", border: "none" }}
+                        style={{ fontSize: "23px", padding: "5px", border: "none", fontFamily: "'Montserrat', sans-serif", height: "300px" }}
                     />
                 </div>
                 <button type="submit" className={styles.button}>
