@@ -45,7 +45,6 @@
   background: #fff;
   display: flex;
   margin-top: 4px;
-  width: 100%;
   flex-direction: column;
   overflow: hidden;
   justify-content: center;
@@ -155,15 +154,14 @@
 /* Styles for larger screens (1024px and up) */
 @media (min-width: 1024px) {
   .homepage {
-    max-width: 800px;
-    padding: 40px;
+    max-width: 90vw;
     margin: auto;
   }
 
   .homepageheader {
     font-size: 56px;
     gap: 40px;
-    padding: 100px 24px 24px;
+    padding: 10px 24px 24px;
   }
 
   .homepagecontentWrapper {
@@ -184,7 +182,7 @@
   }
 
   .homepageprojectIllustration {
-    width: 80%;
+    width: 35%;
     margin-top: 40px;
   }
 }

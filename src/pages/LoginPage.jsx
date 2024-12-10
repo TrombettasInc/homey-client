@@ -69,9 +69,9 @@ function LoginPage() {
 
       
 
-      <form onSubmit={handleLoginSubmit} className={styles.formContainer}>
-        <h1 className={styles.title}>Login</h1>
-        <p className={styles.subtitle}>
+      <form onSubmit={handleLoginSubmit} className={styles.loginformContainer}>
+        <h1 className={styles.logintitle}>Login</h1>
+        <p className={styles.loginsubtitle}>
           login to create and edit your amazing projects.
         </p>
 
@@ -79,13 +79,13 @@ function LoginPage() {
           <InputField key={index} {...field} />
         ))}
 
-        <button type="submit" className={styles.submitButton}>
+        <button type="submit" className={styles.loginsubmitButton}>
           Log In
         </button>
 
-        {errorMessage && <p className={styles.loginerrorMessage}>{errorMessage}</p>}
+        {errorMessage && <p className={styles.loginloginerrorMessage}>{errorMessage}</p>}
 
-        <p className={styles.signupLink}>
+        <p className={styles.loginsignupLink}>
           don't have an account? <Link to="/signup"><span>sign Up</span></Link>
         </p>
       </form>
