@@ -59,53 +59,54 @@ function EditProjectPage() {
     };
 
     return (
-        <main className={styles.container}>
+        <main className={styles.editcontainer}>
             
             <header className={styles.header}>
-                <h1 className={styles.title}>edit project</h1>
+                <h1 className={styles.title}>edit Project</h1>
             </header>
             <form onSubmit={handleFormSubmit}>
-                <div className={styles.inputContainer}>
-                    <label htmlFor="projectTitle" className={styles.visuallyHidden}></label>
-                    <div className={styles.inputWrapper}>
-                        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/22a892083d9a2459f3d6034245b0adf402047a0091b4cdfbf717e8f1786b90fe?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0" className={styles.inputIcon} alt="" />
+                <div className={styles.editinputContainer}>
+                    <label htmlFor="projectTitle" className={styles.editvisuallyHidden}></label>
+                    <div className={styles.editinputWrapper}>
+                        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/22a892083d9a2459f3d6034245b0adf402047a0091b4cdfbf717e8f1786b90fe?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0" className={styles.editinputIcon} alt="" />
                         <input
                             id="projectTitle"
-                            className={styles.input}
+                            className={styles.editinput}
                             type="text"
                             placeholder="Project Title"
                             value={title}
                             onChange={(e) => setTitle(e.target.value)}
+                            style={{ fontSize: "16px", padding: "10px", border: "none" }}
                         />
                     </div>
                 </div>
-                <div className={styles.dateContainer}>
-                    <label htmlFor="deadline" className={styles.dateLabel}>deadline</label>
+                <div className={styles.editdateContainer}>
+                    <label htmlFor="deadline" className={styles.editdateLabel}>deadline</label>
                     <input
                         id="deadline"
                         type="date"
-                        className={styles.dateInput}
+                        className={styles.editdateInput}
                         value={deadline}
                         onChange={(e) => setDeadline(e.target.value)}
-                        style={{ fontSize: "23px", padding: "5px", border: "none", fontFamily: "'Montserrat', sans-serif"  }}
+                        style={{ fontSize: "16px", padding: "10px", border: "none" }}
                     />
-                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ecbf590f99fffde6575863051d00cdb9fea318ce6dd7240a95a8d8b918d13e3e?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0" className={styles.dateIcon} alt="Calendar icon" />
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ecbf590f99fffde6575863051d00cdb9fea318ce6dd7240a95a8d8b918d13e3e?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0" className={styles.editdateIcon} alt="Calendar icon" />
                 </div>
-                <div className={styles.descriptionContainer}>
-                    <label htmlFor="projectDescription" className={styles.descriptionLabel}></label>
+                <div className={styles.editdescriptionContainer}>
+                    <label htmlFor="projectDescription" className={styles.editdescriptionLabel}></label>
                     <textarea
                         id="projectDescription"
-                        className={styles.textarea}
+                        className={styles.edittextarea}
                         value={description}
                         onChange={(e) => setDescription(e.target.value)}
-                        style={{ fontSize: "23px", padding: "5px", border: "none", fontFamily: "'Montserrat', sans-serif", height: "150px" }}
+                        style={{ fontSize: "16px", padding: "10px", border: "none" }}
                     />
                 </div>
-                <button type="submit" className={styles.button}>
+                <button type="submit" className={styles.editbutton}>
                     <span className={styles.buttonText}>update</span>
                 </button>
-                <button type="button" onClick={deleteProject} className={styles.button}>
-                    <span className={styles.buttonText}>delete</span>
+                <button type="button" onClick={deleteProject} className={styles.editbutton}>
+                    <span className={styles.editbuttonText}>delete</span>
                 </button>
             </form>
         </main>

@@ -6,15 +6,15 @@ import styles from './LoginPage.module.css';
 
 function InputField({ icon, placeholder, type, value, onChange }) {
   return (
-    <div className={styles.inputWrapper}>
-      <div className={styles.inputContent}>
-        <img loading="lazy" src={icon} className={styles.inputIcon} alt="" />
+    <div className={styles.logininputWrapper}>
+      <div className={styles.logininputContent}>
+        <img loading="lazy" src={icon} className={styles.logininputIcon} alt="" />
         <input
           type={type}
           value={value}
           onChange={onChange}
           placeholder={placeholder}
-          className={styles.input}
+          className={styles.logininput}
           required
         />
       </div>
@@ -70,7 +70,7 @@ function LoginPage() {
       
 
       <form onSubmit={handleLoginSubmit} className={styles.formContainer}>
-        <h1 className={styles.title}>login</h1>
+        <h1 className={styles.title}>Login</h1>
         <p className={styles.subtitle}>
           login to create and edit your amazing projects.
         </p>
@@ -80,13 +80,13 @@ function LoginPage() {
         ))}
 
         <button type="submit" className={styles.submitButton}>
-          log In
+          Log In
         </button>
 
-        {errorMessage && <p className={styles.errorMessage}>{errorMessage}</p>}
+        {errorMessage && <p className={styles.loginerrorMessage}>{errorMessage}</p>}
 
         <p className={styles.signupLink}>
-          don't have an account? <Link to="/signup"><span>sign up</span></Link>
+          don't have an account? <Link to="/signup"><span>sign Up</span></Link>
         </p>
       </form>
     </main>

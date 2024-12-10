@@ -47,24 +47,24 @@ function ProjectDetailsPage() {
 
     return (
         <main className={styles.projectDetails}>
-            <div className={styles.container}>
+            <div className={styles.projectDetailscontainer}>
                 {project ? (
                     <>
-                        <header className={styles.projectTitle}>
+                        <header className={styles.projectDetailsprojectTitle}>
                             <h1>
-                                <span className={styles.projectTitleMain}>{project.title}</span>
+                                <span className={styles.projectDetailsprojectTitleMain}>{project.title}</span>
                             </h1>
                         </header>
 
                         {/* Merged ProjectInfo */}
-                        <section className={styles.projectInfo}>
-                            <h2 className={styles.projectInfoTitle}>{project.description}</h2>
-                            <p className={styles.projectInfoDate}>start date: {new Date(project.startDate).toLocaleDateString()}</p>
-                            <p className={styles.projectInfoDeadline}>deadline: {project.deadline ? new Date(project.deadline).toLocaleDateString() : 'No Deadline'}</p>
-                            <div className={styles.projectInfoActions}>
-                                <div className={styles.checkboxContainer}>
+                        <section className={styles.projectDetailsprojectInfo}>
+                            <h2 className={styles.projectDetailsprojectInfoTitle}>{project.description}</h2>
+                            <p className={styles.projectDetailsprojectInfoDate}>start date: {new Date(project.startDate).toLocaleDateString()}</p>
+                            <p className={styles.projectDetailsprojectInfoDeadline}>deadline: {project.deadline ? new Date(project.deadline).toLocaleDateString() : 'No Deadline'}</p>
+                            <div className={styles.projectDetailsprojectInfoActions}>
+                                <div className={styles.projectDetailscheckboxContainer}>
                                     <div
-                                        className={`${styles.checkbox} ${checked ? styles.checked : ''}`}
+                                        className={`${styles.projectDetailscheckbox} ${checked ? styles.projectDetailschecked : ''}`}
                                         role="checkbox"
                                         tabIndex="0"
                                         aria-checked={checked}
@@ -74,14 +74,14 @@ function ProjectDetailsPage() {
                                             <img
                                                 loading="lazy"
                                                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/61ba7f039e75537d67906dec0e27a7633222f687b028504a12d4586b45961fb8?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0"
-                                                className={styles.checkboxIcon}
+                                                className={styles.projectDetailscheckboxIcon}
                                                 alt="project details tick mark icon"
                                             />
                                         )}
                                     </div>
                                 </div>
 
-                                <Link to={`/projects/edit/${projectId}`} state={{ project }} className={styles.editButton}>edit</Link>
+                                <Link to={`/projects/edit/${projectId}`} state={{ project }} className={styles.projectDetailseditButton}>edit</Link>
                             </div>
                         </section>
 

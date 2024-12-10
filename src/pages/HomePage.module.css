@@ -1,121 +1,190 @@
+/* Existing mobile styles (unchanged) */
 .homepage {
-    background-color: #fff;
-    display: flex;
-    max-width: 480px;
-    width: 100%;
-    padding-bottom: 6px;
-    flex-direction: column;
-    overflow: hidden;
-    font-family: Montserrat, sans-serif;
-    text-align: center;
-    margin: 0 auto;
-    margin-top: 50px;
+  background-color: #fff;
+  display: flex;
+  max-width: 412px;
+  width: 100%;
+  padding-bottom: 6px;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: Montserrat, sans-serif;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.homepageheader {
+  background: #fff;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 20px;
+  overflow: hidden;
+  font-size: 36px;
+  color: #18191f;
+  font-weight: 800;
+  white-space: nowrap;
+  line-height: 1;
+  padding: 62px 24px 24px;
+  justify-content: space-around;
+}
+
+.logo {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 24px;
+  margin-top: 6px;
+}
+
+.brandName {
+  font-feature-settings: "liga" off, "clig" off;
+}
+
+.homepageprojectCreation {
+  align-items: center;
+  background: #fff;
+  display: flex;
+  margin-top: 4px;
+  width: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: center;
+  padding: 0px;
+}
+
+.homepagecontentWrapper {
+  display: flex;
+  max-width: 100%;
+  width: 327px;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.homepagetitle {
+  color: #18191f;
+  font-feature-settings: "liga" off, "clig" off;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.homepagesubtitle {
+  color: #474a57;
+  font-feature-settings: "liga" off, "clig" off;
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 28px;
+  margin-top: 1px;
+}
+
+.homepageactionButton {
+  align-items: center;
+  border-radius: 16px;
+  background: #f95a2c;
+  box-shadow: 0 6px 0 0 #18191f;
+  align-self: center;
+  margin-top: 10px;
+  flex-direction: column;
+  overflow: hidden;
+  font-size: 23px;
+  color: #fff;
+  font-weight: 800;
+  line-height: 1;
+  justify-content: center;
+  padding: 16px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.homepagebuttonText a {
+  text-decoration: none;
+}
+
+.homepagebuttonText {
+  font-feature-settings: "liga" off, "clig" off;
+  align-self: stretch;
+  gap: 6px;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.homepageprojectIllustration {
+  aspect-ratio: 1.05;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  align-self: center;
+  margin-top: 30px;
+}
+
+/* Styles for tablets (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .homepage {
+    max-width: 600px;
+    padding: 20px;
+    margin: auto;
   }
-  
-  .header {
-    background: #fff;
-    display: flex;
-    width: 100%;
-    align-items: center;
-    gap: 20px;
-    overflow: hidden;
-    font-size: 36px;
-    color: #18191f;
-    font-weight: 800;
-    white-space: nowrap;
-    line-height: 1;
-    padding: 62px 24px 24px;
-    justify-content: space-around;
+
+  .homepageheader {
+    font-size: 48px;
+    gap: 30px;
+    padding: 80px 24px 24px;
   }
-  
-  .logo {
-    aspect-ratio: 1;
-    object-fit: contain;
-    object-position: center;
-    width: 24px;
-    margin-top: 6px;
+
+  .homepagecontentWrapper {
+    width: 500px;
   }
-  
-  .brandName {
-    font-feature-settings: "liga" off, "clig" off;
+
+  .homepagetitle {
+    font-size: 48px;
   }
-  
-  .projectCreation {
-    align-items: center;
-    background: #fff;
-    display: flex;
-    margin-top: 4px;
-    width: 100%;
-    flex-direction: column;
-    overflow: hidden;
-    justify-content: center;
-    padding: 0px;
+
+  .homepagesubtitle {
+    font-size: 28px;
   }
-  
-  .contentWrapper {
-    display: flex;
-    max-width: 100%;
-    width: 327px;
-    flex-direction: column;
-    overflow: hidden;
-    align-items: center;
-    justify-content: flex-start;
+
+  .homepageactionButton {
+    font-size: 28px;
+    padding: 20px;
   }
-  
-  .title {
-    color: #18191f;
-    font-feature-settings: "liga" off, "clig" off;
-    font-size: 36px;
-    font-weight: 800;
-    line-height: 1;
+}
+
+/* Styles for larger screens (1024px and up) */
+@media (min-width: 1024px) {
+  .homepage {
+    max-width: 800px;
+    padding: 40px;
+    margin: auto;
   }
-  
-  .subtitle {
-    color: #474a57;
-    font-feature-settings: "liga" off, "clig" off;
-    font-size: 23px;
-    font-weight: 500;
-    line-height: 28px;
-    margin-top: 1px;
+
+  .homepageheader {
+    font-size: 56px;
+    gap: 40px;
+    padding: 100px 24px 24px;
   }
-  
-  .actionButton {
-    align-items: center;
-    border-radius: 16px;
-    background: #f95a2c;
-    box-shadow: 0 6px 0 0 #18191f;
-    align-self: center;
-    margin-top: 10px;
-    flex-direction: column;
-    overflow: hidden;
-    font-size: 23px;
-    color: #fff;
-    font-weight: 800;
-    line-height: 1;
-    justify-content: center;
-    padding: 16px;
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
+
+  .homepagecontentWrapper {
+    width: 600px;
   }
-  
-  .buttonText a {
-    text-decoration: none;
+
+  .homepagetitle {
+    font-size: 56px;
   }
-  
-  .buttonText {
-    font-feature-settings: "liga" off, "clig" off;
-    align-self: stretch;
-    gap: 6px;
-    overflow: hidden;
-    text-decoration: none;
+
+  .homepagesubtitle {
+    font-size: 32px;
   }
-  
-  .projectIllustration {
-    aspect-ratio: 1.05;
-    object-fit: contain;
-    object-position: center;
-    width: 100%;
-    align-self: center;
-    margin-top: 30px;
+
+  .homepageactionButton {
+    font-size: 32px;
+    padding: 24px;
   }
+
+  .homepageprojectIllustration {
+    width: 80%;
+    margin-top: 40px;
+  }
+}

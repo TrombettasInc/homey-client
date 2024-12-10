@@ -22,21 +22,21 @@ function Navbar() {
     <>
        <nav className="navbar">
         {!isMobileMenuOpen && ( // Hide the hamburger when the menu is open
-          <button className="hamburger" onClick={handleHamburgerClick}>
+          <button className="nav-hamburger" onClick={handleHamburgerClick}>
             <img
               loading="lazy"
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/df815ec07b8c69a75a37f8b1d1fd22c58ef7d75971751f3b7bf6cc90c735e56f?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0"
-              className="menuicon"
+              className="nav-menuicon"
               alt="menu Icon"
             />
           </button>
         )}
-        <div className="logo">homey</div>
+        <div className="nav-logo">homey</div>
       </nav>
 
       {isMobileMenuOpen && (
-        <div className="mobile-menu">
-          <button className="close-button" onClick={handleCloseClick}>
+        <div className="nav-mobile-menu">
+          <button className="nav-close-button" onClick={handleCloseClick}>
             <img src="/close.png" alt="close menu" />
           </button>
           <ul className="nav-links-mobile">
@@ -47,7 +47,7 @@ function Navbar() {
               </>
             ) : (
               <>
-                <li><span className="active-user">{user && user.name}</span></li>
+                <li><span className="nav-active-user">{user && user.name}</span></li>
                 <li><Link to="/projects" onClick={handleCloseClick}>projects</Link></li>
                 <li><Link to="/create" onClick={handleCloseClick}>create</Link></li>
                 <li><button onClick={() => { logOutUser(); handleCloseClick(); }}>logout</button></li>
@@ -55,11 +55,11 @@ function Navbar() {
             )}
           </ul>
 
-          <div className="footer">
-            <div className="footer-text">
+          <div className="nav-footer">
+            <div className="nav-footer-text">
               <span>trombettasInc.</span> <a href="https://github.com/TrombettasInc/homey-client" target="_blank" rel="noopener noreferrer">Repo</a>
             </div>
-            <div className="social-links">
+            <div className="nav-social-links">
               <a>
                 <img src="/footer.png" alt="footer links" />
               </a>

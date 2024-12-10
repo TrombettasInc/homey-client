@@ -66,9 +66,9 @@ function TaskCard({ taskId, projectId, description, deadline, isDone, getProject
 
                 <p className={styles.taskDeadline}>deadline: {deadline ? new Date(deadline).toLocaleDateString() : 'no deadline'}</p>
                 <div className="checkBoxDeleteContainer">
-                    <div className={styles.checkboxContainer}>
+                    <div className={styles.taskcheckboxContainer}>
                         <div
-                            className={`${styles.checkbox} ${checked ? styles.checked : ''}`}
+                            className={`${styles.taskcheckbox} ${checked ? styles.taskchecked : ''}`}
                             role="checkbox"
                             tabIndex="0"
                             aria-checked={checked}
@@ -78,13 +78,13 @@ function TaskCard({ taskId, projectId, description, deadline, isDone, getProject
                                 <img
                                     loading="lazy"
                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/51a1a671c4ae4c97ff9a3464d05eb5ce4d4db0939a6cef9e3149a9fd69a2757f?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0"
-                                    className={styles.checkboxIcon}
+                                    className={styles.taskcheckboxIcon}
                                     alt="task card tick mark icon"
                                 />
                             )}
 
                         </div>
-                        <button onClick={deleteTask} className={styles.deleteButton}>delete</button>
+                        <button onClick={deleteTask} className={styles.taskdeleteButton}>delete</button>
                     </div>
                 </div>
 

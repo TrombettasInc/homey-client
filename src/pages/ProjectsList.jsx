@@ -38,29 +38,29 @@ function ProjectList() {
     <div>
       {projects.length === 0 ? (
         // Display the empty projects page when there are no projects
-        <main className={styles.container}>
-          <div className={styles.imageBg} role="img" aria-label="Decorative background image">
-            <span className={styles.peoplecontainer}>
+        <main className={styles.listcontainer}>
+          <div className={styles.listimageBg} role="img" aria-label="Decorative background image">
+            <span className={styles.listpeoplecontainer}>
               <img
                 src="/emptypage.png"
                 alt=""
-                className={styles.people}
+                className={styles.listpeople}
               />
             </span>
           </div>
-          <section className={styles.contentBox}>
-            <h1 className={styles.title}>let's go!</h1>
-            <p className={styles.subtitle}>
+          <section className={styles.listcontentBox}>
+            <h1 className={styles.listtitle}>let's go!</h1>
+            <p className={styles.listsubtitle}>
               looks like you don't currently have any projects, but no problem, click the button to
             </p>
-            <button className={styles.button} onClick={handleGoBack}>
-              <span className={styles.buttonContent}>
+            <button className={styles.listbutton} onClick={handleGoBack}>
+              <span className={styles.listbuttonContent}>
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/9ea4d14243520560bc7e62b21d3eeffb65ecfd04a01105b59e25604071f1481c?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0"
                   alt=""
-                  className={styles.buttonIcon}
+                  className={styles.listbuttonIcon}
                 />
-                <span className={styles.buttonText}>create!</span>
+                <span className={styles.listbuttonText}>create!</span>
               </span>
             </button>
           </section>

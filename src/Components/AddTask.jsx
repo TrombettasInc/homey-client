@@ -37,18 +37,18 @@ function AddTask({ projectId, getProject }) {
 
             <form className={styles.addTaskForm} onSubmit={handleSubmit}>
                 <h3 className={styles.addTaskTitle}>add task</h3>
-                <div className={styles.inputWrapper}>
+                <div className={styles.addTaskinputWrapper}>
                     <label htmlFor="taskDescription" ></label>
-                    <div className={styles.inputContainer}>
+                    <div className={styles.addTaskinputContainer}>
                         <img
                             src="https://cdn.builder.io/api/v1/image/assets/TEMP/a8fd8ced8adb21bec7b233af6670e3c4d3fba469c11155ff58bf5174dd5f6179?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0"
                             alt=""
-                            className={styles.inputIcon}
+                            className={styles.addTaskinputIcon}
                         />
                         <input
                             type="text"
                             id="taskDescription"
-                            className={styles.taskInput}
+                            className={styles.addTasktaskInput}
                             placeholder="task description"
                             value={description}
                             required
@@ -58,12 +58,12 @@ function AddTask({ projectId, getProject }) {
                     </div>
                 </div>
                 <br />
-                <div className={styles.dateWrapper}>
+                <div className={styles.addTaskdateWrapper}>
                     <label htmlFor="taskDeadline" className={styles.dateLabel}>deadline</label>
                     <input
                         type="date"
                         id="taskDeadline"
-                        className={styles.deadlineInput}
+                        className={styles.addTaskdeadlineInput}
                         value={deadline}
                         placeholder="deadline"
                         onChange={(e) => setDeadline(e.target.value)}
@@ -76,7 +76,7 @@ function AddTask({ projectId, getProject }) {
                     />
                 </div>
 
-                <button type="submit" className={styles.addButton}>add!</button>
+                <button type="submit" className={styles.addTaskaddButton}>add!</button>
             </form>
         </div>
     );

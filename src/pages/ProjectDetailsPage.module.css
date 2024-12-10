@@ -9,14 +9,14 @@
   padding: 10px 0 32px;
 }
 
-.container {
+.projectDetailscontainer {
   display: flex;
   width: 100%;
   flex-direction: column;
   margin-top: 0;
 }
 
-.projectTitle {
+.projectDetailsprojectTitle {
   background-color: #fff;
   align-self: stretch;
   display: flex;
@@ -27,28 +27,29 @@
   position: relative;
 }
 
-.projectTitleMain {
+.projectDetailsprojectTitleMain {
   color: #18191f;
   font-feature-settings: "liga" off, "clig" off;
 }
 
-.projectInfo {
+.projectDetailsprojectInfo {
   border-radius: 16.863px;
   border: 2.108px solid #18191f;
   background-color: #fff3f8;
   box-shadow: 0 6.324px 0 0 #18191f;
-  max-width: 428px;
+  width: 100%;
+  max-width: 412px;
   flex-direction: column;
   padding: 20px 23px;
 }
 
-.projectInfoTitle {
+.projectDetailsprojectInfoTitle {
   color: #18191f;
   font-feature-settings: "liga" off, "clig" off;
   font: 800 25px/2 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
 }
 
-.projectInfoDate {
+.projectDetailsprojectInfoDate {
   color: #18191f;
   font-feature-settings: "liga" off, "clig" off;
   align-self: start;
@@ -57,7 +58,7 @@
   padding: 0;
 }
 
-.projectInfoDeadline {
+.projectDetailsprojectInfoDeadline {
   color: #474a57;
   align-self: start;
   font: 600 15px/2 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
@@ -65,7 +66,7 @@
   margin: 0
 }
 
-.projectInfoActions {
+.projectDetailsprojectInfoActions {
   display: flex;
   margin-top: 30px;
   width: 100%;
@@ -73,13 +74,13 @@
   justify-content: space-between;
 }
 
-.checkboxContainer {
+.taskcheckboxContainer, .projectDetailscheckboxContainer {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
-.checkbox {
+.taskcheckbox, .projectDetailscheckbox {
   border-radius: 8px;
   border: 2px solid #9fa4b4;
   background: #eeeff4;
@@ -93,16 +94,16 @@
   transition: background-color 0.3s ease;
 }
 
-.checkbox.checked {
+.taskcheckbox.checked, .projectDetailscheckbox.checked {
   background: #9fa4b4;
 }
 
-.checkbox:focus {
+.taskcheckbox:focus, .projectDetailscheckbox:focus {
   outline: 2px solid #fff;
   outline-offset: 2px;
 }
 
-.checkboxIcon {
+.taskcheckboxIcon, .projectDetailscheckboxIcon {
   width: 40px;
   height: 40px;
   object-fit: contain;
@@ -110,7 +111,7 @@
   position: absolute;
 }
 
-.editButton {
+.projectDetailseditButton {
   font-feature-settings: "liga" off, "clig" off;
   border-radius: 12.647px;
   border: 2.108px solid #18191f;
@@ -133,7 +134,8 @@
   box-shadow: 0 2px 0 0 #18191f;
   background-color: #d6fcf7;
   margin-top: 17px;
-  max-width: 440px;
+  width: 100%;
+  max-width: 412px;
   padding: 13px 17px 22px;
   font: 23px/1 Montserrat, sans-serif;
   position: relative;
@@ -141,7 +143,7 @@
   justify-content: flex-end; 
   align-items: flex-start; 
   flex-direction: column; 
-  font-family: Montserrat, -apple-system, Roboto, Helvetica, sans-serif;;
+  
 }
 
 .addTaskTitle {
@@ -152,7 +154,7 @@
   align-self: flex-start;
 }
 
-.inputWrapper {
+.addTaskinputWrapper {
   display: flex;
   flex-direction: column;
   font-weight: 800;
@@ -160,7 +162,7 @@
   gap: 10px;
 }
 
-.inputContainer {
+.addTaskinputContainer {
   border-radius: 9.982px;
   border: 2px solid #18191f;
   background-color: #fff;
@@ -170,7 +172,7 @@
   font-size: 23px;
 }
 
-.inputIcon {
+.addTaskinputIcon {
   aspect-ratio: 1;
   object-fit: contain;
   object-position: center;
@@ -178,7 +180,7 @@
   margin-right: 7px;
 }
 
-.taskInput {
+.addTasktaskInput {
   font-feature-settings: "liga" off, "clig" off;
   border: none;
   background: transparent;
@@ -187,7 +189,7 @@
   height: 23px;
 }
 
-.dateWrapper {
+.addTaskdateWrapper {
   border-radius: 10px;
   border: 2px solid #18191f;
   background-color: #fff;
@@ -201,7 +203,7 @@
   height: 40px;
 }
 
-.deadlineInput {
+.addTaskdeadlineInput {
   border: none;
   background: transparent;
   font-size: 16px;
@@ -222,7 +224,7 @@
   width: 44px;
 }
 
-.addButton {
+.addTaskaddButton {
   font-feature-settings: "liga" off, "clig" off;
   border-radius: 12.647px;
   border: 2.108px solid #18191f;
@@ -241,7 +243,6 @@
   margin: 20px 0 0;
   display: flex;
   justify-content: flex-end;
-  font-family: Montserrat, -apple-system, Roboto, Helvetica, sans-serif;;
 }
 
 .taskCard {
@@ -251,7 +252,7 @@
   flex-direction: column;
   font-family: Montserrat, sans-serif;
   position: relative;
-  max-width: 478px;
+  max-width: 412px;
 }
 
 .taskContent {
@@ -284,7 +285,7 @@
   margin-top: 8px;
 }
 
-.deleteButton {
+.taskdeleteButton {
   font-feature-settings: "liga" off, "clig" off;
   border-radius: 12px;
   border: 2px solid #18191f;
@@ -305,7 +306,6 @@
   right: 46px;
   cursor: pointer;
   margin: -25px;
-  font-family: Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
 }
 
 .checkBoxDeleteContainer {
@@ -314,4 +314,54 @@
   width: 100%;
   gap: 20px;
   justify-content: space-between;
+}
+
+/* Media Queries for Larger Screens and Tablets */
+@media (min-width: 768px) {
+  .projectDetails {
+    max-width: 80%;
+  }
+  .projectDetailscontainer {
+    margin-top: 30px;
+  }
+  .addTaskForm {
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+  }
+  .taskCard {
+    max-width: 700px;
+  }
+  .addTaskinputWrapper {
+    flex-direction: row;
+    gap: 15px;
+  }
+  .addTaskinputContainer {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .projectDetails {
+    max-width: 70%;
+  }
+  .projectDetailscontainer {
+    margin-top: 50px;
+  }
+  .addTaskForm {
+    flex-direction: row;
+    gap: 30px;
+    padding: 30px;
+  }
+  .taskCard {
+    max-width: 800px;
+  }
+  .taskcheckbox, .projectDetailscheckbox {
+    width: 50px;
+    height: 50px;
+  }
+  .taskcheckboxIcon, .projectDetailscheckboxIcon {
+    width: 50px;
+    height: 50px;
+  }
 }

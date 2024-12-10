@@ -1,120 +1,193 @@
-.container {
-    background-color: #fff;
-    display: flex;
-    max-width: 480px;
-    width: 100%;
-    flex-direction: column;
-    overflow: hidden;
-    font-family: Montserrat, sans-serif;
-    color: var(--Colors-Black, #18191f);
-    font-weight: 800;
-    text-align: center;
-    margin: 0 auto;
-    padding: 150px 0px 28px;
+.listcontainer {
+  background-color: #fff;
+  display: flex;
+  max-width: 412px;
+  width: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: Montserrat, sans-serif;
+  color: var(--Colors-Black, #18191f);
+  font-weight: 800;
+  text-align: center;
+  margin: 0 auto;
+  padding: 150px 0px 28px;
+}
+
+.listpeoplecontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Full width of its container */
+  height: 100%; /* Full height of its container */
+}
+
+.listpeople {
+  width: 1200px; /* Set your desired width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the image scales properly */
+}
+
+.listimageBg {
+  background-color: #ffc7de;
+  border-radius: 50%;
+  align-self: center;
+  display: flex;
+  width: 309px;
+  height: 309px;
+  aspect-ratio: 1;
+}
+
+.listcontentBox {
+  border-radius: 16px;
+  border: 2px solid var(--Colors-Black, #18191f);
+  box-shadow: 0 6px 0 0 #18191f;
+  background-color: #e9e7fc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 33px;
+}
+
+.listtitle {
+  font-feature-settings: "liga" off, "clig" off;
+  font-size: 36px;
+  line-height: 1;
+}
+
+.listsubtitle {
+  color: var(--Colors-Black-800, #474a57);
+  font-feature-settings: "liga" off, "clig" off;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 20px;
+  align-self: stretch;
+  margin: 0 0 10px;
+}
+
+.listbutton {
+  align-items: center;
+  border-radius: 14.857px;
+  border: 1.857px solid var(--Colors-Black, #18191f);
+  box-shadow: 0 3.714px 0 0 #18191f;
+  background-color: #ffbd12;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-size: 23px;
+  white-space: nowrap;
+  line-height: 1;
+  justify-content: center;
+  padding: 15px;
+  cursor: pointer;
+  font-weight: 800%;
+}
+
+.listbuttonContent {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  overflow: hidden;
+  justify-content: start;
+}
+
+.listbuttonIcon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 22px;
+  align-self: stretch;
+  margin: auto 0;
+}
+
+.listbuttonText {
+  font-feature-settings: "liga" off, "clig" off;
+  align-self: stretch;
+  margin: auto 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Media Queries for Tablets and Larger Screens */
+@media (min-width: 768px) {
+  .listcontainer {
+    max-width: 80%; /* Adjust max width for tablets */
+    padding: 120px 0px 40px; /* Increase padding */
+  }
+  
+  .listpeople {
+    width: 900px; /* Adjust width of the image */
+  }
+  
+  .listimageBg {
+    width: 250px; /* Adjust size of the background image circle */
+    height: 250px;
+  }
+  
+  .listcontentBox {
+    padding: 28px 40px; /* Increase padding */
+  }
+  
+  .listtitle {
+    font-size: 28px; /* Decrease font size slightly for tablets */
+  }
+  
+  .listsubtitle {
+    font-size: 18px; /* Decrease subtitle size */
   }
 
-  .peoplecontainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%; /* Full width of its container */
-    height: 100%; /* Full height of its container */
-  }
-  
-  .people {
-    width: 1200px; /* Set your desired width */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Ensure the image scales properly */
-  }
-  
-  .imageBg {
-    background-color: #ffc7de;
-    border-radius: 50%;
-    align-self: center;
-    display: flex;
-    width: 309px;
-    height: 309px;
-    aspect-ratio: 1;
-  }
-  
-  .contentBox {
-    border-radius: 16px;
-    border: 2px solid var(--Colors-Black, #18191f);
-    box-shadow: 0 6px 0 0 #18191f;
-    background-color: #e9e7fc;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 24px 33px;
-  }
-  
-  .title {
-    font-feature-settings: "liga" off, "clig" off;
-    font-size: 36px;
-    line-height: 1;
-  }
-  
-  .subtitle {
-    color: var(--Colors-Black-800, #474a57);
-    font-feature-settings: "liga" off, "clig" off;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 20px;
-    align-self: stretch;
-    margin: 0 0 10px;
-  }
-  
-  .button {
-    align-items: center;
-    border-radius: 14.857px;
-    border: 1.857px solid var(--Colors-Black, #18191f);
-    box-shadow: 0 3.714px 0 0 #18191f;
-    background-color: #ffbd12;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    font-size: 23px;
-    white-space: nowrap;
-    line-height: 1;
-    justify-content: center;
-    padding: 15px;
-    cursor: pointer;
-    font-weight: 800%;
-  }
-  
-  .buttonContent {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    overflow: hidden;
-    justify-content: start;
-  }
-  
-  .buttonIcon {
-    aspect-ratio: 1;
-    object-fit: contain;
-    object-position: center;
-    width: 22px;
-    align-self: stretch;
-    margin: auto 0;
-  }
-  
-  .buttonText {
-    font-feature-settings: "liga" off, "clig" off;
-    align-self: stretch;
-    margin: auto 0;
-  }
-  
-  .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
+  .listbutton {
+    font-size: 20px; /* Decrease button font size */
+    padding: 12px;
   }
 
- 
+  .listbuttonIcon {
+    width: 28px; /* Increase icon size */
+  }
+}
+
+@media (min-width: 1024px) {
+  .listcontainer {
+    max-width: 70%; /* Adjust max width for larger screens */
+    padding: 100px 0px 50px; /* Further adjust padding */
+  }
+
+  .listpeople {
+    width: 800px; /* Adjust image size for large screens */
+  }
+
+  .listimageBg {
+    width: 280px; /* Increase size of background image */
+    height: 280px;
+  }
+  
+  .listcontentBox {
+    padding: 32px 50px; /* Further adjust padding */
+  }
+  
+  .listtitle {
+    font-size: 32px; /* Increase title size for larger screens */
+  }
+
+  .listsubtitle {
+    font-size: 22px; /* Increase subtitle size */
+  }
+
+  .listbutton {
+    font-size: 24px; /* Increase button font size */
+    padding: 18px;
+  }
+
+  .listbuttonIcon {
+    width: 30px; /* Increase icon size */
+  }
+}

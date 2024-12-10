@@ -1,98 +1,181 @@
 .loginContainer {
-    background: var(--Colors-White, #fff);
-    max-width: 480px;
-    width: 100%;
-    color: var(--Colors-Black, #18191f);
-    margin: 0 auto;
-    font: 500 21px/1 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
-    display: flex;
+  background: var(--Colors-White, #fff);
+  max-width: 412px;
+  width: 100%;
+  color: var(--Colors-Black, #18191f);
+  margin: 0 auto;
+  padding: 68px 0;
+  font: 500 21px/1 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+.loginformContainer {
+  background: var(--Colors-White, #fff);
+  margin-top: 28px;
+  width: 100%;
+  padding: 24px;
+}
+
+.logintitle {
+  color: #000;
+  font-feature-settings: "liga" off, "clig" off;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.loginsubtitle {
+  color: var(--Colors-Black-800, #474a57);
+  font-feature-settings: "liga" off, "clig" off;
+  line-height: 24px;
+  margin-top: 12px;
+}
+
+.logininputWrapper {
+  border-radius: 16px;
+  border: 2px solid var(--Colors-Black, #18191f);
+  background: var(--Colors-White, #fff);
+  display: flex;
+  margin-top: 32px;
+  width: 80%;
+  padding: 16px;
+}
+
+.logininputContent {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.logininputIcon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 24px;
+}
+
+.logininput {
+  font-feature-settings: "liga" off, "clig" off;
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-size: 23px;
+}
+
+.loginsubmitButton {
+  align-items: center;
+  border-radius: 16px;
+  border: 2px solid var(--Colors-Black, #18191f);
+  background: var(--Colors-Yellow, #ffbd12);
+  box-shadow: 0 4px 0 0 #18191f;
+  display: flex;
+  margin-top: 32px; 
+  width: 88%;
+  font-weight: 1000;
+  text-align: center;
+  justify-content: center;
+  padding: 20px;
+  cursor: pointer;
+  font-size: 23px ;
+}
+
+.loginsignupLink {
+  color: var(--Colors-Red, #f95a2c);
+  font-feature-settings: "liga" off, "clig" off;
+  line-height: 1;
+  margin-top: 32px;
+}
+
+.loginsignupLink span {
+  font-weight: 700;
+}
+
+.loginerrorMessage {
+  color: var(--Colors-Red, #f95a2c);
+  font-size: 14px;
+  margin-top: 12px;
+}
+/* Styles for tablets (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .loginContainer {
+    max-width: 600px;
+    padding: 90px 0;
   }
 
-  .formContainer {
-    background: var(--Colors-White, #fff);
-    margin-top: 28px;
-    width: 100%;
+  .loginformContainer {
+    margin-top: 40px;
+    padding: 32px;
+  }
+
+  .logintitle {
+    font-size: 48px;
+  }
+
+  .loginsubtitle {
+    font-size: 18px;
+    line-height: 28px;
+    margin-top: 16px;
+  }
+
+  .logininputWrapper {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .loginsubmitButton {
+    width: 90%;
+    font-size: 26px;
     padding: 24px;
   }
-  
-  .title {
-    color: #000;
-    font-feature-settings: "liga" off, "clig" off;
-    font-size: 36px;
-    font-weight: 800;
-    line-height: 1;
+
+  .loginsignupLink {
+    font-size: 16px;
+    margin-top: 40px;
   }
-  
-  .subtitle {
-    color: var(--Colors-Black-800, #474a57);
-    font-feature-settings: "liga" off, "clig" off;
-    line-height: 24px;
-    margin-top: 12px;
+
+  .loginerrorMessage {
+    font-size: 16px;
   }
-  
-  .inputWrapper {
-    border-radius: 16px;
-    border: 2px solid var(--Colors-Black, #18191f);
-    background: var(--Colors-White, #fff);
-    display: flex;
-    margin-top: 32px;
-    width: 80%;
-    padding: 16px;
+}
+
+/* Styles for larger screens (1024px and up) */
+@media (min-width: 1024px) {
+  .loginContainer {
+    max-width: 800px;
+    padding: 120px 0;
   }
-  
-  .inputContent {
-    display: flex;
-    align-items: center;
-    width: 100%;
+
+  .loginformContainer {
+    margin-top: 50px;
+    padding: 40px;
   }
-  
-  .inputIcon {
-    aspect-ratio: 1;
-    object-fit: contain;
-    object-position: center;
-    width: 24px;
+
+  .logintitle {
+    font-size: 56px;
   }
-  
-  .input {
-    font-feature-settings: "liga" off, "clig" off;
-    width: 100%;
-    border: none;
-    background: transparent;
-    font-size: 23px;
+
+  .loginsubtitle {
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 20px;
   }
-  
-  .submitButton {
-    align-items: center;
-    border-radius: 16px;
-    border: 2px solid var(--Colors-Black, #18191f);
-    background: var(--Colors-Yellow, #ffbd12);
-    box-shadow: 0 4px 0 0 #18191f;
-    display: flex;
-    margin-top: 32px; 
-    width: 91%;
-    font-weight: 1000;
-    text-align: center;
-    justify-content: center;
-    padding: 20px;
-    cursor: pointer;
-    font-size: 23px ;
-    font-family: Montserrat, -apple-system, Roboto, Helvetica, sans-serif;;
+
+  .logininputWrapper {
+    width: 95%;
+    padding: 24px;
   }
-  
-  .signupLink {
-    color: var(--Colors-Red, #f95a2c);
-    font-feature-settings: "liga" off, "clig" off;
-    line-height: 1;
-    margin-top: 32px;
+
+  .loginsubmitButton {
+    width: 95%;
+    font-size: 28px;
+    padding: 28px;
   }
-  
-  .signupLink span {
-    font-weight: 700;
+
+  .loginsignupLink {
+    font-size: 18px;
+    margin-top: 50px;
   }
-  
-  .errorMessage {
-    color: var(--Colors-Red, #f95a2c);
-    font-size: 14px;
-    margin-top: 12px;
+
+  .loginerrorMessage {
+    font-size: 18px;
   }
-  
+}

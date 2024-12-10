@@ -1,4 +1,4 @@
-.container {
+.Addcontainer {
     background-color: #fff;
     display: flex;
     max-width: 412px;
@@ -8,14 +8,14 @@
     font: 500 23px/1 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
   }
   
-  .title {
+  .Addtitle {
     font-feature-settings: "liga" off, "clig" off;
     max-width: 100%;
     overflow: hidden;
     font-size: 36px;
   }
 
-  .input {
+  .Addinput {
     font-feature-settings: "liga" off, "clig" off;
     width: 100%;
     border: none;
@@ -23,11 +23,11 @@
     font-size: 23px;
   }
   
-  input::placeholder {
+  .Addinput::placeholder {
     font-size: 23px;
   }
 
-  .inputWrapper {
+  .AddinputWrapper {
     border-radius: 16px;
     border: 2px solid #18191f;
     background-color: #fff;
@@ -40,7 +40,7 @@
     font: 500 21px/1 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
   }
   
-  .inputContent {
+  .AddinputContent {
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -49,7 +49,7 @@
     border: none;
   }
   
-  .inputIcon {
+  .AddinputIcon {
     aspect-ratio: 1;
     object-fit: contain;
     object-position: center;
@@ -58,7 +58,7 @@
     margin: auto 0;
   }
   
-  .inputLabel {
+  .AddinputLabel {
     font-feature-settings: "liga" off, "clig" off;
     align-self: stretch;
     width: 251px;
@@ -66,7 +66,7 @@
     font-size: 23px;
   }
   
-  .dateWrapper {
+  .AdddateWrapper {
     border-radius: 20px;
     border: 2px solid #18191f;
     background-color: #fff;
@@ -78,19 +78,19 @@
     justify-content: space-between;
   }
   
-  .dateLabel {
+  .AdddateLabel {
     font-feature-settings: "liga" off, "clig" off;
     margin: auto 0;
   }
   
-  .dateIcon {
+  .AdddateIcon {
     aspect-ratio: 0.79;
     object-fit: contain;
     object-position: center;
     width: 44px;
   }
   
-  .descriptionWrapper {
+  .AdddescriptionWrapper {
     border-radius: 16px;
     border: 2px solid #18191f;
     background-color: #fff;
@@ -102,7 +102,7 @@
     padding: 14px 16px 89px;
   }
   
-  .descriptionLabel {
+  .AdddescriptionLabel {
     font-feature-settings: "liga" off, "clig" off;
     align-self: stretch;
     width: 100%;
@@ -110,7 +110,7 @@
     overflow: hidden;
   }
   
-  .submitButton {
+  .AddsubmitButton {
     align-items: center;
     border-radius: 16px;
     background-color: #ffbd12;
@@ -131,7 +131,7 @@
     font-family: Montserrat, -apple-system, Roboto, Helvetica, sans-serif;;
   }
   
-  .buttonContent {
+  .AddbuttonContent {
     display: flex;
     align-items: center;
     gap: 6px;
@@ -139,13 +139,13 @@
     justify-content: flex-start;
   }
   
-  .buttonText {
+  .AddbuttonText {
     font-feature-settings: "liga" off, "clig" off;
     align-self: stretch;
     margin: auto 0;
   }
   
-  .buttonIcon {
+  .AddbuttonIcon {
     aspect-ratio: 1;
     object-fit: contain;
     object-position: center;
@@ -154,5 +154,4 @@
     margin: auto 0;
   }
   
-
 

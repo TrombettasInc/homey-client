@@ -29,20 +29,20 @@ function ProjectCard({ title, isDone, startDate, projectId, color, getProject })
     return (
         <article className={styles.card}>
 
-            <div className={styles.content}>
-                <div className={styles.frame}style={{ backgroundColor: color }}>
-                    <p className={styles.createdDate}>{new Date(startDate).toLocaleDateString()}</p>
-                    <h2 className={styles.projectTitle}>{title}</h2>
+            <div className={styles.cardcontent}>
+                <div className={styles.cardframe}style={{ backgroundColor: color }}>
+                    <p className={styles.cardcreatedDate}>{new Date(startDate).toLocaleDateString()}</p>
+                    <h2 className={styles.cardprojectTitle}>{title}</h2>
 
 
-                    <div className={styles.actionContainer}>
-                        <button className={styles.detailsButton}>
-                            <Link to={`/projects/${projectId}`} className={styles.detailsButtonText} state={isDone}>see details</Link>
+                    <div className={styles.cardactionContainer}>
+                        <button className={styles.carddetailsButton}>
+                            <Link to={`/projects/${projectId}`} className={styles.carddetailsButtonText} state={isDone}>see details</Link>
                         </button>
 
-                        <div className={styles.checkboxContainer}>
+                        <div className={styles.cardcheckboxContainer}>
                             <div
-                                className={`${styles.checkbox} ${checked ? styles.checked : ''}`}
+                                className={`${styles.cardcheckbox} ${checked ? styles.cardchecked : ''}`}
                                 role="checkbox"
                                 tabIndex="0"
                                 aria-checked={checked}
@@ -52,7 +52,7 @@ function ProjectCard({ title, isDone, startDate, projectId, color, getProject })
                                     <img
                                         loading="lazy"
                                         src="https://cdn.builder.io/api/v1/image/assets/TEMP/51a1a671c4ae4c97ff9a3464d05eb5ce4d4db0939a6cef9e3149a9fd69a2757f?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0"
-                                        className={styles.checkboxIcon}
+                                        className={styles.cardcheckboxIcon}
                                         alt="project card tick mark icon"
                                     />
                                 )}

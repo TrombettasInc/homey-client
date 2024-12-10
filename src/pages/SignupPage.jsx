@@ -8,13 +8,13 @@ import styles from './SignUpPage.module.css'
 // InputField Component
 const InputField = ({ icon, placeholder, type, value, onChange }) => {
   return (
-    <div className={styles.inputWrapper}>
-      <div className={styles.inputContent}>
-        <img loading="lazy" src={icon} alt="" className={styles.inputIcon} />
+    <div className={styles.signinputWrapper}>
+      <div className={styles.signinputContent}>
+        <img loading="lazy" src={icon} alt="" className={styles.signinputIcon} />
         <input
           type={type}
           placeholder={placeholder}
-          className={styles.input}
+          className={styles.signinput}
           aria-label={placeholder}
           value={value}
           onChange={onChange}
@@ -58,23 +58,23 @@ const SignupPage = () => {
   ];
 
   return (
-    <main className={styles.signUp}>
+    <main className={styles.signsignUp}>
      
       
-      <form className={styles.formContainer} onSubmit={handleSignupSubmit}>
-        <h1 className={styles.title}>sign up</h1>
-        <p className={styles.subtitle}>
+      <form className={styles.signformContainer} onSubmit={handleSignupSubmit}>
+        <h1 className={styles.signtitle}>sign up</h1>
+        <p className={styles.signsubtitle}>
           sign up to create projects and tasks for your homey!
         </p>
         {inputFields.map((field, index) => (
           <InputField key={index} {...field} />
         ))}
         <button type="submit" className={styles.signupButton}>
-          sign up
+          Sign up
         </button>
         {errorMessage && <p className={styles.error}>{errorMessage}</p>}
         <p className={styles.loginLink}>
-          already have an account? <Link to={'/login'}><span>go here</span></Link>
+          Already have an account? <Link to={'/login'}><span>go here</span></Link>
         </p>
       </form>
     </main>

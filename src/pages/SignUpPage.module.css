@@ -1,34 +1,35 @@
-.signUp {
+.signsignUp {
   background: var(--Colors-White, #fff);
-  max-width: 480px;
+  max-width: 412px;
   width: 100%;
   color: var(--Colors-Black, #18191f);
   margin: 0 auto;
+  padding: 54px 0 152px;
   font: 500 21px/1 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
 }
 
-.formContainer {
+.signformContainer {
   background: var(--Colors-White, #fff);
   margin-top: 28px;
   padding: 24px;
 }
 
-.title {
-  color: #000;
+.signtitle {
+  color: #18191f;
   font-feature-settings: "liga" off, "clig" off;
   font-size: 36px;
   font-weight: 800;
   line-height: 1;
 }
 
-.subtitle {
+.signsubtitle {
   color: var(--Colors-Black-800, #474a57);
   font-feature-settings: "liga" off, "clig" off;
   line-height: 24px;
   margin-top: 12px;
 }
 
-.inputWrapper {
+.signinputWrapper {
   border-radius: 16px;
   border: 2px solid var(--Colors-Black, #18191f);
   background: var(--Colors-White, #fff);
@@ -38,20 +39,20 @@
   padding: 14px 16px;
 }
 
-.inputContent {
+.signinputContent {
   display: flex;
   align-items: center;
   width: 100%;
 }
 
-.inputIcon {
+.signinputIcon {
   aspect-ratio: 1;
   object-fit: contain;
   object-position: center;
   width: 24px;
 }
 
-.input {
+.signinput {
   font-feature-settings: "liga" off, "clig" off;
   width: 100%;
   border: none;
@@ -59,7 +60,7 @@
   font-size: inherit;
 }
 
-.signupButton {
+.signsignupButton {
   align-items: center;
   border-radius: 16px;
   border: 2px solid var(--Colors-Black, #18191f);
@@ -67,24 +68,23 @@
   box-shadow: 0 4px 0 0 #18191f;
   display: flex;
   margin-top: 32px;
-  width: 91%; 
+  width: 88%; 
   font-weight: 1000;
   text-align: center;
   justify-content: center;
   padding: 20px; 
   cursor: pointer;
   font-size: 23px;
-  font-family: Montserrat, -apple-system, Roboto, Helvetica, sans-serif;;
 }
 
-.loginLink {
+.signloginLink {
   color: var(--Colors-Red, #f95a2c);
   font-feature-settings: "liga" off, "clig" off;
   line-height: 1;
   margin-top: 32px;
 }
 
-.loginLink span {
+.signloginLink span {
   font-weight: 700;
 }
 
@@ -98,4 +98,77 @@
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+/* Media Queries for Tablets and Larger Screens */
+@media (min-width: 768px) {
+  .signsignUp {
+    max-width: 80%; /* Adjust max-width for tablets */
+    padding: 80px 0 120px; /* Increase padding for better spacing */
+  }
+
+  .signformContainer {
+    margin-top: 40px; /* Increase space between the container and the top */
+    padding: 32px; /* Increase padding for better spacing */
+  }
+
+  .signtitle {
+    font-size: 32px; /* Adjust font size for larger screens */
+  }
+
+  .signsubtitle {
+    font-size: 18px; /* Adjust subtitle font size */
+  }
+
+  .signinputWrapper {
+    width: 70%; /* Adjust input width to fit larger screens */
+    padding: 18px 20px; /* Increase padding for inputs */
+  }
+
+  .signsignupButton {
+    width: 80%; /* Adjust button width for better proportion */
+    padding: 22px; /* Increase button padding */
+    font-size: 20px; /* Decrease font size slightly for consistency */
+  }
+
+  .signloginLink {
+    margin-top: 40px; /* Increase space above the login link */
+    font-size: 18px; /* Adjust font size of the login link */
+  }
+}
+
+@media (min-width: 1024px) {
+  .signsignUp {
+    max-width: 60%; /* Adjust max-width for larger screens */
+    padding: 100px 0 150px; /* Increase padding for better spacing */
+  }
+
+  .signformContainer {
+    margin-top: 50px; /* Increase space between the container and the top */
+    padding: 40px; /* Further increase padding */
+  }
+
+  .signtitle {
+    font-size: 36px; /* Increase title font size */
+  }
+
+  .signsubtitle {
+    font-size: 20px; /* Increase subtitle font size */
+  }
+
+  .signinputWrapper {
+    width: 60%; /* Narrow down the input width for more balance */
+    padding: 22px 24px; /* Increase padding for inputs */
+  }
+
+  .signsignupButton {
+    width: 70%; /* Adjust button width for larger screens */
+    padding: 25px; /* Increase padding for better clickability */
+    font-size: 22px; /* Increase font size for button */
+  }
+
+  .signloginLink {
+    margin-top: 50px; /* Increase space above the login link */
+    font-size: 20px; /* Increase font size for larger screens */
+  }
 }
