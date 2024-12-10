@@ -143,6 +143,7 @@
     font-feature-settings: "liga" off, "clig" off;
     align-self: stretch;
     margin: auto 0;
+    font-family: 'Montserrat', sans-serif;
   }
   
   .AddbuttonIcon {
