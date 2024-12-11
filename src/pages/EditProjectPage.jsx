@@ -61,8 +61,8 @@ function EditProjectPage() {
     return (
         <main className={styles.editcontainer}>
             
-            <header className={styles.header}>
-                <h1 className={styles.title}>edit Project</h1>
+            <header className={styles.ediheader}>
+                <h1 className={styles.edititle}>edit Project</h1>
             </header>
             <form onSubmit={handleFormSubmit}>
                 <div className={styles.editinputContainer}>
@@ -76,7 +76,7 @@ function EditProjectPage() {
                             placeholder="Project Title"
                             value={title}
                             onChange={(e) => setTitle(e.target.value)}
-                            style={{ fontSize: "16px", padding: "10px", border: "none" }}
+                           
                         />
                     </div>
                 </div>
@@ -88,7 +88,7 @@ function EditProjectPage() {
                         className={styles.editdateInput}
                         value={deadline}
                         onChange={(e) => setDeadline(e.target.value)}
-                        style={{ fontSize: "16px", padding: "10px", border: "none" }}
+                        
                     />
                     <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ecbf590f99fffde6575863051d00cdb9fea318ce6dd7240a95a8d8b918d13e3e?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0" className={styles.editdateIcon} alt="Calendar icon" />
                 </div>
@@ -99,7 +99,7 @@ function EditProjectPage() {
                         className={styles.edittextarea}
                         value={description}
                         onChange={(e) => setDescription(e.target.value)}
-                        style={{ fontSize: "16px", padding: "10px", border: "none" }}
+                        
                     />
                 </div>
                 <button type="submit" className={styles.editbutton}>

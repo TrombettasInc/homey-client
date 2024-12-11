@@ -39,7 +39,7 @@ function AddProject() {
     <main className={styles.Addcontainer}>
 
       <form onSubmit={handleSubmit} className={styles.AddformContainer}>
-        <h1 className={styles.title}>create project</h1>
+        <h1 className={styles.Addtitle}>create project</h1>
 
         {/* Project Title Field */}
         <div className={styles.AddinputWrapper}>
@@ -105,7 +105,7 @@ function AddProject() {
         </div>
 
         {/* Submit Button */}
-        <button type="submit" className={styles.submitButton}>
+        <button type="submit" className={styles.AddsubmitButton}>
           Create
         </button>
       </form>

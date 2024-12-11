@@ -155,4 +155,58 @@
     margin: auto 0;
   }
   
+/* Responsive styles for tablets and larger screens */
+@media (min-width: 768px) {
+  .Addcontainer {
+    max-width: 600px;
+    padding: 20px;
+  }
+  .Addtitle {
+    font-size: 40px;
+  }
+  .Addinput,
+  .Addinput::placeholder,
+  .AddinputLabel {
+    font-size: 25px;
+  }
+  .AddinputWrapper {
+    max-width: 500px;
+  }
+  .AdddateWrapper {
+    padding-left: 20px;
+  }
+  .AdddescriptionWrapper {
+    padding: 20px 24px 100px;
+  }
+  .AddsubmitButton {
+    width: 90%;
+    font-size: 25px;
+  }
+}
 
+@media (min-width: 1024px) {
+  .Addcontainer {
+    max-width: 800px;
+  }
+  .Addtitle {
+    font-size: 48px;
+  }
+  .Addinput,
+  .Addinput::placeholder,
+  .AddinputLabel {
+    font-size: 28px;
+  }
+  .AddinputWrapper {
+    max-width: 600px;
+  }
+  .AdddateWrapper {
+    padding-left: 24px;
+  }
+  .AdddescriptionWrapper {
+    padding: 24px 28px 120px;
+  }
+  .AddsubmitButton {
+    font-size: 28px;
+    padding: 20px;
+  }
+}
