@@ -141,13 +141,7 @@
 /* Styles for larger screens (1024px and up) */
 @media (min-width: 1024px) {
   .loginContainer {
-    max-width: 800px;
-    padding: 120px 0;
-  }
-
-  .loginformContainer {
-    margin-top: 50px;
-    padding: 40px;
+    max-width: 600px;
   }
 
   .logintitle {
@@ -160,16 +154,7 @@
     margin-top: 20px;
   }
 
-  .logininputWrapper {
-    width: 95%;
-    padding: 24px;
-  }
 
-  .loginsubmitButton {
-    width: 95%;
-    font-size: 28px;
-    padding: 28px;
-  }
 
   .loginsignupLink {
     font-size: 18px;

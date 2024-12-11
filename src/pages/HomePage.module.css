@@ -155,8 +155,7 @@
 /* Styles for larger screens (1024px and up) */
 @media (min-width: 1024px) {
   .homepage {
-    max-width: 800px;
-    padding: 40px;
+    max-width: 600px;
     margin: auto;
   }
 

@@ -69,7 +69,7 @@ const SignupPage = () => {
         {inputFields.map((field, index) => (
           <InputField key={index} {...field} />
         ))}
-        <button type="submit" className={styles.signupButton}>
+        <button type="submit" className={styles.signsignupButton}>
           Sign up
         </button>
         {errorMessage && <p className={styles.error}>{errorMessage}</p>}

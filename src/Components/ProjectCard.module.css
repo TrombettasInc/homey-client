@@ -163,6 +163,7 @@
 /* Styles for larger screens (1024px and up) */
 @media (min-width: 1024px) {
   .card {
+    font-family: 'Montserrat', sans-serif;
     max-width: 800px;
     padding: 40px;
     margin: auto;

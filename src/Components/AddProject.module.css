@@ -187,9 +187,16 @@
 @media (min-width: 1024px) {
   .Addcontainer {
     max-width: 800px;
+    margin: 0 auto; /* Center horizontally */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    height: 100vh; /* Take full viewport height */
   }
   .Addtitle {
     font-size: 48px;
+    text-align: center; /* Ensure title is centered */
   }
   .Addinput,
   .Addinput::placeholder,
@@ -206,7 +213,9 @@
     padding: 24px 28px 120px;
   }
   .AddsubmitButton {
+    max-width: 600px; /* Match the max-width of .AddinputWrapper at this breakpoint */
     font-size: 28px;
     padding: 20px;
+    width: 100%
   }
 }

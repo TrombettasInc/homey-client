@@ -139,13 +139,15 @@
 
 @media (min-width: 1024px) {
   .signsignUp {
-    max-width: 60%; /* Adjust max-width for larger screens */
-    padding: 100px 0 150px; /* Increase padding for better spacing */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    padding: 0; /* Remove any unnecessary padding */
   }
 
   .signformContainer {
-    margin-top: 50px; /* Increase space between the container and the top */
-    padding: 40px; /* Further increase padding */
+    margin-right: -180px;
   }
 
   .signtitle {
