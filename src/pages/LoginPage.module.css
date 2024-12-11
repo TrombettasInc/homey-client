@@ -75,8 +75,7 @@
   justify-content: center;
   padding: 20px;
   cursor: pointer;
-  font-size: 23px;
-  font-family: 'Montserrat', sans-serif;
+  font-size: 23px ;
 }
 
 .loginsignupLink {
@@ -119,7 +118,7 @@
   }
 
   .logininputWrapper {
-    width: 100%;
+    width: 90%;
     padding: 20px;
   }
 
@@ -143,6 +142,12 @@
 @media (min-width: 1024px) {
   .loginContainer {
     max-width: 800px;
+    padding: 120px 0;
+  }
+
+  .loginformContainer {
+    margin-top: 50px;
+    padding: 40px;
   }
 
   .logintitle {
@@ -155,18 +160,15 @@
     margin-top: 20px;
   }
 
-  .loginformContainer {
-    margin-top: 40px;
-    width: 100%;
-  }
-
   .logininputWrapper {
-    width: 100%;
-    padding: 16px 0px 16px 0px;
+    width: 95%;
+    padding: 24px;
   }
 
   .loginsubmitButton {
-    width: 100%;
+    width: 95%;
+    font-size: 28px;
+    padding: 28px;
   }
 
   .loginsignupLink {
