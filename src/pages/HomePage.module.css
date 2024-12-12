@@ -1,10 +1,14 @@
-/* Existing mobile styles (unchanged) */
+:root {
+  --spacing: 1rem; /* Base spacing unit */
+  --font-base: 1rem; /* Base font size */
+}
+
 .homepage {
   background-color: #fff;
   display: flex;
-  max-width: 412px;
+  max-width: 90vw; /* Flexible max width */
   width: 100%;
-  padding-bottom: 6px;
+  padding-bottom: var(--spacing);
   flex-direction: column;
   overflow: hidden;
   font-family: Montserrat, sans-serif;
@@ -17,14 +21,14 @@
   display: flex;
   width: 100%;
   align-items: center;
-  gap: 20px;
+  gap: 5vw; /* Gap scales with viewport width */
   overflow: hidden;
-  font-size: 36px;
+  font-size: 2.25rem; /* Scalable font size */
   color: #18191f;
   font-weight: 800;
   white-space: nowrap;
   line-height: 1;
-  padding: 62px 24px 24px;
+  padding: 10vh 5vw 5vh; /* Padding scales with viewport height and width */
   justify-content: space-around;
 }
 
@@ -32,8 +36,8 @@
   aspect-ratio: 1;
   object-fit: contain;
   object-position: center;
-  width: 24px;
-  margin-top: 6px;
+  width: 2rem;
+  margin-top: 0.5rem;
 }
 
 .brandName {
@@ -44,18 +48,18 @@
   align-items: center;
   background: #fff;
   display: flex;
-  margin-top: 4px;
+  margin-top: 0.25rem;
   width: 100%;
   flex-direction: column;
   overflow: hidden;
   justify-content: center;
-  padding: 0px;
+  padding: 0;
 }
 
 .homepagecontentWrapper {
   display: flex;
-  max-width: 100%;
-  width: 327px;
+  max-width: 90%;
+  width: 80vw; /* Width relative to the viewport */
   flex-direction: column;
   overflow: hidden;
   align-items: center;
@@ -65,35 +69,37 @@
 .homepagetitle {
   color: #18191f;
   font-feature-settings: "liga" off, "clig" off;
-  font-size: 36px;
+  font-size: 2.25rem;
   font-weight: 800;
   line-height: 1;
+ 
 }
 
 .homepagesubtitle {
   color: #474a57;
   font-feature-settings: "liga" off, "clig" off;
-  font-size: 23px;
+  font-size: 1.5rem;
   font-weight: 500;
-  line-height: 28px;
-  margin-top: 1px;
+  line-height: 1.75rem;
+  margin-top: 0.5rem;
+  text-align: center;
 }
 
 .homepageactionButton {
   align-items: center;
-  border-radius: 16px;
+  border-radius: 1rem;
   background: #f95a2c;
-  box-shadow: 0 6px 0 0 #18191f;
+  box-shadow: 0 0.5rem 0 0 #18191f;
   align-self: center;
-  margin-top: 10px;
+  margin-top: 1rem;
   flex-direction: column;
   overflow: hidden;
-  font-size: 23px;
+  font-size: 1.5rem;
   color: #fff;
   font-weight: 800;
   line-height: 1;
   justify-content: center;
-  padding: 16px;
+  padding: 1rem;
   border: none;
   cursor: pointer;
   text-decoration: none;
@@ -106,84 +112,85 @@
 .homepagebuttonText {
   font-feature-settings: "liga" off, "clig" off;
   align-self: stretch;
-  gap: 6px;
+  gap: 0.5rem;
   overflow: hidden;
   text-decoration: none;
+  font-family: Montserrat, sans-serif;
 }
 
 .homepageprojectIllustration {
   aspect-ratio: 1.05;
   object-fit: contain;
   object-position: center;
-  width: 100%;
+  width: 90%;
   align-self: center;
-  margin-top: 30px;
+  margin-top: 5vh; /* Scales with viewport height */
 }
 
 /* Styles for tablets (768px to 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
   .homepage {
-    max-width: 600px;
-    padding: 20px;
+    max-width: 80vw;
+    padding: 2rem;
     margin: auto;
   }
 
   .homepageheader {
-    font-size: 48px;
-    gap: 30px;
-    padding: 80px 24px 24px;
+    font-size: 3rem;
+    gap: 4vw;
+    padding: 10vh 5vw 5vh;
   }
 
   .homepagecontentWrapper {
-    width: 500px;
+    width: 70vw;
   }
 
   .homepagetitle {
-    font-size: 48px;
+    font-size: 3rem;
   }
 
   .homepagesubtitle {
-    font-size: 28px;
+    font-size: 1.75rem;
   }
 
   .homepageactionButton {
-    font-size: 28px;
-    padding: 20px;
+    font-size: 1.75rem;
+    padding: 1.5rem;
   }
 }
 
 /* Styles for larger screens (1024px and up) */
 @media (min-width: 1024px) {
   .homepage {
-    max-width: 600px;
+    max-width: 60vw;
     margin: auto;
   }
 
   .homepageheader {
-    font-size: 56px;
-    gap: 40px;
-    padding: 100px 24px 24px;
+    font-size: 3.5rem;
+    gap: 5vw;
+    padding: 10vh 5vw 5vh;
   }
 
   .homepagecontentWrapper {
-    width: 600px;
+    width: 60vw;
   }
 
   .homepagetitle {
-    font-size: 56px;
+    font-size: 3.5rem;
   }
 
   .homepagesubtitle {
-    font-size: 32px;
+    font-size: 2rem;
   }
 
   .homepageactionButton {
-    font-size: 32px;
-    padding: 24px;
+    font-size: 2rem;
+    padding: 2rem;
   }
 
   .homepageprojectIllustration {
     width: 80%;
-    margin-top: 40px;
+    margin-top: 5vh;
   }
 }

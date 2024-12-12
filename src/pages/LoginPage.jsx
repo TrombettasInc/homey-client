@@ -65,7 +65,7 @@ function LoginPage() {
   ];
 
   return (
-    <main className={styles.loginContainer}>
+    <div className={styles.loginContainer}>
 
       
 
@@ -89,7 +89,7 @@ function LoginPage() {
           don't have an account? <Link to="/signup"><span>sign up</span></Link>
         </p>
       </form>
-    </main>
+    </div>
   );
 }
 

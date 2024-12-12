@@ -73,7 +73,7 @@ const SignupPage = () => {
           sign up
         </button>
         {errorMessage && <p className={styles.error}>{errorMessage}</p>}
-        <p className={styles.loginLink}>
+        <p className={styles.signloginLink}>
           already have an account? <Link to={'/login'}><span>go here</span></Link>
         </p>
       </form>
