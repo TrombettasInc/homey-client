@@ -9,13 +9,11 @@
   width: 100%;
   color: var(--Colors-Black, #18191f);
   margin: 0 auto;
-
   font: 500 1.3125rem/1 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
   display: flex;
   flex-direction: column; /* Stack children vertically */
   align-items: center; /* Center horizontally */
   justify-content: center; /* Center vertically */
-  min-height: 100vh; /* Ensure the container takes full height of the viewport */
 }
 
 .signformContainer {
@@ -59,6 +57,7 @@
 .signinputWrapper {
   background: var(--Colors-White, #fff);
   margin-top: 2rem;
+  padding-right: 0.75rem;
 }
 
 .signinputContent {
@@ -72,6 +71,8 @@
   object-fit: contain;
   object-position: center;
   width: 1.5rem; /* 24px to rem */
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
 }
 
 .signinput {
@@ -121,17 +122,13 @@
     max-width: 80vw; /* Flexible max width */
   }
 
-  .signformContainer {
-    margin-top: 2.5rem; /* 40px to rem */
-  }
-
   .signtitle {
     font-size: 3rem; /* 48px to rem */
   }
 
   .signsubtitle {
     font-size: 1.125rem; /* 18px to rem */
-    line-height: 1.75rem; /* 28px to rem */
+    line-height: 2rem; /* 28px to rem */
     margin-top: 1rem; /* 16px to rem */
   }
 
@@ -142,16 +139,13 @@
 
   .signsignupButton {
     width: 90%;
-    font-size: 1.625rem; /* 26px to rem */
+    font-size: 1.8rem; /* 26px to rem */
     padding: 1.5rem; /* 24px to rem */
   }
 
   .signloginLink {
     font-size: 1rem; /* 16px to rem */
     margin-top: 2.5rem; /* 40px to rem */
-  }
-  .signloginLink span {
-    font-weight: 700;
   }
 
   .signerrorMessage {
@@ -170,17 +164,22 @@
   }
 
   .signsubtitle {
-    font-size: 1.25rem; /* 20px to rem */
-    line-height: 1.875rem; /* 30px to rem */
+    font-size: 2rem; /* 20px to rem */
+    line-height: 2rem; /* 30px to rem */
     margin-top: 1.25rem; /* 20px to rem */
+  }
+  .signsignupButton {
+    width: 90%;
+    font-size: 2rem; /* 26px to rem */
+    padding: 1.5rem; /* 24px to rem */
   }
 
   .signloginLink {
-    font-size: 1.375rem; /* 22px to rem */
+    font-size: 2rem; /* 22px to rem */
     margin-top: 1.875rem; /* 30px to rem */
   }
 
   .signerrorMessage {
-    font-size: 1.125rem; /* 18px to rem */
+    font-size: 2rem; /* 18px to rem */
   }
 }

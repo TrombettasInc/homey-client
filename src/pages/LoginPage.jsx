@@ -72,7 +72,7 @@ function LoginPage() {
       <form onSubmit={handleLoginSubmit} className={styles.loginformContainer}>
         <h1 className={styles.logintitle}>login</h1>
         <p className={styles.loginsubtitle}>
-          login to create and edit your amazing projects.
+          login to create and edit your amazing projects!
         </p>
 
         {inputFields.map((field, index) => (

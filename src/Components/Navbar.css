@@ -1,21 +1,24 @@
+:root {
+  --spacing: 1rem; /* Base spacing unit */
+  --font-base: 1rem; /* Base font size */
+}
 
 .navbar {
   background-color: #fff;
-  color: #18191f; 
+  color: #18191f;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Space between elements */
   align-items: center;
-  padding: 10px 20px;
-  z-index: 10; 
+  padding-right: 1.25rem; /* Padding based on viewport width */
+  z-index: 10;
   font-family: 'Montserrat', sans-serif;
-  margin-left: 10%
+  position: relative; /* Allow positioning of the logo */
 }
 
 .nav-logo {
-  position: absolute;
-  left: 70%;
-  transform: translateX(-50%);
-  font-size: 45px;
+  position: absolute; /* Position the logo to the right */
+  right: 10%; /* Align it to the right */
+  font-size: 2.8125rem; /* 45px to rem */
   font-weight: bold;
   font-family: 'Montserrat', sans-serif;
 }
@@ -25,39 +28,37 @@
   border: none;
   cursor: pointer;
   padding: 0;
+  display: flex;
+  justify-content: flex-end; /* Ensures hamburger is on the right */
+  align-items: center;
 }
 
 .nav-menuicon {
-  width: 50px; 
-  height: 50px;
+  width: 3rem;
+  height: 3rem;
   object-fit: contain;
   border: none;
   background: none;
   box-shadow: none;
-  padding: 0;
+  padding-left: 2rem;
   margin: 0;
   display: block;
 }
 
 .nav-mobile-menu {
   position: fixed;
-  top: 1px;
+  top: 0;
+  left: 0;
   width: 100vw;
-  height: 100vw;
+  height: 93vh; /* Full height of the viewport */
   background-color: rgba(255, 255, 255, 0.9);
-  color: #18191f; 
+  color: #18191f;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   z-index: 20;
-}
-
-.nav-hamburger {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
+  padding-top: 2rem;
 }
 
 .nav-close-button {
@@ -65,26 +66,23 @@
   background: none;
   border: none;
   cursor: pointer;
-  margin-bottom: 50px;
   margin-right: 5%;
-  margin-top: 5%;
+  margin-top: 2vh; /* Vertical margin based on viewport height */
 }
 
 .nav-close-button img {
-  width: 50px; 
-  height: 50px;
-  object-fit: contain;
-  
+  width: 3.5rem; /* Scales with viewport width */
+  height: 3.5rem; /* Scales with viewport width */
 }
 
 .nav-links-mobile {
-  list-style: none;
+  list-style-type: none;
   padding: 0;
-  margin: 0;
+  margin-top: 2rem;
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2rem; /* Vertical spacing between links */
   flex-grow: 1;
 }
 
@@ -92,7 +90,7 @@
 .nav-links-mobile li button {
   color: #18191f;
   text-decoration: none;
-  font-size: 40px;
+  font-size: 2.5rem; /* Scalable font size */
   font-weight: 800;
   background: none;
   border: none;
@@ -101,7 +99,7 @@
 }
 
 .nav-active-user {
-  font-size: 40px;
+  font-size: 2.5rem; /* Scalable font size */
   color: #f95a2c;
   font-weight: 800;
   font-family: 'Montserrat', sans-serif;
@@ -112,27 +110,88 @@
   flex-direction: column;
   align-items: center;
   text-decoration: none;
+  margin-top: 1rem; /* Margin for spacing */
 }
 
 .nav-footer-text {
   color: #474a57;
-  font-size: 20px;
+  font-size: 1.25rem; /* 20px to rem */
   font-weight: 800;
   display: flex;
-  gap: 5px;
+  gap: 1rem; /* Gap between text items */
+  font-family: 'Montserrat', sans-serif;
 }
 
-.nav-footer-text a{
+.nav-footer-text a {
   text-decoration: none;
 }
 
 .nav-social-links img {
-  width: 120px;
-  height: 50px;
+  width: 20vw; /* Scalable width based on viewport */
+  height: auto;
   object-fit: contain;
 }
 
 .nav-links-mobile li a:hover,
 .nav-links-mobile li button:hover {
-  color: #ffbd12; 
+  color: #ffbd12; /* Hover color */
+}
+
+/* Responsive styles for tablets (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar {
+    padding: 1.5rem;
+  }
+
+  .nav-logo {
+    font-size: 3rem; /* Adjust font size */
+  }
+
+  .nav-menuicon {
+    width: 3.5rem; /* Adjust for tablet screens */
+    height: 3.5rem;
+    padding-left: 2rem;
+  }
+
+  .nav-links-mobile li a,
+  .nav-links-mobile li button {
+    font-size: 2.8rem; /* Scalable font size */
+  }
+
+  .nav-footer-text {
+    font-size: 2rem; /* Scalable font size */
+  }
+
+  .nav-social-links img {
+    width: 15vw; /* Scalable width */
+  }
+}
+
+/* Responsive styles for larger screens (1024px and up) */
+@media (min-width: 1024px) {
+  .navbar {
+    padding-left: 2rem;
+  }
+
+  .nav-logo {
+    font-size: 3.5rem; /* Adjust font size for larger screens */
+  }
+
+  .nav-menuicon {
+    width: 4rem; /* Adjust for larger screens */
+    height: 4rem;
+  }
+
+  .nav-links-mobile li a,
+  .nav-links-mobile li button {
+    font-size: 3rem; /* Scalable font size */
+  }
+
+  .nav-footer-text {
+    font-size: 2rem; /* Adjust font size for large screens */
+  }
+
+  .nav-social-links img {
+    width: 12vw; /* Adjust width for large screens */
+  }
 }
