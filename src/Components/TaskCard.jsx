@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import styles from "../pages/ProjectDetailsPage.module.css";
+import styles from './TaskCard.module.css';
 
 
 function TaskCard({ taskId, projectId, description, deadline, isDone, getProject }) {

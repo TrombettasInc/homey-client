@@ -1,0 +1,137 @@
+.taskCard {
+  display: flex;
+  margin-top: 17px;
+  width: 100%;
+  flex-direction: column;
+  font-family: Montserrat, sans-serif;
+  position: relative;
+  max-width: 412px;
+}
+
+.taskContent {
+  border-radius: 16px;
+  border: 2px solid #18191f;
+  box-shadow: 0 2px 0 0 #18191f;
+  background-color: #e9e7fc;
+  display: flex;
+  min-height: 151px;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: start;
+  padding: 20px 23px;
+}
+
+.taskDeadline {
+  color: #474a57;
+  font-feature-settings: "liga" off, "clig" off;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.taskDescription {
+  color: #18191f;
+  font-feature-settings: "liga" off, "clig" off;
+  font-size: 23px;
+  font-weight: 800;
+  line-height: 1.4;
+  margin-top: 8px;
+}
+
+.taskdeleteButton {
+  font-feature-settings: "liga" off, "clig" off;
+  border-radius: 12px;
+  border: 2px solid #18191f;
+  box-shadow: 0 2px 0 0 #18191f;
+  background-color: #ffbd12;
+  align-self: end;
+  z-index: 10;
+  overflow: hidden;
+  font-size: 23px;
+  color: #18191f;
+  font-weight: 800;
+  white-space: nowrap;
+  text-align: center;
+  line-height: 1;
+  padding: 10px 16px;
+  position: absolute;
+  bottom: 50px;
+  right: 46px;
+  cursor: pointer;
+  margin: -25px;
+}
+.checkBoxDeleteContainer {
+  display: flex;
+  margin-top: 30px;
+  width: 100%;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.taskcheckboxContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .taskcheckbox {
+    border-radius: 8px;
+    border: 2px solid #9fa4b4;
+    background: #eeeff4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease;
+  }
+  
+  .taskcheckbox.checked {
+    background: #9fa4b4;
+  }
+  
+  .taskcheckbox:focus{
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+  }
+  
+  .taskcheckboxIcon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    object-position: center;
+    position: absolute;
+  }
+
+@media (min-width: 768px) {
+  .task-card {
+    max-width: 700px;
+  }
+  .add-task-input-wrapper {
+    flex-direction: row;
+    gap: 15px;
+  }
+  .add-task-input-container {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .task-card {
+    max-width: 800px;
+  }
+
+  .task-checkbox,
+  .project-details-checkbox {
+    width: 50px;
+    height: 50px;
+  }
+
+  .task-checkbox-icon,
+  .project-details-checkbox-icon {
+    width: 50px;
+    height: 50px;
+  }
+}

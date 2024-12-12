@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
-import styles from '../pages/ProjectDetailsPage.module.css';
+import styles from "./AddTask.module.css";
+
 
 
 function AddTask({ projectId, getProject }) {

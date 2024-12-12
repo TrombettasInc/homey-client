@@ -2,16 +2,13 @@
   background-color: #fff;
   display: flex;
   max-width: 412px;
-  width: 100%;
   flex-direction: column;
-  overflow: hidden;
   margin: 0 auto;
   padding: 10px 0 32px;
 }
 
 .projectDetailscontainer {
   display: flex;
-  width: 100%;
   flex-direction: column;
   margin-top: 0;
 }
@@ -21,7 +18,6 @@
   align-self: stretch;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
   padding: 0 0 21px;
   font: 800 25px/1 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
   position: relative;
@@ -37,8 +33,7 @@
   border: 2.108px solid #18191f;
   background-color: #fff3f8;
   box-shadow: 0 6.324px 0 0 #18191f;
-  width: 100%;
-  max-width: 412px;
+  width: auto;
   flex-direction: column;
   padding: 20px 23px;
 }
@@ -54,7 +49,7 @@
   font-feature-settings: "liga" off, "clig" off;
   align-self: start;
   margin-top: 36px;
-  font:800 15px/2 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
+  font: 800 15px/2 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
   padding: 0;
 }
 
@@ -63,7 +58,7 @@
   align-self: start;
   font: 600 15px/2 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
   padding: 0;
-  margin: 0
+  margin: 0;
 }
 
 .projectDetailsprojectInfoActions {
@@ -74,13 +69,13 @@
   justify-content: space-between;
 }
 
-.taskcheckboxContainer, .projectDetailscheckboxContainer {
+.projectDetailscheckboxContainer {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
-.taskcheckbox, .projectDetailscheckbox {
+.projectDetailscheckbox {
   border-radius: 8px;
   border: 2px solid #9fa4b4;
   background: #eeeff4;
@@ -94,16 +89,16 @@
   transition: background-color 0.3s ease;
 }
 
-.taskcheckbox.checked, .projectDetailscheckbox.checked {
+.projectDetailscheckbox.checked {
   background: #9fa4b4;
 }
 
-.taskcheckbox:focus, .projectDetailscheckbox:focus {
+.projectDetailscheckbox:focus {
   outline: 2px solid #fff;
   outline-offset: 2px;
 }
 
-.taskcheckboxIcon, .projectDetailscheckboxIcon {
+.projectDetailscheckboxIcon {
   width: 40px;
   height: 40px;
   object-fit: contain;
@@ -128,222 +123,21 @@
   text-decoration: none;
 }
 
-.addTaskForm {
-  border-radius: 16px;
-  border: 2px solid #18191f;
-  box-shadow: 0 2px 0 0 #18191f;
-  background-color: #d6fcf7;
-  margin-top: 17px;
-  width: 100%;
-  max-width: 412px;
-  padding: 13px 17px 22px;
-  font: 23px/1 Montserrat, sans-serif;
-  position: relative;
-  display: flex;
-  justify-content: flex-end; 
-  align-items: flex-start; 
-  flex-direction: column; 
-  
-}
-
-.addTaskTitle {
-  font-feature-settings: "liga" off, "clig" off;
-  font-size: 23px;
-  font-weight: 700;
-  line-height: 26px;
-  align-self: flex-start;
-}
-
-.addTaskinputWrapper {
-  display: flex;
-  flex-direction: column;
-  font-weight: 800;
-  width: 100%;
-  gap: 10px;
-}
-
-.addTaskinputContainer {
-  border-radius: 9.982px;
-  border: 2px solid #18191f;
-  background-color: #fff;
-  display: flex;
-  width: 90%;
-  padding: 9px 10px;
-  font-size: 23px;
-}
-
-.addTaskinputIcon {
-  aspect-ratio: 1;
-  object-fit: contain;
-  object-position: center;
-  width: 25px;
-  margin-right: 7px;
-}
-
-.addTasktaskInput {
-  font-feature-settings: "liga" off, "clig" off;
-  border: none;
-  background: transparent;
-  width: 100%;
-  font: inherit;
-  height: 23px;
-}
-
-.addTaskdateWrapper {
-  border-radius: 10px;
-  border: 2px solid #18191f;
-  background-color: #fff;
-  display: flex;
-  margin-top: 1px;
-  padding-left: 5px;
-  gap: 5px;
-  overflow: hidden;
-  white-space: nowrap;
-  width: 94%;
-  height: 40px;
-}
-
-.addTaskdeadlineInput {
-  border: none;
-  background: transparent;
-  font-size: 16px;
-  padding: 5px;
-  width: 100%;
-}
-
-.dateLabel {
-  font-feature-settings: "liga" off, "clig" off;
-  margin: auto 0;
-  font-size: 23px;
-}
-
-.calendarIcon {
-  aspect-ratio: 0.79;
-  object-fit: contain;
-  object-position: center;
-  width: 44px;
-}
-
-.addTaskaddButton {
-  font-feature-settings: "liga" off, "clig" off;
-  border-radius: 12.647px;
-  border: 2.108px solid #18191f;
-  background-color: #ffbd12;
-  box-shadow: 0 2.108px 0 0 #18191f;
-  align-self: flex-end;
-  margin-top: auto;
-  min-height: 36px;
-  overflow: hidden;
-  font-weight: 800;
-  font-size: 23px;
-  white-space: nowrap;
-  text-align: center;
-  padding: 10px 17px;
-  cursor: pointer;
-  margin: 20px 0 0;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.taskCard {
-  display: flex;
-  margin-top: 17px;
-  width: 100%;
-  flex-direction: column;
-  font-family: Montserrat, sans-serif;
-  position: relative;
-  max-width: 412px;
-}
-
-.taskContent {
-  border-radius: 16px;
-  border: 2px solid #18191f;
-  box-shadow: 0 2px 0 0 #18191f;
-  background-color: #e9e7fc;
-  display: flex;
-  min-height: 151px;
-  flex-direction: column;
-  overflow: hidden;
-  justify-content: start;
-  padding: 20px 23px;
-}
-
-.taskDeadline {
-  color: #474a57;
-  font-feature-settings: "liga" off, "clig" off;
-  font-size: 18px;
-  font-weight: 800;
-  line-height: 1;
-}
-
-.taskDescription {
-  color: #18191f;
-  font-feature-settings: "liga" off, "clig" off;
-  font-size: 23px;
-  font-weight: 800;
-  line-height: 1.4;
-  margin-top: 8px;
-}
-
-.taskdeleteButton {
-  font-feature-settings: "liga" off, "clig" off;
-  border-radius: 12px;
-  border: 2px solid #18191f;
-  box-shadow: 0 2px 0 0 #18191f;
-  background-color: #ffbd12;
-  align-self: end;
-  z-index: 10;
-  overflow: hidden;
-  font-size: 23px;
-  color: #18191f;
-  font-weight: 800;
-  white-space: nowrap;
-  text-align: center;
-  line-height: 1;
-  padding: 10px 16px;
-  position: absolute;
-  bottom: 50px;
-  right: 46px;
-  cursor: pointer;
-  margin: -25px;
-}
-
-.checkBoxDeleteContainer {
-  display: flex;
-  margin-top: 30px;
-  width: 100%;
-  gap: 20px;
-  justify-content: space-between;
-}
-
-/* Media Queries for Larger Screens and Tablets */
 @media (min-width: 768px) {
   .projectDetails {
-    max-width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    margin: auto;
   }
   .projectDetailscontainer {
     margin-top: 30px;
   }
-  .addTaskForm {
-    flex-direction: row;
-    gap: 20px;
-    padding: 20px;
-  }
-  .taskCard {
-    max-width: 700px;
-  }
-  .addTaskinputWrapper {
-    flex-direction: row;
-    gap: 15px;
-  }
-  .addTaskinputContainer {
-    width: 80%;
-  }
+
 }
 
 @media (min-width: 1024px) {
   .projectDetails {
-    max-width: 70%;
+    max-width: 700px !important;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -351,6 +145,9 @@
     margin: 0 auto; /* Ensure centering horizontally */
   }
 
+  .projectDetailsprojectInfo {
+    width: 700px;
+  }
   .projectDetailscontainer {
     margin-top: 50px;
     display: flex;
@@ -358,27 +155,5 @@
     justify-content: center;
     flex-direction: column;
     width: 100%; /* Ensure it stretches within the centered container */
-  }
-
-  .addTaskForm {
-    flex-direction: row;
-    gap: 30px;
-    padding: 25px;
-  }
-
-  .taskCard {
-    max-width: 800px;
-  }
-
-  .taskcheckbox,
-  .projectDetailscheckbox {
-    width: 50px;
-    height: 50px;
-  }
-
-  .taskcheckboxIcon,
-  .projectDetailscheckboxIcon {
-    width: 50px;
-    height: 50px;
   }
 }

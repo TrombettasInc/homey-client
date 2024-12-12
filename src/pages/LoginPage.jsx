@@ -70,7 +70,7 @@ function LoginPage() {
       
 
       <form onSubmit={handleLoginSubmit} className={styles.loginformContainer}>
-        <h1 className={styles.logintitle}>Login</h1>
+        <h1 className={styles.logintitle}>login</h1>
         <p className={styles.loginsubtitle}>
           login to create and edit your amazing projects.
         </p>
@@ -80,13 +80,13 @@ function LoginPage() {
         ))}
 
         <button type="submit" className={styles.loginsubmitButton}>
-          Log In
+          log in
         </button>
 
         {errorMessage && <p className={styles.loginloginerrorMessage}>{errorMessage}</p>}
 
         <p className={styles.loginsignupLink}>
-          don't have an account? <Link to="/signup"><span>sign Up</span></Link>
+          don't have an account? <Link to="/signup"><span>sign up</span></Link>
         </p>
       </form>
     </main>

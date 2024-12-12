@@ -11,7 +11,6 @@
 .signformContainer {
   background: var(--Colors-White, #fff);
   margin-top: 28px;
-  padding: 24px;
 }
 
 .signtitle {
@@ -75,9 +74,10 @@
   padding: 20px; 
   cursor: pointer;
   font-size: 23px;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.signloginLink {
+.loginLink {
   color: var(--Colors-Red, #f95a2c);
   font-feature-settings: "liga" off, "clig" off;
   line-height: 1;
@@ -100,77 +100,71 @@
   border: 0;
 }
 
-/* Media Queries for Tablets and Larger Screens */
-@media (min-width: 768px) {
+/* Styles for tablets (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
   .signsignUp {
-    max-width: 80%; /* Adjust max-width for tablets */
-    padding: 80px 0 120px; /* Increase padding for better spacing */
+    max-width: 600px;
+    padding: 90px 0;
   }
 
   .signformContainer {
-    margin-top: 40px; /* Increase space between the container and the top */
-    padding: 32px; /* Increase padding for better spacing */
+    margin-top: 40px;
+    padding: 32px;
   }
 
   .signtitle {
-    font-size: 32px; /* Adjust font size for larger screens */
+    font-size: 48px;
   }
 
   .signsubtitle {
-    font-size: 18px; /* Adjust subtitle font size */
+    font-size: 18px;
+    line-height: 28px;
+    margin-top: 16px;
   }
 
   .signinputWrapper {
-    width: 70%; /* Adjust input width to fit larger screens */
-    padding: 18px 20px; /* Increase padding for inputs */
+    width: 90%;
+    padding: 20px;
   }
 
   .signsignupButton {
-    width: 80%; /* Adjust button width for better proportion */
-    padding: 22px; /* Increase button padding */
-    font-size: 20px; /* Decrease font size slightly for consistency */
+    width: 90%;
+    font-size: 26px;
+    padding: 24px;
   }
 
   .signloginLink {
-    margin-top: 40px; /* Increase space above the login link */
-    font-size: 18px; /* Adjust font size of the login link */
+    font-size: 16px;
+    margin-top: 40px;
+  }
+
+  .signerrorMessage {
+    font-size: 16px;
   }
 }
 
+/* Styles for larger screens (1024px and up) */
 @media (min-width: 1024px) {
   .signsignUp {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Full height of the viewport */
-    padding: 0; /* Remove any unnecessary padding */
-  }
-
-  .signformContainer {
-    margin-right: -180px;
+    max-width: 600px;
   }
 
   .signtitle {
-    font-size: 36px; /* Increase title font size */
+    font-size: 56px;
   }
 
   .signsubtitle {
-    font-size: 20px; /* Increase subtitle font size */
-  }
-
-  .signinputWrapper {
-    width: 60%; /* Narrow down the input width for more balance */
-    padding: 22px 24px; /* Increase padding for inputs */
-  }
-
-  .signsignupButton {
-    width: 70%; /* Adjust button width for larger screens */
-    padding: 25px; /* Increase padding for better clickability */
-    font-size: 22px; /* Increase font size for button */
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 20px;
   }
 
   .signloginLink {
-    margin-top: 50px; /* Increase space above the login link */
-    font-size: 20px; /* Increase font size for larger screens */
+    font-size: 18px;
+    margin-top: 50px;
+  }
+
+  .signerrorMessage {
+    font-size: 18px;
   }
 }

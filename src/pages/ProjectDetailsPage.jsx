@@ -46,7 +46,7 @@ function ProjectDetailsPage() {
 
 
     return (
-        <main className={styles.projectDetails}>
+        <div className={styles.projectDetails}>
             <div className={styles.projectDetailscontainer}>
                 {project ? (
                     <>
@@ -107,7 +107,7 @@ function ProjectDetailsPage() {
                     <p>loading project data...</p>
                 )}
             </div>
-        </main>
+        </div>
     );
 }
 

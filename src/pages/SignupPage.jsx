@@ -70,11 +70,11 @@ const SignupPage = () => {
           <InputField key={index} {...field} />
         ))}
         <button type="submit" className={styles.signsignupButton}>
-          Sign up
+          sign up
         </button>
         {errorMessage && <p className={styles.error}>{errorMessage}</p>}
         <p className={styles.loginLink}>
-          Already have an account? <Link to={'/login'}><span>go here</span></Link>
+          already have an account? <Link to={'/login'}><span>go here</span></Link>
         </p>
       </form>
     </main>
