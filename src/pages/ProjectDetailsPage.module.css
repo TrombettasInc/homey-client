@@ -23,6 +23,7 @@
   padding: 0 0 1.3125rem; /* 21px */
   font: 800 1.5625rem/1 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
   position: relative;
+  align-items: center;
 }
 
 .projectDetailsprojectTitleMain {
@@ -135,6 +136,11 @@
   .projectDetailscontainer {
     margin-top: 1.875rem; /* 30px */
   }
+  .projectDetailseditButton{
+    font-size: 1.625rem;
+    padding: 1rem 1.87rem;
+  }
+
 }
 
 @media (min-width: 1024px) {

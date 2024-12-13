@@ -24,8 +24,10 @@
   flex-direction: column;
   overflow: hidden;  
   padding: 1.25rem 1.4375rem; /* 20px 23px */
-  width: 100%;
-  margin: auto;
+  width: 80vw;
+  justify-content: flex-end;
+  align-items: flex-start;
+  position: relative;
 }
 
 .taskDeadline {
@@ -48,26 +50,26 @@
 .taskdeleteButton {
   font-feature-settings: "liga" off, "clig" off;
   border-radius: 0.789rem; /* 12.647px */
-  border: 0.131rem solid #18191f; /* 2.108px */
-  box-shadow: 0 0.131rem 0 0 #18191f; /* 2.108px */
+  border: 0.125rem solid #18191f; /* 2.108px */
+  box-shadow: 0 0.125rem 0 0 #18191f; /* 2.108px */
   background-color: #ffbd12;
   align-self: flex-end;
-  z-index: 10;
+  margin-top: auto;
+  min-height: 2.25rem;
   overflow: hidden;
+  font-weight: 800;
   font-size: 1.4375rem; /* 23px */
-  color: #18191f;
-  font-weight: 600;
   white-space: nowrap;
   text-align: center;
-  line-height: 1;
-  padding: 0.625rem 1rem; /* 10px 16px */
-  position: absolute;
-  bottom: 3.125rem; /* 50px */
-  right: 2.875rem; /* 46px */
+  padding: 0.625rem 1rem 1.0625rem; /* 10px 16px */
   cursor: pointer;
-  margin: -1.5625rem; /* -25px */
+  margin: 1.25rem 0 0; /* -25px */
+  display: flex;
+  justify-content: flex-end;
   font-family: Montserrat, sans-serif;
-  
+  color: #18191f;
+  position: absolute;
+  right: 1.8rem; /* 46px */ 
 }
 
 .checkBoxDeleteContainer {
@@ -91,8 +93,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 5vw; /* 40px relative to viewport width */
-  height: 5vw; /* 40px relative to viewport width */
+  width: 10vw; /* 40px relative to viewport width */
+  height: 10vw; /* 40px relative to viewport width */
   cursor: pointer;
   position: relative;
   transition: background-color 0.3s ease;
@@ -115,18 +117,27 @@
   position: absolute;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .taskCard {
-    max-width: 80vw; /* 600px */
+    width: 70vw; /* 600px */
+  }
+  .taskContent{
+    margin: auto;
+    width: 80vw;
   }
 
-  .add-task-input-wrapper {
-    flex-direction: row;
-    gap: 0.9375rem; /* 15px */
+  .taskcheckbox {
+    width: 5vw; /* 50px relative to viewport width */
+    height: 5vw; /* 50px relative to viewport width */
   }
 
-  .add-task-input-container {
-    width: 80%;
+  .taskcheckboxIcon {
+    width: 5vw; /* 50px relative to viewport width */
+    height: 5vw; /* 50px relative to viewport width */
+  }
+  .taskdeleteButton{
+    font-size: 1.625rem;
+    padding: 1rem 1.875rem;
   }
 }
 
@@ -136,12 +147,16 @@
   }
 
   .taskcheckbox {
-    width: 6.25vw; /* 50px relative to viewport width */
-    height: 6.25vw; /* 50px relative to viewport width */
+    width: 5vw; /* 50px relative to viewport width */
+    height: 5vw; /* 50px relative to viewport width */
   }
 
   .taskcheckboxIcon {
-    width: 6.25vw; /* 50px relative to viewport width */
-    height: 6.25vw; /* 50px relative to viewport width */
+    width: 5vw; /* 50px relative to viewport width */
+    height: 5vw; /* 50px relative to viewport width */
+  }
+  .taskdeleteButton{
+    font-size: 1.625rem;
+    padding: 1rem 1.875rem;
   }
 }
