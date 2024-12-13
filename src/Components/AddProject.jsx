@@ -86,12 +86,7 @@ function AddProject() {
         {/* Project Description Field */}
         <div className={styles.AddinputWrapper}>
           <div className={styles.AddinputContent}>
-            <img
-              loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/4d671a9a3741b06f3c0c0a6f804e3b6f42b21f67fb759696e08a3541c9f23184?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0"
-              className={styles.AddinputIcon}
-              alt="Description Icon"
-            />
+            
             <textarea
               id="projectDescription"
               className={styles.Addinput}
@@ -106,7 +101,7 @@ function AddProject() {
 
         {/* Submit Button */}
         <button type="submit" className={styles.AddsubmitButton}>
-          Create
+          create
         </button>
       </form>
     </main>
