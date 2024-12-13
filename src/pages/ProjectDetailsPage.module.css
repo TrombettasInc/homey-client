@@ -85,8 +85,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 5vw; /* 40px relative to viewport width */
-  height: 5vw; /* 40px relative to viewport width */
+  width: 10vw; /* 40px relative to viewport width */
+  height: 10vw; /* 40px relative to viewport width */
   cursor: pointer;
   position: relative;
   transition: background-color 0.3s ease;
@@ -140,6 +140,11 @@
     font-size: 1.625rem;
     padding: 1rem 1.87rem;
   }
+  .projectDetailscheckbox {
+    width: 5vw; /* 40px relative to viewport width */
+    height: 5vw; /* 40px relative to viewport width */
+  }
+
 
 }
 
@@ -168,5 +173,9 @@
   .projectDetailseditButton{
     font-size: 1.625rem;
     padding: 1rem 1.87rem;
+  }
+  .projectDetailscheckbox {
+    width: 5vw; /* 40px relative to viewport width */
+    height: 5vw; /* 40px relative to viewport width */
   }
 }

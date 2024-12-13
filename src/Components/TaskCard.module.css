@@ -142,8 +142,9 @@
 }
 
 @media (min-width: 1024px) {
-  .taskCard {
-    width: 70vw; /* 700px */
+  .taskContent{
+    margin: auto;
+    width: 70vw;
   }
 
   .taskcheckbox {
