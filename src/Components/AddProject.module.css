@@ -53,10 +53,10 @@
 .AddinputContent {
   display: flex;
   align-items: center;
+  gap: 0.75rem; /* 12px to rem */
   overflow: hidden;
-  padding: 0;
-  width: 100%;
-  border: none;
+  justify-content: flex-start;
+  
 }
 
 .AddinputIcon {
