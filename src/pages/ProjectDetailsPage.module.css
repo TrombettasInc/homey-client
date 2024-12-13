@@ -1,10 +1,13 @@
 .projectDetails {
   background-color: #fff;
   display: flex;
-  max-width: 412px;
+  max-width: 90vw; /* 412px */
   flex-direction: column;
   margin: 0 auto;
-  padding: 10px 0 32px;
+  padding: 0.625rem 0 2rem; /* 10px 0 32px */
+  justify-content: center;
+  align-items: center;
+  
 }
 
 .projectDetailscontainer {
@@ -15,11 +18,10 @@
 
 .projectDetailsprojectTitle {
   background-color: #fff;
-  align-self: stretch;
   display: flex;
   flex-direction: column;
-  padding: 0 0 21px;
-  font: 800 25px/1 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
+  padding: 0 0 1.3125rem; /* 21px */
+  font: 800 1.5625rem/1 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
   position: relative;
 }
 
@@ -29,43 +31,43 @@
 }
 
 .projectDetailsprojectInfo {
-  border-radius: 16.863px;
-  border: 2.108px solid #18191f;
+  border-radius: 1.054rem; /* 16.863px */
+  border: 0.131rem solid #18191f; /* 2.108px */
   background-color: #fff3f8;
-  box-shadow: 0 6.324px 0 0 #18191f;
+  box-shadow: 0 0.393rem 0 0 #18191f; /* 6.324px */
   width: auto;
   flex-direction: column;
-  padding: 20px 23px;
+  padding: 1.25rem 1.4375rem; /* 20px 23px */
 }
 
 .projectDetailsprojectInfoTitle {
   color: #18191f;
   font-feature-settings: "liga" off, "clig" off;
-  font: 800 25px/2 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
+  font: 800 1.5625rem/2 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
 }
 
 .projectDetailsprojectInfoDate {
   color: #18191f;
   font-feature-settings: "liga" off, "clig" off;
   align-self: start;
-  margin-top: 36px;
-  font: 800 15px/2 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
+  margin-top: 2.25rem; /* 36px */
+  font: 800 0.9375rem/2 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
   padding: 0;
 }
 
 .projectDetailsprojectInfoDeadline {
   color: #474a57;
   align-self: start;
-  font: 600 15px/2 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
+  font: 600 0.9375rem/2 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
   padding: 0;
   margin: 0;
 }
 
 .projectDetailsprojectInfoActions {
   display: flex;
-  margin-top: 30px;
+  margin-top: 1.875rem; /* 30px */
   width: 100%;
-  gap: 20px;
+  gap: 1.25rem; /* 20px */
   justify-content: space-between;
 }
 
@@ -76,14 +78,14 @@
 }
 
 .projectDetailscheckbox {
-  border-radius: 8px;
-  border: 2px solid #9fa4b4;
+  border-radius: 0.5rem; /* 8px */
+  border: 0.125rem solid #9fa4b4; /* 2px */
   background: #eeeff4;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 5vw; /* 40px relative to viewport width */
+  height: 5vw; /* 40px relative to viewport width */
   cursor: pointer;
   position: relative;
   transition: background-color 0.3s ease;
@@ -94,13 +96,13 @@
 }
 
 .projectDetailscheckbox:focus {
-  outline: 2px solid #fff;
-  outline-offset: 2px;
+  outline: 0.125rem solid #fff; /* 2px */
+  outline-offset: 0.125rem; /* 2px */
 }
 
 .projectDetailscheckboxIcon {
-  width: 40px;
-  height: 40px;
+  width: 5vw; /* 40px relative to viewport width */
+  height: 5vw; /* 40px relative to viewport width */
   object-fit: contain;
   object-position: center;
   position: absolute;
@@ -108,36 +110,36 @@
 
 .projectDetailseditButton {
   font-feature-settings: "liga" off, "clig" off;
-  border-radius: 12.647px;
-  border: 2.108px solid #18191f;
+  border-radius: 0.789rem; /* 12.647px */
+  border: 0.131rem solid #18191f; /* 2.108px */
   background-color: #ffbd12;
-  box-shadow: 0 2.108px 0 0 #18191f;
+  box-shadow: 0 0.131rem 0 0 #18191f; /* 2.108px */
   overflow: hidden;
   color: #18191f;
   white-space: nowrap;
   text-align: center;
-  padding: 10px 17px;
-  font: 800 23px/1 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
+  padding: 0.625rem 1.0625rem; /* 10px 17px */
+  font: 800 1.4375rem/1 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
   cursor: pointer;
   margin-top: auto;
   text-decoration: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .projectDetails {
-    max-width: 600px;
-    padding: 20px;
+    max-width: 80vw; /* 600px */
+    padding: 1.25rem;
     margin: auto;
   }
-  .projectDetailscontainer {
-    margin-top: 30px;
-  }
 
+  .projectDetailscontainer {
+    margin-top: 1.875rem; /* 30px */
+  }
 }
 
 @media (min-width: 1024px) {
   .projectDetails {
-    max-width: 700px !important;
+    max-width: 90vw; /* 700px */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -146,14 +148,19 @@
   }
 
   .projectDetailsprojectInfo {
-    width: 700px;
+    width: 70vw; /* 700px */
   }
+
   .projectDetailscontainer {
-    margin-top: 50px;
+    margin-top: 3.125rem; /* 50px */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     width: 100%; /* Ensure it stretches within the centered container */
+  }
+  .projectDetailseditButton{
+    font-size: 1.625rem;
+    padding: 1rem 1.87rem;
   }
 }

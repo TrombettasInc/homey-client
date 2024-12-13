@@ -73,7 +73,7 @@ function AddTask({ projectId, getProject }) {
                     <img
                         src="https://cdn.builder.io/api/v1/image/assets/TEMP/7b71adf9c660d4bf197db4c60f874eef1364737d23e9e9e98fc61f2fff7493d2?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0"
                         alt="add task deadline dropdown icon"
-                        className={styles.addTaskateIcon}
+                        className={styles.addTaskdateIcon}
                     />
                 </div>
 
