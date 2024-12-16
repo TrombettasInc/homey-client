@@ -1,6 +1,7 @@
 import React from "react";
 import styles from './PageNotFound.module.css';
 import { useNavigate } from "react-router-dom"; 
+import { motion } from 'framer-motion';
 
 
 function PageNotFound() {
@@ -12,7 +13,13 @@ function PageNotFound() {
   };
   
   return (
-    <main className={styles.notcontainer}>
+    <motion.div 
+    className={styles.notcontainer}
+    
+    initial={{opacity:0}}
+    animate={{opacity:1}}
+    exit={{opacity:0}}
+    >
       <div className={styles.notimageBg}>
         <img 
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/ac4729253b2ec0861ba630f90aa6742e41890347c7f43ae4ca617e29d1121f0b?placeholderIfAbsent=true&apiKey=60afd9c2e7064e039d088416e43472c0" 
@@ -38,7 +45,7 @@ function PageNotFound() {
           <span className={styles.notbackButtonText}>let's go back</span>
         </div>
       </button>
-    </main>
+    </motion.div>
   );
 }
 

@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/auth.context";
 import styles from './LoginPage.module.css'; 
+import { motion } from 'framer-motion';
 
 function InputField({ icon, placeholder, type, value, onChange }) {
   return (
@@ -65,7 +66,13 @@ function LoginPage() {
   ];
 
   return (
-    <div className={styles.loginContainer}>
+    <motion.div 
+    className={styles.loginContainer}
+    
+    initial={{opacity:0}}
+    animate={{opacity:1}}
+    exit={{opacity:0}}
+    >
 
       
 
@@ -89,7 +96,7 @@ function LoginPage() {
           don't have an account? <Link to="/signup"><span>sign up</span></Link>
         </p>
       </form>
-    </div>
+    </motion.div>
   );
 }
 

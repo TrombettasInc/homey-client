@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 import styles from './SignUpPage.module.css'
+import { motion} from "framer-motion";
 
 
 
@@ -58,7 +59,13 @@ const SignupPage = () => {
   ];
 
   return (
-    <main className={styles.signsignUp}>
+    <motion.div 
+    className={styles.signsignUp}
+    
+    initial={{opacity:0}}
+    animate={{opacity:1}}
+    exit={{opacity:0}}
+    >
      
       
       <form className={styles.signformContainer} onSubmit={handleSignupSubmit}>
@@ -77,7 +84,7 @@ const SignupPage = () => {
           already have an account? <Link to={'/login'}><span>go here</span></Link>
         </p>
       </form>
-    </main>
+    </motion.div>
   );
 };
 

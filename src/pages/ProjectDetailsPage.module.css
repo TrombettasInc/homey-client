@@ -7,7 +7,6 @@
   padding: 0.625rem 0 2rem; /* 10px 0 32px */
   justify-content: center;
   align-items: center;
-  
 }
 
 .projectDetailscontainer {
@@ -24,6 +23,7 @@
   font: 800 1.5625rem/1 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
   position: relative;
   align-items: center;
+  justify-content: center;
 }
 
 .projectDetailsprojectTitleMain {
@@ -144,7 +144,6 @@
     width: 7vw; /* 40px relative to viewport width */
     height: 7vw; /* 40px relative to viewport width */
   }
-
 
 }
 

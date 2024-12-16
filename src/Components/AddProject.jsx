@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import styles from './AddProject.module.css';  
-
+import { motion } from 'framer-motion';
 
 function AddProject() {
   const [title, setTitle] = useState("");
@@ -36,7 +36,13 @@ function AddProject() {
 
 
   return (
-    <main className={styles.Addcontainer}>
+    <motion.div
+     className={styles.Addcontainer}
+     
+     initial={{opacity:0}}
+     animate={{opacity:1}}
+     exit={{opacity:0}}
+     >
 
       <form onSubmit={handleSubmit} className={styles.AddformContainer}>
         <h1 className={styles.Addtitle}>create project</h1>
@@ -104,7 +110,7 @@ function AddProject() {
           create
         </button>
       </form>
-    </main>
+    </motion.div>
   );
 }
 

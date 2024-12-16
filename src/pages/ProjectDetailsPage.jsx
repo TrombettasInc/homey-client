@@ -4,6 +4,7 @@ import axios from "axios";
 import styles from './ProjectDetailsPage.module.css';
 import AddTask from "../Components/AddTask";
 import TaskCard from "../Components/TaskCard";
+import { motion } from 'framer-motion';
 
 function ProjectDetailsPage() {
     const [project, setProject] = useState(null);
@@ -46,7 +47,13 @@ function ProjectDetailsPage() {
 
 
     return (
-        <div className={styles.projectDetails}>
+        <motion.div
+            className={styles.projectDetails}
+
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+        >
             <div className={styles.projectDetailscontainer}>
                 {project ? (
                     <>
@@ -86,11 +93,31 @@ function ProjectDetailsPage() {
                         </section>
 
                         {/* Merged AddTaskForm */}
-                        <AddTask projectId={projectId} getProject={getProject} />
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{duration: 0.5}}
+                        >
+                            <AddTask projectId={projectId} getProject={getProject} />
+                            </motion.div>
 
                         {/* Merged Task Cards */}
-                        <section className={styles.tasksSection}>
+                        <motion.section 
+                        className={styles.tasksSection}
+                        
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{duration: 0.8}}>
+
                             {project.tasks.map((task) => (
+                                <motion.div
+
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                transition={{duration: 1, delay: 0.1}}>
                                 <TaskCard
                                     key={task._id}
                                     taskId={task._id}
@@ -100,14 +127,15 @@ function ProjectDetailsPage() {
                                     isDone={task.isDone}
                                     getProject={getProject}
                                 />
+                                </motion.div>
                             ))}
-                        </section>
+                        </motion.section>
                     </>
                 ) : (
                     <p>loading project data...</p>
                 )}
             </div>
-        </div>
+        </motion.div>
     );
 }
 

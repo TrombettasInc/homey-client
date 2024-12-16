@@ -6,15 +6,15 @@
 .editcontainer {
   background-color: #fff;
   display: flex;
-  max-width: 90vw; /* 412px to rem */
+  max-width: 90vw; /* Flexible width */
   width: 100%;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   color: #18191f;
-  margin: 0 auto;
-  margin-top: 4rem;
   font: 500 1.4375rem/1 Montserrat, -apple-system, Roboto, Helvetica, sans-serif; /* 23px to rem */
-}
+  margin-top: 4rem;
+  margin: 0 auto; }
 
 .edittitle {
   font-feature-settings: "liga" off, "clig" off;

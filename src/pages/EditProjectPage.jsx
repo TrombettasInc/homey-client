@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import styles from './EditProjectPage.module.css';
+import { motion } from 'framer-motion';
 
 function EditProjectPage() {
     const [title, setTitle] = useState("");
@@ -59,7 +60,12 @@ function EditProjectPage() {
     };
 
     return (
-        <main className={styles.editcontainer}>
+        <motion.div 
+        className={styles.editcontainer}
+        initial={{opacity:0}}
+        animate={{opacity:1}}
+        exit={{opacity:0}}
+        >
             
             <header className={styles.ediheader}>
                 <h1 className={styles.edititle}>edit project</h1>
@@ -109,7 +115,7 @@ function EditProjectPage() {
                     <span className={styles.editbuttonText}>delete</span>
                 </button>
             </form>
-        </main>
+        </motion.div>
     );
 }
 

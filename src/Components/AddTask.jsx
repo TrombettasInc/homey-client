@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import styles from "./AddTask.module.css";
+import { motion } from 'framer-motion';
 
 
 
@@ -34,7 +35,11 @@ function AddTask({ projectId, getProject }) {
 
 
     return (
-        <div className="create-task">
+        <motion.div 
+        initial={{opacity:0}}
+        animate={{opacity:1}}
+        exit={{opacity:0}}
+        >
 
             <form className={styles.addTaskForm} onSubmit={handleSubmit}>
                 <h3 className={styles.addTaskTitle}>add task</h3>
@@ -79,7 +84,7 @@ function AddTask({ projectId, getProject }) {
 
                 <button type="submit" className={styles.addTaskaddButton}>add!</button>
             </form>
-        </div>
+        </motion.div>
     );
 }
 

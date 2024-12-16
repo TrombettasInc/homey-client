@@ -110,8 +110,8 @@
 }
 
 .taskcheckboxIcon {
-  width: 5vw; /* 40px relative to viewport width */
-  height: 5vw; /* 40px relative to viewport width */
+  width: 10vw; /* 40px relative to viewport width */
+  height: 10vw; /* 40px relative to viewport width */
   object-fit: contain;
   object-position: center;
   position: absolute;

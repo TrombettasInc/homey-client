@@ -1,10 +1,17 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import styles from './HomePage.module.css';
+import {motion} from 'framer-motion';
 
 function HomePage() {
   return (
-    <main className={styles.homepage}>
+    <motion.div 
+    className={styles.homepage}
+    
+    initial={{opacity:0}}
+    animate={{opacity:1}}
+    exit={{opacity:0}}
+    >
 
       {/* Project Creation Section */}
       <section className={styles.homepageprojectCreation}>
@@ -29,7 +36,7 @@ function HomePage() {
         alt="Illustration of home projects" 
         className={styles.homepageprojectIllustration} 
       />
-    </main>
+    </motion.div>
   );
 }
 
