@@ -6,6 +6,7 @@ import AddTask from "../Components/AddTask";
 import TaskCard from "../Components/TaskCard";
 import { motion } from 'framer-motion';
 
+
 function ProjectDetailsPage() {
     const [project, setProject] = useState(null);
     const { projectId } = useParams();
@@ -71,7 +72,7 @@ function ProjectDetailsPage() {
                             <div className={styles.projectDetailsprojectInfoActions}>
                                 <div className={styles.projectDetailscheckboxContainer}>
                                     <div
-                                        className={`${styles.projectDetailscheckbox} ${checked ? styles.projectDetailschecked : ''}`}
+                                        className={`${styles.projectDetailscheckbox}${checked ? styles.projectDetailschecked : ''}`}
                                         role="checkbox"
                                         tabIndex="0"
                                         aria-checked={checked}

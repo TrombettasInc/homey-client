@@ -9,9 +9,11 @@ function AddTask({ projectId, getProject }) {
     const [description, setDescription] = useState("");
     const [deadline, setDeadline] = useState("");
     const [isDone, setIsDone] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        setIsLoading(true);
 
         const requestBody = { description, deadline, isDone, projectId };
 
@@ -25,6 +27,7 @@ function AddTask({ projectId, getProject }) {
                 console.log('Task added:', response.data);
                 setDescription("");
                 setDeadline("");
+                setIsLoading(false);
 
                 // Invoke the callback function coming through the props
                 // from the ProjectDetailsPage, to refresh the project details
@@ -35,10 +38,10 @@ function AddTask({ projectId, getProject }) {
 
 
     return (
-        <motion.div 
-        initial={{opacity:0}}
-        animate={{opacity:1}}
-        exit={{opacity:0}}
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
         >
 
             <form className={styles.addTaskForm} onSubmit={handleSubmit}>
@@ -82,7 +85,9 @@ function AddTask({ projectId, getProject }) {
                     />
                 </div>
 
-                <button type="submit" className={styles.addTaskaddButton}>add!</button>
+                <button type="submit" className={styles.addTaskaddButton} disabled={isLoading}>
+                    {isLoading ? "Adding..." : "Add!"}
+                </button>
             </form>
         </motion.div>
     );
