@@ -1,51 +1,52 @@
 .notcontainer {
   background-color: #fff;
   display: flex;
-  max-width: 412px;
+  max-width: 90vw;
   width: 100%;
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
-  padding: 20px 0 38px;
+  padding: 1.25rem 0 2.375rem;
 }
 
 .notimageBg {
   background-color: #ff9692;
   border-radius: 50%;
   display: flex;
-  width: 309px;
+  width: 40vw;
+  max-width: 19.31rem;
   flex-direction: column;
   align-items: start;
   aspect-ratio: 1;
-  padding: 49px 42px 0;
+  padding: 3.0625rem 2.625rem 0;
 }
 
 .noterrorImage {
   aspect-ratio: 0.87;
   object-fit: contain;
   object-position: center;
-  width: 100%;
+  
   z-index: 10;
-  margin-bottom: -34px;
+  margin-bottom: -2.125rem;
 }
 
 .nottextContainer {
   align-self: stretch;
   display: flex;
-  margin-top: 9px;
+  margin-top: 0.5625rem;
   flex-direction: column;
   align-items: center;
   font-family: Montserrat, sans-serif;
   color: #000;
   text-align: center;
   justify-content: center;
-  padding: 32px 24px;
+  padding: 2rem 1.5rem;
 }
 
 .nottextBox {
   display: flex;
   max-width: 100%;
-  width: 327px;
+  width: 20.43rem;
   flex-direction: column;
   align-items: center;
   justify-content: start;
@@ -53,42 +54,44 @@
 
 .nottitle {
   font-feature-settings: "liga" off, "clig" off;
-  font-size: 36px;
+  font-size: 2.25rem;
   font-weight: 800;
   line-height: 1;
+  margin: 0;
 }
 
 .notsubtitle {
   font-feature-settings: "liga" off, "clig" off;
-  font-size: 23px;
+  font-size: 1.4375rem;
   font-weight: 500;
-  line-height: 28px;
-  margin-top: 24px;
+  line-height: 1.75rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0rem;
 }
 
 .notbackButton {
   align-items: center;
-  border-radius: 16px;
-  border: 2px solid #18191f;
+  border-radius: 1rem;
+  border: 0.125rem solid #18191f;
   background: #ffbd12;
-  box-shadow: 0 4px 0 0 #18191f;
+  box-shadow: 0 0.25rem 0 0 #18191f;
   display: flex;
-  margin-top: 11px;
+  
   width: 100%;
-  max-width: 327px;
+  max-width: 20.43rem;
   flex-direction: column;
   overflow: hidden;
   color: #18191f;
   text-align: center;
   justify-content: center;
-  padding: 16px;
-  font: 800 21px/1 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
+  padding: 1rem;
+  font: 800 1.3125rem/1 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
 }
 
 .notbackButtonContent {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 0.375rem;
   overflow: hidden;
   justify-content: start;
 }
@@ -97,7 +100,7 @@
   aspect-ratio: 1;
   object-fit: contain;
   object-position: center;
-  width: 24px;
+  width: 1.5rem;
   align-self: stretch;
   margin: auto 0;
 }
@@ -111,22 +114,26 @@
 /* Styles for tablets (768px to 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
   .notcontainer {
-    max-width: 600px;
-    padding: 30px 0 50px;
+    max-width: 80vw;
+    padding: 0;
+    
   }
 
   .notimageBg {
-    width: 400px;
-    padding: 60px 50px 0;
+    max-width: 25rem;
+    padding: 0;
+    width: 32.3vw;
   }
 
   .noterrorImage {
-    margin-bottom: -40px;
+    margin-bottom: -2.5rem;
+    width: 30vw;
+    margin-left: 1.2rem;
   }
 
   .nottextContainer {
-    padding: 40px 32px;
-    margin-top: 16px;
+    margin-top: 1rem;
+    padding: 0;
   }
 
   .nottextBox {
@@ -134,78 +141,85 @@
   }
 
   .nottitle {
-    font-size: 48px;
+    font-size: 3rem;
+    margin-bottom: 0;
   }
 
   .notsubtitle {
-    font-size: 26px;
-    line-height: 32px;
-    margin-top: 32px;
+    font-size: 1.625rem;
+    line-height: 2rem;
+    margin-top: 2rem;
   }
 
   .notbackButton {
-    max-width: 400px;
-    font-size: 24px;
-    padding: 20px;
-    margin-top: 20px;
+    max-width: 25rem;
+    font-size: 1.5rem;
+    padding: 1.25rem;
+    margin-top: 1.25rem;
   }
 
   .notbackButtonContent {
-    gap: 10px;
+    gap: 0.625rem;
   }
 
   .notbackButtonIcon {
-    width: 28px;
+    width: 1.75rem;
   }
 }
 
 /* Styles for larger screens (1024px and up) */
 @media (min-width: 1024px) {
   .notcontainer {
-    max-width: 800px;
-    padding: 50px 0 70px;
+    max-width: 80vw;
+    padding: 0;
+    
   }
 
   .notimageBg {
-    width: 500px;
-    padding: 80px 60px 0;
+    max-width: 25rem;
+    padding: 0;
+    width: 22.3vw;
   }
 
   .noterrorImage {
-    margin-bottom: -50px;
+    margin-bottom: -2.5rem;
+    width: 20vw;
+    margin-left: 1.2rem;
   }
 
   .nottextContainer {
-    padding: 50px 40px;
-    margin-top: 20px;
+    margin-top: 1rem;
+    padding: 0;
   }
 
   .nottextBox {
-    width: 95%;
+    width: 90%;
   }
 
   .nottitle {
-    font-size: 56px;
+    font-size: 3rem;
+    margin-bottom: 0;
   }
 
   .notsubtitle {
-    font-size: 30px;
-    line-height: 36px;
-    margin-top: 40px;
+    font-size: 1.625rem;
+    line-height: 2rem;
+    
   }
 
   .notbackButton {
-    max-width: 500px;
-    font-size: 28px;
-    padding: 24px;
-    margin-top: 30px;
+    max-width: 25rem;
+    font-size: 1.5rem;
+    padding: 1.25rem;
+    margin-top: 0;
+    
   }
 
   .notbackButtonContent {
-    gap: 12px;
+    gap: 0.625rem;
   }
 
   .notbackButtonIcon {
-    width: 32px;
+    width: 1.75rem;
   }
 }
