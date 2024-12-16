@@ -50,7 +50,7 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: 93vh; /* Full height of the viewport */
+  height: 85vh; /* Full height of the viewport */
   background-color: rgba(255, 255, 255, 0.9);
   color: #18191f;
   display: flex;

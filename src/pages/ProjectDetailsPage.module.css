@@ -102,8 +102,8 @@
 }
 
 .projectDetailscheckboxIcon {
-  width: 5vw; /* 40px relative to viewport width */
-  height: 5vw; /* 40px relative to viewport width */
+  width: 10vw; /* 40px relative to viewport width */
+  height: 10vw; /* 40px relative to viewport width */
   object-fit: contain;
   object-position: center;
   position: absolute;
@@ -140,9 +140,9 @@
     font-size: 1.625rem;
     padding: 1rem 1.87rem;
   }
-  .projectDetailscheckbox {
-    width: 5vw; /* 40px relative to viewport width */
-    height: 5vw; /* 40px relative to viewport width */
+  .projectDetailscheckbox, .projectDetailscheckboxIcon  {
+    width: 7vw; /* 40px relative to viewport width */
+    height: 7vw; /* 40px relative to viewport width */
   }
 
 
@@ -174,7 +174,7 @@
     font-size: 1.625rem;
     padding: 1rem 1.87rem;
   }
-  .projectDetailscheckbox {
+  .projectDetailscheckbox, .projectDetailscheckboxIcon  {
     width: 5vw; /* 40px relative to viewport width */
     height: 5vw; /* 40px relative to viewport width */
   }

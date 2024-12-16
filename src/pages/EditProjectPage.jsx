@@ -62,7 +62,7 @@ function EditProjectPage() {
         <main className={styles.editcontainer}>
             
             <header className={styles.ediheader}>
-                <h1 className={styles.edititle}>edit Project</h1>
+                <h1 className={styles.edititle}>edit project</h1>
             </header>
             <form onSubmit={handleFormSubmit}>
                 <div className={styles.editinputContainer}>
