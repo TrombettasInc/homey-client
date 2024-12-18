@@ -34,13 +34,13 @@ function ProjectList() {
     return colors[Math.floor(Math.random() * colors.length)];
   };
 
-  // Animation variants for the container and cards
+  
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.6, // Delays each child's animation
+        staggerChildren: 0.6, 
       },
     },
   };
@@ -90,7 +90,7 @@ function ProjectList() {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className={styles.projectListContainer} // Optional: Add a wrapper style
+          className={styles.projectListContainer} 
         >
           {projects.map((project) => (
             <motion.div key={project._id} variants={cardVariants}>

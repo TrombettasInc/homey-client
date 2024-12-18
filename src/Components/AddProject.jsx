@@ -89,7 +89,7 @@ function AddProject() {
           />
         </div>
 
-        {/* Project Description Field */}
+        
         <div className={styles.AddinputWrapper}>
           <div className={styles.AddinputContent}>
             
@@ -105,7 +105,7 @@ function AddProject() {
           </div>
         </div>
 
-        {/* Submit Button */}
+        
         <button type="submit" className={styles.AddsubmitButton}>
           create
         </button>

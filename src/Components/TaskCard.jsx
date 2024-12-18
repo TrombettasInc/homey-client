@@ -9,7 +9,7 @@ function TaskCard({ taskId, projectId, description, deadline, isDone, getProject
     const navigate = useNavigate();
     const storedToken = localStorage.getItem('authToken');
 
-    // Fetch project data, including tasks
+    
     useEffect(() => {
         if (!projectId) return;
         axios
@@ -18,12 +18,12 @@ function TaskCard({ taskId, projectId, description, deadline, isDone, getProject
             })
             .then((response) => {
                 const project = response.data;
-                setTaskData(project.tasks); // Assuming tasks are an array in the project response
+                setTaskData(project.tasks); 
             })
             .catch((error) => console.log("Error fetching project data:", error));
     }, [projectId, storedToken]);
 
-    // Handle checkbox status change (mark task as done or undone)
+   
     const handleCheckboxChange = (newChecked) => {
         setChecked(newChecked);
 
@@ -38,7 +38,7 @@ function TaskCard({ taskId, projectId, description, deadline, isDone, getProject
         .catch((error) => console.log("Error updating task:", error));
     };
 
-    // Handle task deletion
+    
     const deleteTask = () => {
         console.log("Deleting task with ID:", taskId);
 
@@ -56,11 +56,10 @@ function TaskCard({ taskId, projectId, description, deadline, isDone, getProject
     return (
         <div className={styles.taskCard}>
             <div className={styles.taskContent}>
-                <h4 className={styles.taskLabel}>Description</h4>
-                <h3 className={styles.taskDescription}>{description}</h3> {/* Render task description */}
+                <h3 className={styles.taskDescription}>{description}</h3> 
 
                 <p className={styles.taskDeadline}>
-                    Deadline: {deadline ? new Date(deadline).toLocaleDateString() : 'No deadline'}
+                    deadline: {deadline ? new Date(deadline).toLocaleDateString() : 'No deadline'}
                 </p>
 
                 <div className="checkBoxDeleteContainer">

@@ -111,7 +111,7 @@
   margin: auto 0;
 }
 
-/* Styles for tablets (768px to 1024px) */
+
 @media (min-width: 768px) and (max-width: 1024px) {
   .notcontainer {
     max-width: 80vw;
@@ -167,7 +167,6 @@
   }
 }
 
-/* Styles for larger screens (1024px and up) */
 @media (min-width: 1024px) {
   .notcontainer {
     max-width: 80vw;

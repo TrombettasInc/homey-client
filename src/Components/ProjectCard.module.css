@@ -1,6 +1,6 @@
 .card {
   background-color: #fff;
-  max-width: 90vw; /* 412px */
+  max-width: 90vw;
   width: 100%;
   flex-direction: column;
   margin: 0 auto;
@@ -10,22 +10,22 @@
 
 .cardcontent {
   display: flex;
-  margin-top: 0.625rem; /* 10px */
+  margin-top: 0.625rem;
   width: 100%;
   flex-direction: column;
 }
 
 .cardframe {
-  border-radius: 1rem; /* 16px */
-  border: 0.125rem solid #18191f; /* 2px */
+  border-radius: 1rem;
+  border: 0.125rem solid #18191f;
   background: #e9e7fc;
-  box-shadow: 0 0.125rem 0 0 #18191f; /* 2px */
+  box-shadow: 0 0.125rem 0 0 #18191f;
   display: flex;
-  min-height: 20vh; /* 166px relative to viewport height */
+  min-height: 20vh;
   flex-direction: column;
   overflow: hidden;
   justify-content: center;
-  padding: 1.5625rem 2rem 2rem; /* 25px 32px 32px */
+  padding: 1.5625rem 2rem 2rem;
   box-sizing: border-box;
   margin-top: 4rem;
 }
@@ -33,7 +33,7 @@
 .cardcreatedDate {
   color: #474a57;
   font-feature-settings: "liga" off, "clig" off;
-  font-size: 0.9375rem; /* 15px */
+  font-size: 1.2rem;
   font-weight: 700;
   line-height: 1;
   display: flex;
@@ -43,40 +43,39 @@
 .cardprojectTitle {
   color: #18191f;
   font-feature-settings: "liga" off, "clig" off;
-  font-size: 1.5625rem; /* 25px */
+  font-size: 1.5625rem;
   font-weight: 800;
   line-height: 1;
-  margin-top: 0.5rem; /* 8px */
+  margin-top: 0.5rem;
 }
 
 .cardactionContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 1.25rem; /* 20px */
+  margin-top: 1.25rem;
 }
 
 .carddetailsButton {
   align-items: center;
-  border-radius: 0.75rem; /* 12px */
-  border: 0.09375rem solid #18191f; /* 1.5px */
+  border-radius: 0.75rem;
+  border: 0.09375rem solid #18191f;
   background: #ffbd12;
-  box-shadow: 0 0.1875rem 0 0 #18191f; /* 3px */
+  box-shadow: 0 0.1875rem 0 0 #18191f;
   z-index: 10;
   display: flex;
-  min-height: 6vh; /* 44px relative to viewport height */
-  width: 20vw; /* 127px relative to viewport width */
+  min-height: 6vh;
   max-width: 100%;
   flex-direction: column;
   overflow: hidden;
-  font-size: 1.125rem; /* 18px */
+  font-size: 1.125rem;
   color: #18191f;
   font-weight: 800;
   text-align: center;
   line-height: 1;
   justify-content: center;
-  margin: -0.0625rem 0 0 1.0625rem; /* -1px 0 0 17px */
-  padding: 0.6875rem 0.75rem; /* 11px 12px */
+  margin: -0.0625rem 0 0 1.0625rem;
+  padding: 0.6875rem 0.75rem;
   text-decoration: none;
   font-family: Montserrat, sans-serif;
   color: #18191f;
@@ -84,7 +83,7 @@
 
 .carddetailsButtonText {
   align-self: stretch;
-  gap: 0.125rem; /* 2px */
+  gap: 0.125rem;
   overflow: hidden;
   text-decoration: none;
 }
@@ -96,14 +95,14 @@
 }
 
 .cardcheckbox {
-  border-radius: 0.5rem; /* 8px */
-  border: 0.125rem solid #9fa4b4; /* 2px */
+  border-radius: 0.5rem;
+  border: 0.125rem solid #9fa4b4;
   background: #eeeff4;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 8vw; /* 40px relative to viewport width */
-  height: 8vw; /* 40px relative to viewport width */
+  width: 10vw;
+  height: 10vw;
   cursor: pointer;
   position: relative;
 }
@@ -113,77 +112,86 @@
 }
 
 .cardcheckbox:focus {
-  outline: 0.125rem solid #fff; /* 2px */
-  outline-offset: 0.125rem; /* 2px */
+  outline: 0.125rem solid #fff;
+  outline-offset: 0.125rem;
 }
 
 .cardcheckboxIcon {
-  width: 8vw; /* 40px relative to viewport width */
-  height: 8vw; /* 40px relative to viewport width */
+  width: 10vw;
+  height: 10vw;
   object-fit: contain;
   object-position: center;
   position: absolute;
 }
 
-/* Styles for tablets (768px to 1024px) */
+
 @media (min-width: 768px) and (max-width: 1024px) {
   .card {
-    max-width: 37.5rem; /* 600px */
+    max-width: 37.5rem;
     margin: auto;
   }
 
   .cardframe {
     padding: 2rem 2.5rem;
-    min-height: 25vh; /* 200px relative to viewport height */
-  margin-top: 3rem;
-
+    min-height: 25vh;
+    margin-top: 3rem;
   }
 
   .cardprojectTitle {
-    font-size: 1.875rem; /* 30px */
+    font-size: 1.875rem;
   }
 
   .carddetailsButton {
-    font-size: 1.25rem; /* 20px */
-    min-height: 6vh; /* 50px relative to viewport height */
-    width: 22vw; /* 140px relative to viewport width */
-    padding: 0.75rem 1rem; /* 12px 16px */
+    font-size: 1.25rem;
+    min-height: 6vh;
+    width: 22vw;
+    padding: 0.75rem 1rem;
   }
 
-  .cardcheckbox, .cardcheckboxIcon  {
-    width: 5vw; /* 50px relative to viewport width */
-    height: 5vw; /* 50px relative to viewport width */
+  .cardcheckbox,
+  .cardcheckboxIcon {
+    width: 5vw;
+    height: 5vw;
+  }
+
+  .cardcreatedDate {
+    font-size: 1.5rem;
   }
 
 }
 
-/* Styles for larger screens (1024px and up) */
 @media (min-width: 1024px) {
   .card {
     font-family: 'Montserrat', sans-serif;
-    max-width: 50rem; /* 800px */
+    max-width: 50rem;
     margin: auto;
   }
 
   .cardframe {
     padding: 2.5rem 3rem;
-    min-height: 31.25vh; /* 250px relative to viewport height */
-   margin-top: 4rem;
+    min-height: 31.25vh;
+    margin-top: 4rem;
   }
 
   .cardprojectTitle {
-    font-size: 2.25rem; /* 36px */
+    font-size: 2.25rem;
   }
 
   .carddetailsButton {
-    font-size: 1.5rem; /* 24px */
-    min-height: 7.5vh; /* 60px relative to viewport height */
-    width: 15vw; /* 160px relative to viewport width */
-    padding: 0.875rem 1.25rem; /* 14px 20px */
+    font-size: 1.5rem;
+    min-height: 7.5vh;
+    width: 15vw;
+    padding: 0.875rem 1.25rem;
   }
 
-  .cardcheckbox, .cardcheckboxIcon  {
-    width: 4vw; /* 50px relative to viewport width */
-    height: 4vw; /* 50px relative to viewport width */
+  .cardcheckbox,
+  .cardcheckboxIcon {
+    width: 4vw;
+    height: 4vw;
   }
+
+  .cardcreatedDate {
+    font-size: 1.5rem;
+  }
+
 }

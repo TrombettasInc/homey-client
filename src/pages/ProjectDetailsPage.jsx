@@ -93,43 +93,49 @@ function ProjectDetailsPage() {
                             </div>
                         </section>
 
-                        {/* Merged AddTaskForm */}
+                        
                         <motion.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
-                            transition={{duration: 0.5}}
+                            transition={{ duration: 0.5 }}
                         >
                             <AddTask projectId={projectId} getProject={getProject} />
-                            </motion.div>
+                        </motion.div>
 
-                        {/* Merged Task Cards */}
-                        <motion.section 
-                        className={styles.tasksSection}
                         
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{duration: 0.8}}>
+                        <motion.section
+                            className={styles.tasksSection}
 
-                            {project.tasks.map((task) => (
-                                <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.8 }}>
+                                
+                                {console.log(project.tasks)}
+                                {project.tasks.map((task) => {
+    console.log(task);
+    return (
+      <motion.div
+        key={task._id}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 1, delay: 0.1 }}
+      >
+        <TaskCard
+          key={task._id}
+          taskId={task._id}
+          projectId={projectId}
+          description={task.description}
+          deadline={task.deadline}
+          isDone={task.isDone}
+          getProject={getProject}
+        />
+      </motion.div>
+    );
+})}
 
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                exit={{ opacity: 0 }}
-                                transition={{duration: 1, delay: 0.1}}>
-                                <TaskCard
-                                    key={task._id}
-                                    taskId={task._id}
-                                    projectId={projectId}
-                                    description={task.description}
-                                    deadline={task.deadline}
-                                    isDone={task.isDone}
-                                    getProject={getProject}
-                                />
-                                </motion.div>
-                            ))}
                         </motion.section>
                     </>
                 ) : (

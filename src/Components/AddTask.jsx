@@ -29,8 +29,7 @@ function AddTask({ projectId, getProject }) {
                 setDeadline("");
                 setIsLoading(false);
 
-                // Invoke the callback function coming through the props
-                // from the ProjectDetailsPage, to refresh the project details
+               
                 getProject();
             })
             .catch((error) => console.log(error));
@@ -86,7 +85,7 @@ function AddTask({ projectId, getProject }) {
                 </div>
 
                 <button type="submit" className={styles.addTaskaddButton} disabled={isLoading}>
-                    {isLoading ? "Adding..." : "Add!"}
+                    {isLoading ? "adding..." : "add"}
                 </button>
             </form>
         </motion.div>

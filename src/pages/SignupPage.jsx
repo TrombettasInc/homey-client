@@ -6,7 +6,7 @@ import { motion} from "framer-motion";
 
 
 
-// InputField Component
+
 const InputField = ({ icon, placeholder, type, value, onChange }) => {
   return (
     <div className={styles.signinputWrapper}>
@@ -25,7 +25,7 @@ const InputField = ({ icon, placeholder, type, value, onChange }) => {
   );
 };
 
-// SignupPage Component
+
 const SignupPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

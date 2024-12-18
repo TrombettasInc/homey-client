@@ -1,12 +1,12 @@
 .addTaskForm {
-  border-radius: 1rem; /* 16px */
-  border: 0.125rem solid #18191f; /* 2px */
-  box-shadow: 0 0.393rem 0 0 #18191f; /* 2px */
+  border-radius: 1rem; 
+  border: 0.125rem solid #18191f; 
+  box-shadow: 0 0.393rem 0 0 #18191f; 
   background-color: #d6fcf7;
-  margin-top: 1.0625rem; /* 17px */
-  max-width: 90vw; /* 412px */
-  padding: 0.8125rem 1.0625rem 1.375rem; /* 13px 17px 22px */
-  font: 1.4375rem/1 Montserrat, sans-serif; /* 23px */
+  margin-top: 1.0625rem; 
+  max-width: 90vw; 
+  padding: 0.8125rem 1.0625rem 1.375rem; 
+  font: 1.4375rem/1 Montserrat, sans-serif; 
   position: relative;
   display: flex;
   justify-content: flex-end;
@@ -16,16 +16,16 @@
 
 .addTaskTitle {
   font-feature-settings: "liga" off, "clig" off;
-  font-size: 1.4375rem; /* 23px */
+  font-size: 1.4375rem; 
   font-weight: 700;
-  line-height: 1.625rem; /* 26px */
+  line-height: 1.625rem; 
   align-self: flex-start;
 }
 
 .addTaskinputWrapper {
   display: flex;
   flex-direction: column;
-  gap: 0.625rem; /* 10px */
+  gap: 0.625rem; 
 }
 
 .addTaskinputWrapper, .addTaskdateWrapper{
@@ -33,20 +33,20 @@
 }
 
 .addTaskinputContainer {
-  border-radius: 0.6245rem; /* 10px */
-  border: 0.125rem solid #18191f; /* 2px */
+  border-radius: 0.6245rem; 
+  border: 0.125rem solid #18191f; 
   background-color: #fff;
   display: flex;
-  padding: 0.5625rem 0.625rem; /* 9px 10px */
-  font-size: 1.4375rem; /* 23px */
+  padding: 0.5625rem 0.625rem; 
+  font-size: 1.4375rem; 
 }
 
 .addTaskinputIcon {
   aspect-ratio: 1;
   object-fit: contain;
   object-position: center;
-  width: 1.5625rem; /* 25px */
-  margin-right: 1rem; /* 7px */
+  width: 1.5625rem; 
+  margin-right: 1rem; 
 }
 
 .addTasktaskInput {
@@ -55,27 +55,27 @@
   background: transparent;
   width: 100%;
   font: inherit;
-  height: 2rem; /* 23px */
+  height: 2rem; 
 }
 
 .addTaskdateWrapper {
-  border-radius: 0.625rem; /* 10px */
-  border: 0.125rem solid #18191f; /* 2px */
+  border-radius: 0.625rem; 
+  border: 0.125rem solid #18191f; 
   background-color: #fff;
   display: flex;
-  margin-top: 0.0625rem; /* 1px */
-  padding-left: 0.3125rem; /* 5px */
-  gap: 0.3125rem; /* 5px */
+  margin-top: 0.0625rem; 
+  padding-left: 0.3125rem; 
+  gap: 0.3125rem; 
   overflow: hidden;
   white-space: nowrap;
-  height: 3rem; /* 40px */
+  height: 3rem; 
 }
 
 .addTaskdeadlineInput {
   border: none;
   background: transparent;
-  font-size: 1rem; /* 16px */
-  padding: 0.3125rem; /* 5px */
+  font-size: 1rem; 
+  padding: 0.3125rem; 
   width: 100%;
   font: Montserrat, sans-serif;
   -webkit-appearance: none;
@@ -85,7 +85,7 @@
 
 .addTaskdateLabel {
   font-feature-settings: "liga" off, "clig" off;
-  font-size: 1.4375rem; /* 23px */
+  font-size: 1.4375rem; 
   margin: auto 0;
   padding-left: 1rem;
 }
@@ -94,26 +94,26 @@
   aspect-ratio: 0.79;
   object-fit: contain;
   object-position: center;
-  width: 2.75rem; /* 44px */
+  width: 2.75rem; 
 }
 
 .addTaskaddButton {
   font-feature-settings: "liga" off, "clig" off;
-  border-radius: 0.787rem; /* 12.647px */
-  border: 0.125rem solid #18191f; /* 2.108px */
+  border-radius: 0.787rem; 
+  border: 0.125rem solid #18191f; 
   background-color: #ffbd12;
-  box-shadow: 0 0.125rem 0 0 #18191f; /* 3px */
+  box-shadow: 0 0.125rem 0 0 #18191f; 
   align-self: flex-end;
   margin-top: auto;
-  min-height: 2.25rem; /* 36px */
+  min-height: 2.25rem; 
   overflow: hidden;
   font-weight: 800;
-  font-size: 1.4375rem; /* 23px */
+  font-size: 1.4375rem; 
   white-space: nowrap;
   text-align: center;
-  padding: 0.625rem 1.0625rem; /* 10px 17px */
+  padding: 0.625rem 1.0625rem; 
   cursor: pointer;
-  margin: 1.25rem 0 0; /* 20px 0 0 */
+  margin: 1.25rem 0 0; 
   display: flex;
   justify-content: flex-end;
   font: 1.4375rem/1 Montserrat, sans-serif;
@@ -123,16 +123,16 @@
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .addTaskForm {
-    width: 80vw; /* 700px */
+    width: 80vw; 
     padding: 1.5625rem;
   }
 
   .addTaskTitle {
-    font-size: 1.625rem; /* 26px */
+    font-size: 1.625rem; 
   }
 
   .addTaskinputContainer {
-    font-size: 1.3125rem; /* 21px */
+    font-size: 1.3125rem; 
   }
 
   .addTaskaddButton {
@@ -143,17 +143,17 @@
 
 @media (min-width: 1024px) {
   .addTaskForm {
-    width: 70vw; /* 800px */
+    width: 70vw; 
     padding: 1.5625rem;
     
   }
 
   .addTaskTitle {
-    font-size: 1.75rem; /* 28px */
+    font-size: 1.75rem; 
   }
 
   .addTaskinputContainer {
-    font-size: 1.4375rem; /* 23px */
+    font-size: 1.4375rem; 
   }
 
   .addTaskaddButton {

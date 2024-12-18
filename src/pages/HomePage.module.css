@@ -1,12 +1,12 @@
 :root {
-  --spacing: 1rem; /* Base spacing unit */
-  --font-base: 1rem; /* Base font size */
+  --spacing: 1rem; 
+  --font-base: 1rem; 
 }
 
 .homepage {
   background-color: #fff;
   display: flex;
-  max-width: 80vw; /* Flexible max width */
+  max-width: 80vw; 
   width: 100%;
   padding-bottom: var(--spacing);
   flex-direction: column;
@@ -21,14 +21,14 @@
   display: flex;
   width: 100%;
   align-items: center;
-  gap: 5vw; /* Gap scales with viewport width */
+  gap: 5vw; 
   overflow: hidden;
-  font-size: 2.25rem; /* Scalable font size */
+  font-size: 2.25rem; 
   color: #18191f;
   font-weight: 800;
   white-space: nowrap;
   line-height: 1;
-  padding: 10vh 5vw 5vh; /* Padding scales with viewport height and width */
+  padding: 10vh 5vw 5vh; 
   justify-content: space-around;
 }
 
@@ -59,7 +59,7 @@
 .homepagecontentWrapper {
   display: flex;
   max-width: 90%;
-  width: 80vw; /* Width relative to the viewport */
+  width: 80vw; 
   flex-direction: column;
   overflow: hidden;
   align-items: center;
@@ -124,10 +124,10 @@
   object-position: center;
   width: 90%;
   align-self: center;
-  margin-top: 5vh; /* Scales with viewport height */
+  margin-top: 5vh; 
 }
 
-/* Styles for tablets (768px to 1024px) */
+
 @media (min-width: 768px) and (max-width: 1024px) {
   .homepage {
     max-width: 80vw;
@@ -166,7 +166,7 @@
   }
 }
 
-/* Styles for larger screens (1024px and up) */
+
 @media (min-width: 1024px) {
   .homepage {
     max-width: 60vw;

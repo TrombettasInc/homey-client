@@ -1,10 +1,10 @@
 .projectDetails {
   background-color: #fff;
   display: flex;
-  max-width: 90vw; /* 412px */
+  max-width: 90vw; 
   flex-direction: column;
   margin: 0 auto;
-  padding: 0.625rem 0 2rem; /* 10px 0 32px */
+  padding: 0.625rem 0 2rem; 
   justify-content: center;
   align-items: center;
 }
@@ -19,7 +19,7 @@
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  padding: 0 0 1.3125rem; /* 21px */
+  padding: 0 0 1.3125rem; 
   font: 800 1.5625rem/1 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
   position: relative;
   align-items: center;
@@ -32,13 +32,13 @@
 }
 
 .projectDetailsprojectInfo {
-  border-radius: 1.054rem; /* 16.863px */
-  border: 0.131rem solid #18191f; /* 2.108px */
+  border-radius: 1.054rem; 
+  border: 0.131rem solid #18191f; 
   background-color: #fff3f8;
-  box-shadow: 0 0.393rem 0 0 #18191f; /* 6.324px */
+  box-shadow: 0 0.393rem 0 0 #18191f; 
   width: auto;
   flex-direction: column;
-  padding: 1.25rem 1.4375rem; /* 20px 23px */
+  padding: 1.25rem 1.4375rem; 
 }
 
 .projectDetailsprojectInfoTitle {
@@ -51,7 +51,7 @@
   color: #18191f;
   font-feature-settings: "liga" off, "clig" off;
   align-self: start;
-  margin-top: 2.25rem; /* 36px */
+  margin-top: 2.25rem; 
   font: 800 0.9375rem/2 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
   padding: 0;
 }
@@ -66,9 +66,9 @@
 
 .projectDetailsprojectInfoActions {
   display: flex;
-  margin-top: 1.875rem; /* 30px */
+  margin-top: 1.875rem; 
   width: 100%;
-  gap: 1.25rem; /* 20px */
+  gap: 1.25rem; 
   justify-content: space-between;
 }
 
@@ -79,14 +79,14 @@
 }
 
 .projectDetailscheckbox {
-  border-radius: 0.5rem; /* 8px */
-  border: 0.125rem solid #9fa4b4; /* 2px */
+  border-radius: 0.5rem; 
+  border: 0.125rem solid #9fa4b4; 
   background: #eeeff4;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 10vw; /* 40px relative to viewport width */
-  height: 10vw; /* 40px relative to viewport width */
+  width: 10vw; 
+  height: 10vw; 
   cursor: pointer;
   position: relative;
   transition: background-color 0.3s ease;
@@ -97,13 +97,13 @@
 }
 
 .projectDetailscheckbox:focus {
-  outline: 0.125rem solid #fff; /* 2px */
-  outline-offset: 0.125rem; /* 2px */
+  outline: 0.125rem solid #fff; 
+  outline-offset: 0.125rem; 
 }
 
 .projectDetailscheckboxIcon {
-  width: 10vw; /* 40px relative to viewport width */
-  height: 10vw; /* 40px relative to viewport width */
+  width: 10vw; 
+  height: 10vw; 
   object-fit: contain;
   object-position: center;
   position: absolute;
@@ -111,15 +111,15 @@
 
 .projectDetailseditButton {
   font-feature-settings: "liga" off, "clig" off;
-  border-radius: 0.789rem; /* 12.647px */
-  border: 0.131rem solid #18191f; /* 2.108px */
+  border-radius: 0.789rem; 
+  border: 0.131rem solid #18191f; 
   background-color: #ffbd12;
-  box-shadow: 0 0.131rem 0 0 #18191f; /* 2.108px */
+  box-shadow: 0 0.131rem 0 0 #18191f; 
   overflow: hidden;
   color: #18191f;
   white-space: nowrap;
   text-align: center;
-  padding: 0.625rem 1.0625rem; /* 10px 17px */
+  padding: 0.625rem 1.0625rem; 
   font: 800 1.4375rem/1 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
   cursor: pointer;
   margin-top: auto;
@@ -128,53 +128,53 @@
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .projectDetails {
-    max-width: 80vw; /* 600px */
+    max-width: 80vw; 
     padding: 1.25rem;
     margin: auto;
   }
 
   .projectDetailscontainer {
-    margin-top: 1.875rem; /* 30px */
+    margin-top: 1.875rem; 
   }
   .projectDetailseditButton{
     font-size: 1.625rem;
     padding: 1rem 1.87rem;
   }
   .projectDetailscheckbox, .projectDetailscheckboxIcon  {
-    width: 7vw; /* 40px relative to viewport width */
-    height: 7vw; /* 40px relative to viewport width */
+    width: 7vw; 
+    height: 7vw; 
   }
 
 }
 
 @media (min-width: 1024px) {
   .projectDetails {
-    max-width: 90vw; /* 700px */
+    max-width: 90vw; 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0 auto; /* Ensure centering horizontally */
+    margin: 0 auto; 
   }
 
   .projectDetailsprojectInfo {
-    width: 70vw; /* 700px */
+    width: 70vw; 
   }
 
   .projectDetailscontainer {
-    margin-top: 3.125rem; /* 50px */
+    margin-top: 3.125rem; 
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 100%; /* Ensure it stretches within the centered container */
+    width: 100%; 
   }
   .projectDetailseditButton{
     font-size: 1.625rem;
     padding: 1rem 1.87rem;
   }
   .projectDetailscheckbox, .projectDetailscheckboxIcon  {
-    width: 5vw; /* 40px relative to viewport width */
-    height: 5vw; /* 40px relative to viewport width */
+    width: 5vw; 
+    height: 5vw; 
   }
 }

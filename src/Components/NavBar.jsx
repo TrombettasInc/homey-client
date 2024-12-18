@@ -4,10 +4,10 @@ import { AuthContext } from '../context/auth.context';
 import './Navbar.css';
 
 function Navbar() {
-  // Subscribe to the AuthContext to access the authentication state
+  
   const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
 
-  // State to toggle mobile menu visibility
+  
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const handleHamburgerClick = () => {
@@ -21,7 +21,7 @@ function Navbar() {
   return (
     <>
        <nav className="navbar">
-        {!isMobileMenuOpen && ( // Hide the hamburger when the menu is open
+        {!isMobileMenuOpen && ( 
           <button className="nav-hamburger" onClick={handleHamburgerClick}>
             <img
               loading="lazy"
